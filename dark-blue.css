@@ -1,7 +1,8 @@
 /*
  * BJ-Share custom CSS
- * Versao: 1.1
- * Organizacao: comentarios de secao adicionados para facilitar manutencao interna.
+ * Tema: Dark Blue
+ * Versao: 1.2
+ * Organizacao: secoes revisadas, duplicidades removidas e declaracoes desativadas comentadas.
  */
 
 /* ===== Base global e tipografia ===== */
@@ -178,10 +179,6 @@ ul.thin {
     margin: 0 0 0 25px;
     padding: 0;
 }
-ul.thin {
-    margin: 0 0 0 25px;
-    padding: 0;
-}
 ul.thin li {
     margin: 0 0;
     padding: 0;
@@ -189,10 +186,10 @@ ul.thin li {
 /* ===== Estrutura principal da pagina ===== */
 #header {
     background: url(https://i.bj-share.info/7941f9941d487660d53683c66ac3a1b4.gif) no-repeat top center;
-   /background: url(https://i.bj-share.info/39cc9dcf61cc9adcc3f0a90d965c3f55.gif) no-repeat top center;
-   /background: url(https://i.bj-share.info/d9e208c79ce0e5dc61ace829dc6cf93a.gif) no-repeat top center;
-   /background: url(https://i.bj-share.info/058bb96313de7fec923ae3a8173c2419.gif) no-repeat top center;
-   /background-color: #0a0a0c;
+   /* background: url(https://i.bj-share.info/39cc9dcf61cc9adcc3f0a90d965c3f55.gif) no-repeat top center; */
+   /* background: url(https://i.bj-share.info/d9e208c79ce0e5dc61ace829dc6cf93a.gif) no-repeat top center; */
+   /* background: url(https://i.bj-share.info/058bb96313de7fec923ae3a8173c2419.gif) no-repeat top center; */
+   /* background-color: #0a0a0c; */
     width: 100%;
     padding: 0;
 }
@@ -200,7 +197,7 @@ ul.thin li {
     margin: auto;
     width: 100%;
     overflow: hidden;
-   /background-color: #1D1C1D;
+   /* background-color: #1D1C1D; */
     position: relative;
     top: 60px;
 }
@@ -233,9 +230,9 @@ ul.thin li {
 #logo a:hover {
     border: none;
 }
-/#mydrop {
+/* #mydrop {
     height: 217px;
-}
+} */
 /* ===== Menu principal e dropdowns ===== */
 #menu {
     position: absolute;
@@ -245,7 +242,7 @@ ul.thin li {
     font-size: 10pt;
     z-index: 1001;
     min-width: 850px;
-    /background-color: #18181c;
+    /* background-color: #18181c; */
     background-color: #1a1a1e;
     box-shadow: 0 1px 3px #000;
 }
@@ -286,7 +283,7 @@ ul.thin li {
 }
 #menudrop ul ul ul {
     top: 0;
-    left: 100%
+    left: 100%;
 }
 #menudrop ul ul ul ul {
     max-height: 300px;
@@ -315,7 +312,7 @@ ul.thin li {
     display: block;
 }
 #chat #nav_irc, #collage #nav_collages, #forums #nav_forums, #index #nav_index, #moderar #nav_moderar, #requests #nav_requests, #rules #nav_rules, #staff #nav_staff, #top10 #nav_top10, #torrents #nav_torrents, #user #nav_userinfor, #wiki #nav_wiki {
-   /background-color: #303030;
+   /* background-color: #303030; */
 }
 /* ===== Barra de usuario e estatisticas ===== */
 #userinfo {
@@ -398,7 +395,7 @@ ul.thin li {
     top: 265px; /*altura buscar*/
     width: 100%;
     text-align: center;
-   /background-color: #303030;
+   /* background-color: #303030; */
     padding: 4px 0;
     min-width: 850px;
 }
@@ -409,8 +406,8 @@ ul.thin li {
     font-size: .9em;
     color: #e0e0e0;
     top: 0px;
-   /padding: 5px 5px 5px 25px;
-   /background: #1e1e1ef2 url('https://i.bj-share.info/c5348ed21b07d6b4f430baa362a40e50.png') no-repeat center left;
+   /* padding: 5px 5px 5px 25px; */
+   /* background: #1e1e1ef2 url('https://i.bj-share.info/c5348ed21b07d6b4f430baa362a40e50.png') no-repeat center left; */
 }
 #searchbars ul {
     margin: 0 auto;
@@ -469,7 +466,7 @@ ul.thin li {
     box-shadow: 0px 0px 2px #000;
 }
 .alertbar.blend {
-   /background-color: #313031;
+   /* background-color: #313031; */
     border: 1px solid #38383f;
     width: 410px;
     margin-top: -1px;
@@ -483,7 +480,7 @@ ul.thin li {
     text-decoration: none;
 }
 #cat-selector ul {
-    width: 100%
+    width: 100%;
 }
 #cat-selector ul li {
     display: inline;
@@ -533,7 +530,7 @@ p.min_padding {
 }
 /* ===== Containers, caixas, sidebar e imagens ===== */
 .pad {
-   /padding: 1em;
+   /* padding: 1em; */
     padding: 0.5em;
     font-family: inter, Roboto, tahoma, helvetica, sans-serif;
 }
@@ -544,16 +541,16 @@ p.min_padding {
     margin-bottom: 10px;
 }
 .box {
-    /font-size: 11.85px;
+    /* font-size: 11.85px; */
     font-size: 8.9pt;
-    /background-color: #202021;
+    /* background-color: #202021; */
     background-color: #1c1c20;
     border: 1px solid #38383f;
     margin-bottom: 10px;
     box-shadow: 0 1px 3px #000;
 }
 .box2 {
-    /font-size: 11.90px;
+    /* font-size: 11.90px; */
     font-size: 8.9pt;
     background-color: #1c1c20;
     border: 1px solid #38383f;
@@ -581,7 +578,7 @@ ul.collage_images {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 15px;
-  //width: 590px;
+  /* width: 590px; */
 }
 ul.collage_images img {
   height: 100%;
@@ -601,7 +598,7 @@ ul.collage_images img {
     border-bottom: 2px solid #0f0f12;
 }
 .body {
-     /padding: 5px 0px 0px 0px;
+     /* padding: 5px 0px 0px 0px; */
      padding-left: 4.5px;
      padding-right: 4.5px;
 }
@@ -638,26 +635,26 @@ table {
     box-shadow: 0 1px 2px #000;
 }
 tr.resolution_header{
-    /background: linear-gradient(0deg, hsla(220, 8.6%, 6.9%, 0.8) 0, hsla(0, 0%, 12%, 0.85));
+    /* background: linear-gradient(0deg, hsla(220, 8.6%, 6.9%, 0.8) 0, hsla(0, 0%, 12%, 0.85)); */
     background: linear-gradient(0deg, hsl(240, 3.4%, 5.7%) 0, hsl(240, 9.5%, 16.5%));
     background-color: rgba(0, 0, 0, 0);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 tr.season_header, td.season_header{
-    /background: linear-gradient(0deg, hsla(220, 8.6%, 6.9%, 0.8) 0, hsla(0, 0%, 12%, 0.85));
+    /* background: linear-gradient(0deg, hsla(220, 8.6%, 6.9%, 0.8) 0, hsla(0, 0%, 12%, 0.85)); */
     background: linear-gradient(0deg, hsl(240, 3.4%, 5.7%) 0, hsl(240, 9.5%, 16.5%));
     background-color: rgba(0, 0, 0, 0);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 tr {
     border: 1px solid #38383f;
-    /background-color: #1f1f20;
+    /* background-color: #1f1f20; */
 }
 tr.rowa {
-    /background-color: #222;
+    /* background-color: #222; */
 }
 td, th {
-    /border: 1px solid #303030;
+    /* border: 1px solid #303030; */
     box-shadow: 0px 0px 0px #000;
     padding: 5px;
     text-align: left;
@@ -708,7 +705,7 @@ td.colhead {
 }
 td.label {
     font-weight: 700;
-   /text-align: right;
+   /* text-align: right; */
     width: 180px;
     padding-top: 10px;
 }
@@ -739,10 +736,6 @@ ul {
 }
 .noty_message {
   background: #1f1f23 url(https://bj-share.info/static/common/icons/bj.svg) no-repeat 4px 7px;
-    background-repeat: no-repeat;
-    background-size: auto;
-  background-repeat: no-repeat;
-  background-size: auto;
   margin: 0px 0px 0px 0px;
   color: #eeeeee;
   background-repeat: no-repeat;
@@ -754,7 +747,7 @@ ul {
     background: #2f2f35 !important;
 }
 .noty_buttons a {
-   /background: #353535 !important;
+   /* background: #353535 !important; */
     border-radius: 3px;
     margin: 5px;
     padding: 2px 5px 2px 5px;
@@ -782,20 +775,9 @@ ul.poll li.graph {
 .show_torrents {
     width: 28px;
     height: 28px;
-    background: url(images/show.png) no-repeat center center;
-}
-.hide_torrents {
-    width: 28px;
-    height: 28px;
-    background: url(images/hide.png) no-repeat center center;
-}
-.show_torrents {
-    width: 28px;
-    height: 28px;
     display: inline-block;
     background: url('https://bj-share.info/static/common/icons/plus.svg');
     background-repeat: repeat;
-    background-size: auto;
     background-size: contain;
 }
 .hide_torrents {
@@ -804,7 +786,6 @@ ul.poll li.graph {
     display: inline-block;
     background: url('https://bj-share.info/static/common/icons/minus.svg');
     background-repeat: repeat;
-    background-size: auto;
     background-size: contain;
 }
 .show_torrents_link {
@@ -829,7 +810,7 @@ ul.poll li.graph {
 }
 .torrent_table tr {
     vertical-align: top;
-    /box-shadow: 0 -3px 5px -5px rgba(55, 51, 51);
+    /* box-shadow: 0 -3px 5px -5px rgba(55, 51, 51); */
 }
 #torrent_table {
   border-collapse: collapse;
@@ -846,18 +827,18 @@ ul.poll li.graph {
 color: #e0c89f;
 }
 .torrent_table tr.group {
-    /background-color: #1a1a1ed6;
+    /* background-color: #1a1a1ed6; */
     background-color: #1c1c20d6;
     text-shadow: 1px 1px 1px rgba(0, 0, 0,);
     box-shadow: 0 -3px 5px -5px rgba(55, 51, 51);
 }
 tr.group_torrent {
     background-color: #1c1c20;
-    /background-color: #222227;
+    /* background-color: #222227; */
     text-shadow: 1px 1px 1px rgba(0, 0, 0,);
 }
 tr.torrent {
-    /background-color: #1a1a1ed6;
+    /* background-color: #1a1a1ed6; */
     background-color: #1c1c20d6;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     border-left: 1px solid #282b2e !important;
@@ -867,7 +848,7 @@ tr.torrent {
 }
 tr.torrent:hover, tr.group_torrent:hover, tr.group:hover {
      background-color: #1f1f25d6;
-     /background-color: #18181cd6;
+     /* background-color: #18181cd6; */
 }
 .torrent {
   transition: transform 0.3s ease, box-shadow 0.3s ease,
@@ -883,11 +864,11 @@ tr.torrent:hover, tr.group_torrent:hover, tr.group:hover {
 .torrentdetails {
     background-color: #1d1d22 !important;
 }
-/blockquote {
+/* blockquote {
     margin: 10px;
     padding: 10px;
     border: 1px dashed #666;
-}
+} */
 /* ===== Citacoes e midia embutida ===== */
 blockquote {
   -webkit-border-radius: 5px;
@@ -908,13 +889,13 @@ blockquote {
     aspect-ratio: 16 / 9;
     height: auto;
     border: none;
-   /border-radius: 12px;
+   /* border-radius: 12px; */
 }
 
 .number_column{
     text-align: center;
     padding-left: 5px;
-    /vertical-align: middle;
+    /* vertical-align: middle; */
 }
 .group_torrent span {
     float: right;
@@ -944,80 +925,48 @@ blockquote {
 }
 .unread_locked_sticky {
     background: url('https://bj-share.info/static/common/icons/unread_locked_sticky.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .read_locked_sticky {
     background: url('https://bj-share.info/static/common/icons/read_locked_sticky.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .unread_sticky {
     background: url('https://bj-share.info/static/common/icons/unread_sticky.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .read_sticky {
     background: url('https://bj-share.info/static/common/icons/read_sticky.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .unread_locked {
     background: url('https://bj-share.info/static/common/icons/unread_locked.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .read_locked {
     background: url('https://bj-share.info/static/common/icons/read_locked.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .unread {
     background: url('https://bj-share.info/static/common/icons/unread.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
 }
 .read {
     background: url('https://bj-share.info/static/common/icons/read.svg');
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 17px;
@@ -1032,7 +981,7 @@ table.forum_post td {
    border: 1px solid #37373f;
 }
 table.forum_unread {
-   /border: 2px solid #ccc;
+   /* border: 2px solid #ccc; */
 }
 td.avatar {
     width: 150px;
@@ -1044,7 +993,7 @@ table.forum_post td.body {
 tbody {
     max-width: 690px;
     background-color: #1e1e23;
-   /background-color: #1c1c20;
+   /* background-color: #1c1c20; */
 }
 tr.unreadpm {
     background-color: #5c2525;
@@ -1132,12 +1081,9 @@ table#torrent_table.torrent_table {
     margin: auto;
 }
 form tr {
-    /background-color: #212121d9;
+    /* background-color: #212121d9; */
     background-color: #1f1f23eb;
     box-shadow: 0px 0px 0px #000;
-}
-.center {
-    text-align: center;
 }
 .spellcheck {
     margin: 25px 0;
@@ -1201,10 +1147,10 @@ td.shoutTable {
     padding: 8px;
     text-align: left;
     font-size: 11.60px;
-    /font-family: Helvetica;
+    /* font-family: Helvetica; */
 }
 table.shoutTable a {
-    /color: #4db8ff;
+    /* color: #4db8ff; */
     color: #21a6ff;
 }
 tr.row1 {
@@ -1260,7 +1206,7 @@ select {
     padding: 5px 25px 5px 5px;
 }
 select:hover {
-    /background-color: #202020;
+    /* background-color: #202020; */
      color: #999;
 }
 select a.active, select a:hover {
@@ -1288,7 +1234,6 @@ select a.active, select a:hover {
 }
 .open > .dropdown-menu {
   display: block;
-  overflow-y: auto;
   z-index: 1;
   max-height: 225px;
   overflow-y: auto;
@@ -1299,11 +1244,10 @@ select a.active, select a:hover {
     position: fixed;
     right: 10px;
     bottom: 60px;
-    cursor: pointer;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    /background-image: linear-gradient(to top, #161618, #262525);
+    /* background-image: linear-gradient(to top, #161618, #262525); */
     background: linear-gradient(180deg, #141417 0, #212124 1px, #18181c 2px, #222226);
     text-indent: -9999px;
     display: none;
@@ -1324,22 +1268,19 @@ select a.active, select a:hover {
     background-image: linear-gradient(to top, #505355, #16171a);
     opacity: 1;
     filter: "alpha(opacity=100)";
-    -ms-filter: "alpha(opacity=100)"
+    -ms-filter: "alpha(opacity=100)";
 }
 #irfinal {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    cursor: pointer;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    /background-image: linear-gradient(to top, #161618, #262525);
+    /* background-image: linear-gradient(to top, #161618, #262525); */
     background: linear-gradient(180deg, #1a1a1c 0, #404044 1px, #18181c 2px, #222226);
     text-indent: -9999px;
     display: none;
-    border-radius: 6px;
-    border-radius: 6px;
     border-radius: 6px;
 }
 #irfinal span {
@@ -1358,7 +1299,7 @@ select a.active, select a:hover {
     background-image: linear-gradient(to bottom, #505355, #17171a);
     opacity: 1;
     filter: "alpha(opacity=100)";
-    -ms-filter: "alpha(opacity=100)"
+    -ms-filter: "alpha(opacity=100)";
 }
 /* ===== Info boxes e tooltips ===== */
 .homesldframe {
@@ -1380,7 +1321,7 @@ a.BJinfoBox span {
     line-height: 15px;
     visibility: hidden;
     border-radius: 6px;
-   /border: 2px solid #494649;
+   /* border: 2px solid #494649; */
     text-decoration: none;
     padding: 7px 5px;
     margin-left: -25px !important;
@@ -1401,7 +1342,7 @@ form a.BJinfoBox span {
     line-height: 15px;
     visibility: hidden;
     border-radius: 6px;
-   /border: 2px solid #494649;
+   /* border: 2px solid #494649; */
     text-decoration: none;
     padding: 10px 5px 5px;
     margin-left: -20px !important;
@@ -1422,7 +1363,7 @@ form a.BJinfoBox span {
     line-height: 18px;
     visibility: hidden;
     border-radius: 6px;
-   /border: 2px solid #494649;
+   /* border: 2px solid #494649; */
     text-decoration: none;
     padding: 4px 0px 4px 2px;
     margin-left: -60px !important;
@@ -1504,7 +1445,7 @@ a[data-tooltip]:hover {
 }
 /* ===== Slider BJQS ===== */
 ul.bjqs {
-   /position: relative;
+   /* position: relative; */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -1566,7 +1507,7 @@ ol.bjqs-markers {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%
+    width: 100%;
 }
 ol.bjqs-markers.h-centered {
     text-align: center;
@@ -1579,8 +1520,6 @@ ol.bjqs-markers li a {
 }
 p.bjqs-caption {
     font-family: 'Varela Round', sans-serif;
-    font-size: medium;
-    color: #fff;
     display: block;
     width: 190px;
     margin: 25px;
@@ -1591,23 +1530,23 @@ p.bjqs-caption {
     color: #000;
 }
 #container {
-    /float: right;
+    /* float: right; */
     position: relative;
     width: 263px;
     padding-top: 10px;
     padding-bottom: 0;
-    float: bottom;
+    /* float: bottom; */
 }
 #banner-fade, #banner-slide {
     margin-bottom: 40px;
     margin-top: -12px;
 }
 ul.bjqs-controls.v-centered li a {
-   /font-family: tahoma, helvetica, sans-serif;
+   /* font-family: tahoma, helvetica, sans-serif; */
     display: block;
     padding: 10px;
     background: #365a72;
-   /font-weight: lighter;
+   /* font-weight: lighter; */
     color: #fff;
     text-decoration: none;
     -webkit-border-radius: 6px;
@@ -1633,7 +1572,7 @@ p.bjqs-caption {
     background: rgba(254, 254, 254, .74);
 }
 .two_columns {
-    width: 47%
+    width: 47%;
 }
 
 /* ===== Marcadores internos e labels de torrent ===== */
@@ -1645,7 +1584,7 @@ p.bjqs-caption {
   border-right: 3px solid #ffcc66;
   border-radius: 4px;
   transition: background 0.2s ease;
-  /cursor: help;
+  /* cursor: help; */
   position: relative; /* essencial pro tooltip aparecer */
 }
 
@@ -1799,7 +1738,7 @@ dialog {
     top: 0px;
     left: 0;
     right: 0;
-    /background: #282828;
+    /* background: #282828; */
     text-align: center;
     line-height: 2.5;
     overflow: hidden;
