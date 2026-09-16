@@ -1,0 +1,89 @@
+{
+  "legacyCommit": "ba4e315",
+  "widths": [
+    320,
+    375,
+    768,
+    900,
+    901,
+    1024,
+    1440,
+    1920,
+    2560,
+    3840
+  ],
+  "themes": {
+    "BJ-Black": {
+      "archiveSha256": "fecb3bac192aadaab69cbb5b9502b237066dbf51572830d15af3e20fbd86ab74",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Blue": {
+      "archiveSha256": "b30bd515575f8cb12b46609b73da66cf039bc7fa671cc64d718bf4f84c5bf796",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Clean": {
+      "archiveSha256": "d55e2dfdb16d93e232367b27975fba505a69aa67835ec919e4768119da18109f",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-DarkBlue": {
+      "archiveSha256": "b11484e2d349f0f42cedafeac9695657d429b35b746a21e37cd68c29effe98e9",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Darkness": {
+      "archiveSha256": "89a58f2d176f5beffdee6d60d49d19d8c08414c619ff3451322fba8a245d6bf6",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Grey": {
+      "archiveSha256": "1b0cd4f14061c46e2f733bdde45eaef47f131e77eee6d6846d71a56699bb22a3",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Midnight": {
+      "archiveSha256": "439a27b694ec95550fef988bae5cc4cbc9b1cb0f09b90b158a24930f4a0967f5",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-NewBlack": {
+      "archiveSha256": "95de091ae10e8626bc0f653fbcbd1563db2232e8d7e7c349382eafccb3930d28",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Pink": {
+      "archiveSha256": "e99797fb30ac427eceb2da91f38b28edb0dc36379e88f49a8d42b9dac5fd5397",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    },
+    "BJ-Red": {
+      "archiveSha256": "7d003c996baa9326df30cf6de9a2e5e604f962ff5885e28000c6c29774ae70cd",
+      "viewportModeChecks": 20,
+      "colorDifferences": [],
+      "stateDifferences": [],
+      "layoutDifferences": []
+    }
+  },
+  "failures": [],
+  "scope": "Fixture local; recursos externos bloqueados. Não é validação do site autenticado."
+}

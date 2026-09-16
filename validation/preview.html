@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prévia dos temas BJ-Share</title>
+<link id="theme" rel="stylesheet" href="../new/BJ-Midnight.css">
+<body id="index">
+<div id="wrapper">
+  <div id="header">
+    <div id="logo"><a href="#content" aria-label="Ir ao conteúdo"></a></div>
+    <div id="menu"><div id="menudrop"><ul>
+      <li class="current-menu-item"><a href="#content">Início</a></li>
+      <li><a href="#torrents">Torrents</a><ul><li><a href="#torrents">Filmes</a></li><li><a href="#torrents">Séries</a><ul><li><a href="#torrents">Novidades</a></li></ul></li></ul></li>
+      <li><a href="#forum">Fórum</a></li><li><a href="#rules">Regras</a></li><li><a href="#help">Ajuda</a></li>
+    </ul></div></div>
+    <div id="userinfo">
+      <ul id="userinfo_username"><li><a href="#profile">Usuário de exemplo</a></li></ul>
+      <ul id="userinfo_stats"><li id="stats_seeding">Enviando: <span class="stat">12</span></li><li id="stats_leeching">Baixando: <span class="stat">2</span></li><li id="stats_bjpontos">Pontos: <span class="stat">150</span></li></ul>
+      <ul id="userinfo_major"><li><a href="#profile">Perfil</a></li><li><a href="#messages">Mensagens</a></li></ul>
+    </div>
+    <div id="searchbars"><ul><li><form><input aria-label="Buscar" placeholder="Buscar torrents"><input type="submit" value="Buscar"></form></li></ul></div>
+  </div>
+  <div id="alerts"><div class="alertbar"><a id="alert-link" href="#preview-controls">Aviso de exemplo — link clicável</a></div></div>
+  <div id="content"><div class="thin">
+    <div class="box" id="preview-controls"><div class="head">Prévia local dos temas</div><div class="pad">
+      <p>Esta página usa conteúdo fictício para conferir cores e comportamento. Não reproduz todas as páginas do BJ-Share.</p>
+      <label>Tema <select id="theme-select"></select></label>
+      <label><input type="checkbox" id="fixed-toggle" checked> Menu fixo (em telas acima de 900px)</label>
+    </div></div>
+    <div class="sidebar"><div class="box"><div class="head">Comunidade</div><div class="pad"><a href="#forum">Últimas discussões</a><p class="r50">Ratio: 2.50</p><span class="internalbox">Internal</span></div></div></div>
+    <div class="main_column">
+      <h2>Novidades</h2>
+      <div class="box"><div class="head"><a href="#torrents">Últimos lançamentos</a></div><div class="pad">
+        <p>Texto principal e <a id="sample-link" href="#forum">link de exemplo</a>.</p>
+        <table id="torrents"><thead><tr class="colhead"><th>Título</th><th>Categoria</th><th>Ratio</th></tr></thead>
+        <tbody><tr class="rowa"><td><a href="#item">Exemplo de lançamento</a></td><td>Filme</td><td class="r50">2.00</td></tr>
+        <tr class="resolution_header"><td colspan="3">1080p</td></tr><tr class="season_header"><td colspan="3">Temporada 1</td></tr>
+        <tr><td><span class="torrent_label bjtooltip seeding">Enviando</span> Outro lançamento</td><td>Série</td><td class="r01">0.10</td></tr></tbody></table>
+        <table class="shoutTable"><tbody><tr class="row1"><td class="shoutTable"><a href="#chat">Pessoa A</a>: mensagem no chat.</td></tr><tr class="row2"><td class="shoutTable">Outra mensagem.</td></tr></tbody></table>
+      </div></div>
+      <div class="box" id="forum"><div class="head">Editor e controles</div><div class="pad">
+        <form><p><input id="sample-input" placeholder="Campo de texto"> <select id="sample-select"><option>Opção de exemplo</option></select></p>
+        <textarea id="sample-textarea" rows="3" aria-label="Mensagem">Texto do editor</textarea>
+        <p><button id="sample-button" type="button">Salvar</button> <button type="button" disabled>Indisponível</button> <input type="button" value="Deletar"></p></form>
+        <blockquote>Uma citação para conferir o fundo e o texto.</blockquote>
+        <div class="error_message">Mensagem de erro</div><div class="success_message">Mensagem de sucesso</div>
+      </div></div>
+      <div class="box"><div class="head">Rolagem</div><div class="pad" id="long-content"></div></div>
+    </div>
+  </div></div>
+  <div id="footer">Prévia de validação — BJ-Share custom CSS</div>
+</div>
+<script>
+const themes = ['Black','Blue','Clean','DarkBlue','Darkness','Grey','Midnight','NewBlack','Pink','Red'];
+const selector = document.querySelector('#theme-select');
+for (const name of themes) selector.add(new Option('BJ-' + name, name, false, name === 'Midnight'));
+document.querySelector('#long-content').innerHTML = '<p>Conteúdo de exemplo para testar a rolagem da página.</p>'.repeat(40);
+function toggleFixed() {
+  const sheet = document.querySelector('#theme').sheet;
+  if (!sheet) return;
+  for (const rule of sheet.cssRules) {
+    if (rule instanceof CSSMediaRule && ['all', 'not all'].includes(rule.conditionText)) {
+      rule.media.mediaText = document.querySelector('#fixed-toggle').checked ? 'all' : 'not all';
+    }
+  }
+}
+selector.addEventListener('change', () => {
+  document.querySelector('#theme').href = '../new/BJ-' + selector.value + '.css';
+});
+document.querySelector('#theme').addEventListener('load', toggleFixed);
+document.querySelector('#fixed-toggle').addEventListener('change', toggleFixed);
+document.querySelectorAll('form').forEach(form => form.addEventListener('submit', event => event.preventDefault()));
+</script>

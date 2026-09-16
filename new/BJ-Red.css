@@ -1,0 +1,3957 @@
+/* BJ-Share — BJ-Red — base CSS new, cores/imagens de ba4e315.
+ * Gerado por scripts/build_themes.py. Arquivo independente, sem @import. */
+
+/* Cores auxiliares derivadas deste tema antigo, para componentes novos. */
+@layer bj-defaults {
+input, textarea, .sceditor-container textarea {
+   color: rgb(221, 221, 221);
+}
+
+dialog {
+   color: rgb(187, 187, 187);
+   background-color: rgb(40, 40, 40);
+}
+
+.sceditor-container {
+   background-color: rgb(28, 28, 28);
+}
+
+.sceditor-container:focus-within {
+   border-color: rgb(153, 153, 153);
+   box-shadow: 0 0 15px rgb(153, 153, 153);
+}
+
+}
+
+/* ===== Aparência original: cores, imagens e sombras ===== */
+body {
+   color: #bbb;
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+}
+
+a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+   color: #ccc;
+}
+
+a:hover {
+   color: #aaa;
+}
+
+a.similar_artist {
+   background-color: #444;
+   color: #fff;
+   border-top-color: rgb(255, 255, 255);
+   border-right-color: rgb(255, 255, 255);
+   border-bottom-color: rgb(255, 255, 255);
+   border-left-color: rgb(255, 255, 255);
+}
+
+a.similar_artist:hover {
+   background-color: #555;
+}
+
+.similar_artist_header {
+   color: #fff;
+   background-color: #666;
+   border-top-color: rgb(255, 255, 255);
+   border-right-color: rgb(255, 255, 255);
+   border-bottom-color: rgb(255, 255, 255);
+   border-left-color: rgb(255, 255, 255);
+}
+
+h2 {
+   color: #fff;
+}
+
+input {
+   background-color: rgb(28, 28, 28);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-color: rgba(49, 47, 47, 0.94);
+   border-right-color: rgba(49, 47, 47, 0.94);
+   border-bottom-color: rgba(49, 47, 47, 0.94);
+   border-left-color: rgba(49, 47, 47, 0.94);
+   color: #ddd;
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
+}
+
+textarea {
+   background-color: rgb(28, 28, 28);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-color: rgba(49, 47, 47, 0.94);
+   border-right-color: rgba(49, 47, 47, 0.94);
+   border-bottom-color: rgba(49, 47, 47, 0.94);
+   border-left-color: rgba(49, 47, 47, 0.94);
+   color: #ddd;
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
+}
+
+.BBCodeToolbar-icon {
+   fill: #777;
+}
+
+input:focus, form input:focus, form textarea:focus, textarea:focus, form button:focus {
+   border-color: #999;
+}
+
+img {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.r01 {
+   color: #ff1300;
+}
+
+.r02 {
+   color: #ff1300;
+}
+
+.r03 {
+   color: #ff2600;
+}
+
+.r04 {
+   color: #ff4c00;
+}
+
+.r05 {
+   color: #ff5e00;
+}
+
+.r06 {
+   color: #ff5e00;
+}
+
+.r07 {
+   color: #ff7100;
+}
+
+.r08 {
+   color: #ff9700;
+}
+
+.r09 {
+   color: #fa0;
+}
+
+.r10 {
+   color: #74c42e;
+}
+
+.r20 {
+   color: #418b00;
+}
+
+.r50 {
+   color: #418b00;
+}
+
+.r99 {
+   color: #418b00;
+}
+
+span.size1 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size2 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size3 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size4 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size5 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size6 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size7 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size8 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size9 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+span.size10 {
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+#header {
+   background-color: initial;
+   background-image: url("https://i.bj-share.info/084f6795963fb60fe471580f5d7ea4e9.gif");
+   background-position: center top;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-color: #000;
+}
+
+#footer {
+   color: #fff;
+   background-color: rgb(13, 13, 13);
+   background-image: url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png");
+   background-position: center 184px;
+   background-size: initial;
+   background-repeat: repeat-x;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-color: rgb(36, 36, 36);
+   box-shadow: 0 0 10px 1px #000;
+}
+
+#logo a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+#logo a:hover {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+#menu {
+   background-color: #303030;
+   box-shadow: 0 1px 3px #000;
+}
+
+#menudrop ul a {
+   color: #ccc;
+}
+
+#menudrop ul li.current-menu-item {
+   background-color: rgb(221, 221, 221);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#menudrop ul ul {
+   background-color: rgb(69, 69, 69);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#menudrop ul ul ul ul {
+   background-color: rgb(69, 69, 69);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#menudrop ul li:hover {
+   background-color: rgb(48, 48, 48);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#menu ul li a.active, #menu ul li a:focus, #menu ul li a:hover {
+   color: #565656;
+}
+
+#userinfo {
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+   color: #777;
+}
+
+#userinfo ul li {
+   color: #bbb;
+}
+
+#userinfo a {
+   color: #bbb;
+}
+
+#stats_seeding .stat {
+   color: #0a0;
+}
+
+#stats_leeching .stat {
+   color: red;
+}
+
+#stats_bjpontos .stat {
+   color: #E5C599;
+}
+
+#userinfo_username {
+   background-color: rgb(28, 28, 28);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #777;
+}
+
+#userinfo_major {
+   background-color: rgb(28, 28, 28);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #777;
+}
+
+#searchbars input {
+   color: #ddd9;
+   background-color: #212121;
+}
+
+#searchbars ul li ul li {
+   background-color: rgb(48, 48, 48);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#searchbars ul li ul li.highlight {
+   background-color: rgb(69, 69, 69);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#alerts {
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+}
+
+#alerts a {
+   color: #ccc;
+}
+
+.alertbar {
+   background-color: #303030;
+   border-top-color: rgb(53, 51, 51);
+   border-right-color: rgb(53, 51, 51);
+   border-bottom-color: rgb(53, 51, 51);
+   border-left-color: rgb(53, 51, 51);
+   color: #ccc;
+   box-shadow: 0px 0px 2px #000;
+}
+
+.alertbar.blend {
+   border-top-color: rgb(53, 51, 51);
+   border-right-color: rgb(53, 51, 51);
+   border-bottom-color: rgb(53, 51, 51);
+   border-left-color: rgb(53, 51, 51);
+}
+
+.alertbar a {
+   color: #19191a;
+}
+
+.alertbar a:hover {
+   color: #777;
+}
+
+.box {
+   background-color: #282828;
+   border-top-color: rgb(48, 48, 48);
+   border-right-color: rgb(48, 48, 48);
+   border-bottom-color: rgb(48, 48, 48);
+   border-left-color: rgb(48, 48, 48);
+   box-shadow: 0 1px 3px #000;
+}
+
+.box2 {
+   background-color: #282828;
+   border-top-color: rgb(48, 48, 48);
+   border-right-color: rgb(48, 48, 48);
+   border-bottom-color: rgb(48, 48, 48);
+   border-left-color: rgb(48, 48, 48);
+}
+
+.head {
+   border-bottom-color: rgb(140, 12, 12);
+   background-color: rgb(18, 18, 18);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #fff;
+   background-color: #303030;
+   box-shadow: 0px 0px 0px #000;
+}
+
+.tags a {
+   color: #7e7e7e;
+}
+
+.tags a:hover {
+   color: #dedede;
+}
+
+.noborder {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+table {
+   border-top-color: rgb(48, 48, 48);
+   border-right-color: rgb(48, 48, 48);
+   border-bottom-color: rgb(48, 48, 48);
+   border-left-color: rgb(48, 48, 48);
+   box-shadow: 0 1px 3px #000;
+}
+
+tr.resolution_header {
+   background-color: initial;
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0px, rgba(49, 45, 45, 0.35));
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+tr.season_header, td.season_header {
+   background-color: initial;
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0px, rgba(49, 45, 45, 0.35));
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+tr {
+   border-top-color: rgb(48, 48, 48);
+   border-right-color: rgb(48, 48, 48);
+   border-bottom-color: rgb(48, 48, 48);
+   border-left-color: rgb(48, 48, 48);
+}
+
+tr.rowa {
+   background-color: #222;
+}
+
+td, th {
+   border-top-color: rgb(48, 48, 48);
+   border-right-color: rgb(48, 48, 48);
+   border-bottom-color: rgb(48, 48, 48);
+   border-left-color: rgb(48, 48, 48);
+   box-shadow: 0px 0px 0px #8c0c0c;
+}
+
+.colhead {
+   background-color: #303030;
+   color: #fff;
+   border-bottom-color: rgb(140, 12, 12);
+}
+
+.colhead td {
+   border-bottom-color: rgb(140, 12, 12);
+}
+
+.colhead_dark {
+   background-color: #303030;
+   color: #ccc;
+   box-shadow: 0px 0px 0px #000;
+   border-bottom-color: rgb(140, 12, 12);
+}
+
+.colhead_dark a {
+   color: #fff;
+}
+
+.error_message {
+   border-top-color: rgb(102, 102, 102);
+   border-right-color: rgb(102, 102, 102);
+   border-bottom-color: rgb(102, 102, 102);
+   border-left-color: rgb(102, 102, 102);
+   background-color: #af2525;
+   color: #fff;
+}
+
+.save_message {
+   border-top-color: rgb(102, 102, 102);
+   border-right-color: rgb(102, 102, 102);
+   border-bottom-color: rgb(102, 102, 102);
+   border-left-color: rgb(102, 102, 102);
+   background-color: #f4e649;
+   color: #492802;
+}
+
+.noty_message {
+   background-color: rgb(34, 34, 34);
+   background-image: url("https://bj-share.info/static/common/icons/bj.svg");
+   background-position: 4px 7px;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #dddddd;
+   background-repeat: no-repeat;
+   background-size: 26px 16px;
+}
+
+.noty_buttons {
+   background-color: rgb(53, 53, 53) !important;
+   background-image: initial !important;
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+}
+
+.noty_buttons a {
+   color: #e4dcdc;
+}
+
+.elem_error {
+   border-top-color: rgb(176, 13, 13);
+   border-right-color: rgb(176, 13, 13);
+   border-bottom-color: rgb(176, 13, 13);
+   border-left-color: rgb(176, 13, 13);
+}
+
+.show_torrents {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/plus.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-repeat: repeat;
+   background-size: contain;
+}
+
+.hide_torrents {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/minus.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-repeat: repeat;
+   background-size: contain;
+}
+
+.show_torrents_link {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.cat_list tr td {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.torrentinfo_release {
+   color: #DDC39F;
+}
+
+.torrent_table tr.group {
+   background-color: rgb(34, 34, 34);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 -6px 5px -5px rgba(0, 0, 0, 0.4);
+}
+
+tr.group_torrent {
+   background-color: #222;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+tr.torrent {
+   background-color: #222;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+   border-left-color: rgb(40, 43, 46) !important;
+   border-right-color: rgb(40, 43, 46) !important;
+}
+
+tr.torrent:hover, tr.group_torrent:hover, tr.group:hover {
+   background-color: #202020;
+}
+
+.last_read {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/styles/bj-black/images/go_last_read.png");
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.last_read a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.last_read a:hover {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.unread_locked_sticky {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/unread_locked_sticky.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.read_locked_sticky {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/read_locked_sticky.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.unread_sticky {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/unread_sticky.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.read_sticky {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/read_sticky.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.unread_locked {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/unread_locked.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.read_locked {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/read_locked.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.unread {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/unread.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+.read {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/icons/read.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: 17px;
+}
+
+strong.quoteheader {
+   color: #999;
+}
+
+tbody {
+   background-color: rgb(40, 40, 40);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+blockquote {
+   border-top-color: rgb(102, 102, 102);
+   border-right-color: rgb(102, 102, 102);
+   border-bottom-color: rgb(102, 102, 102);
+   border-left-color: rgb(102, 102, 102);
+}
+
+:is(iframe.youtube, iframe.dailymotion) {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+tr.unreadpm {
+   background-color: #692222;
+}
+
+.left_poll {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_left.gif");
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.center_poll {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar.gif");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.right_poll {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_right.gif");
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.curtain {
+   background-color: #000;
+}
+
+form tr {
+   background-color: #222222d9;
+   box-shadow: 0px 0px 0px #000;
+}
+
+tr.torrent .bookmark>a:before {
+   color: #999;
+}
+
+tr.torrent .bookmark>a:after {
+   color: #999;
+}
+
+.linkbox .brackets:after, .linkbox .brackets:before, .top10_quantity_links .brackets:after, .top10_quantity_links .brackets:before {
+   color: #999;
+}
+
+.autocomplete-suggestions {
+   background-color: rgb(34, 34, 34);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.small_upvote, .small_upvoted, .vote_album_up, .vote_artist_up, .vote_tag_up {
+   color: green;
+}
+
+.small_downvote, .small_downvoted, .vote_album_down, .vote_artist_down, .vote_tag_down {
+   color: red;
+}
+
+#forum_search_cat_list, #forum_search_cat_list tr {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.chat_mark_bg {
+   background-color: rgb(21, 21, 21);
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+table.shoutTable {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+}
+
+td.shoutTable {
+   border-top-color: rgb(51, 51, 51);
+   border-right-color: rgb(51, 51, 51);
+   border-bottom-color: rgb(51, 51, 51);
+   border-left-color: rgb(51, 51, 51);
+   box-shadow: 0px 0px 1px #353535;
+}
+
+table.shoutTable a {
+   color: #0a84af;
+}
+
+tr.row1 {
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+}
+
+tr.row2 {
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+}
+
+button:hover, input[type=button]:hover, input[type=submit]:hover {
+   background-color: rgb(56, 56, 56);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+button, input[type=button], input[type=submit] {
+   background-color: initial;
+   background-image: linear-gradient(rgb(26, 26, 27) 0px, rgb(64, 64, 68) 1px, rgb(46, 46, 48) 2px, rgb(34, 34, 37));
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-color: rgb(27, 27, 27);
+   border-right-color: rgb(27, 27, 27);
+   border-bottom-color: rgb(27, 27, 27);
+   border-left-color: rgb(27, 27, 27);
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+   color: #999;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
+   background-color: rgb(48, 48, 48);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #686868;
+}
+
+select {
+   background-image: url("https://bj-share.info/static/common/icons/svg-viewer.svg");
+   background-position: right 8px center;
+   background-repeat: no-repeat;
+   background-size: 10px 10px;
+   background-color: #1c1c1c;
+   border-top-color: rgba(45, 43, 43, 0.86);
+   border-right-color: rgba(45, 43, 43, 0.86);
+   border-bottom-color: rgba(45, 43, 43, 0.86);
+   border-left-color: rgba(45, 43, 43, 0.86);
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
+   color: #888;
+}
+
+select:hover {
+   background-color: #202020;
+}
+
+select a.active, select a:hover {
+   color: #000;
+}
+
+.open > .dropdown-menu {
+   background-color: #202020;
+}
+
+.checkbox:hover {
+   background-color: #383838;
+}
+
+.multiselect-container > li > a > label.radio, .multiselect-container > li > a > label.checkbox {
+   color: #fff;
+}
+
+.btn-default {
+   color: #bbb !important;
+   background-color: #2b2b2d !important;
+   border-color: #444 !important;
+}
+
+.btn:hover, .btn:focus {
+   background-color: rgb(51, 51, 51) !important;
+   background-image: initial !important;
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+}
+
+#irtopo {
+   background-image: linear-gradient(to top, #313133, #171616);
+}
+
+#irtopo span {
+   border-top-color: transparent;
+   border-right-color: transparent;
+   border-bottom-color: transparent;
+   border-left-color: transparent;
+   border-bottom-color: #fff;
+}
+
+#irtopo:hover {
+   background-image: linear-gradient(to top, #505355, #161718);
+}
+
+#irfinal {
+   background-color: rgb(52, 152, 219);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-image: linear-gradient(to bottom, #313437, #111);
+}
+
+#irfinal span {
+   border-top-color: transparent;
+   border-right-color: transparent;
+   border-bottom-color: transparent;
+   border-left-color: transparent;
+   border-top-color: #fff;
+}
+
+#irfinal:hover {
+   background-color: rgb(80, 83, 85);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-image: linear-gradient(to bottom, #505355, #171616);
+}
+
+a.BJinfoBox span {
+   color: #eee;
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+   box-shadow: 0 1px 4px #000;
+}
+
+form a.BJinfoBox span {
+   color: #eee;
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+   box-shadow: 0 1px 4px #000;
+}
+
+.post_return a.BJinfoBox span {
+   color: #D4D4D4;
+   background-color: rgb(29, 29, 29) !important;
+   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+   box-shadow: 0 1px 4px #000;
+}
+
+a.BJinfoBox:hover {
+   color: #eee;
+}
+
+[data-tooltip]:before {
+   background-color: #000;
+   color: #fff;
+}
+
+[data-tooltip]:after {
+   border-top-color: rgb(0, 0, 0);
+   border-right-color: transparent;
+   border-left-color: transparent;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+   border-top-color: #494649;
+   border-left-color: #494649;
+   border-bottom-color: #494649;
+   border-right-color: #494649;
+   background-color: rgba(0, 0, 0, .2);
+   background-repeat: no-repeat;
+   color: #fff;
+   text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+   border-top-color: #494649;
+   border-left-color: #494649;
+   border-bottom-color: #494649;
+   border-right-color: #494649;
+   background-color: rgba(0, 0, 0, .2);
+   background-repeat: no-repeat;
+   color: #fff;
+   text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+p.bjqs-caption {
+   color: #000;
+}
+
+ul.bjqs-controls.v-centered li a {
+   background-color: rgb(54, 90, 114);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #fff;
+}
+
+ul.bjqs-controls.v-centered li a:hover {
+   background-color: rgb(56, 56, 56);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+ol.bjqs-markers li a {
+   background-color: rgb(0, 0, 0);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #fff;
+}
+
+ol.bjqs-markers li a:hover, ol.bjqs-markers li.active-marker a {
+   background-color: rgb(153, 153, 153);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+p.bjqs-caption {
+   background-color: rgba(254, 254, 254, 0.74);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.internalbox {
+   background-color: rgb(29, 33, 36) !important;
+   background-image: initial !important;
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   color: #ffb300 !important;
+   border-left-color: rgb(255, 179, 0);
+   border-right-color: rgb(255, 179, 0);
+}
+
+.internalbox:hover {
+   background-color: rgb(53, 53, 55);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.internalbox::before {
+   color: #fffbee !important;
+}
+
+.internalbox:hover::after {
+   background-color: #333;
+   color: #fff;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
+.torrent_label.bjtooltip.leeching {
+   background-color: initial !important;
+   background-image: url("https://bj-share.info/static/common/Downloadv2.svg") !important;
+   background-position: center center !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   color: transparent !important;
+}
+
+.torrent_label.bjtooltip.seeding {
+   background-color: initial !important;
+   background-image: url("https://bj-share.info/static/common/Seedv2.svg") !important;
+   background-position: center center !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   color: transparent !important;
+}
+
+.torrent_label.bjtooltip.tl_snatched,
+.torrent_label.bjtooltip.snatched {
+   background-color: initial !important;
+   background-image: url("https://bj-share.info/static/common/check.svg") !important;
+   background-position: center center !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   color: transparent !important;
+}
+
+.torrent_label.bjtooltip.repack {
+   background-color: initial !important;
+   background-image: url("https://bj-share.info/static/common/Repackv2.svg") !important;
+   background-position: center center !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   color: transparent !important;
+}
+
+dialog {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+   background-color: rgb(50, 49, 49);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   color: #fff;
+}
+
+.brackets[onclick*="gorjeta"] {
+   color: #f4bc64;
+}
+
+#noteAlertMsg {
+   -webkit-box-shadow: 0 0 0px #282828;
+   -moz-box-shadow: 0 0 0px #282828;
+   box-shadow: 0 0 0px #282828;
+}
+
+.browse_rating {
+   background-color: black;
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+/* ===== Estrutura comum e menu opcional do exemplo ===== */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body,
+#userinfo,
+#alerts,
+a.BJinfoBox span,
+form a.BJinfoBox span,
+.post_return a.BJinfoBox span {
+   background-position: 0px center !important;
+   background-size: initial !important;
+   background-repeat: repeat !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: scroll !important;
+}
+
+body {
+   font-size: 11px;
+   min-width: 950px;
+   font-family: Roboto, tahoma, helvetica, sans-serif;
+   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   margin: 5px 0;
+   font-weight: 700;
+}
+
+h2 {
+   text-align: center;
+   font-size: 16px;
+}
+
+h4 {
+   font-size: 10.67px;
+}
+
+p {
+   margin: 10px 5px;
+}
+
+li {
+   margin: 5px 5px;
+}
+
+ul {
+   padding-left: 5px;
+   left: 0.5%;
+}
+
+ol {
+   margin-left: 1em;
+}
+
+a {
+   text-decoration: none;
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   transition: color 0.25s,
+      text-decoration 0.25s,
+      opacity 0.25s;
+   font-weight: bold;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+a.similar_artist {
+   display: block;
+   padding: 1px 4px;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+.similar_artist_header {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding: 3px 5px;
+}
+
+input {
+   padding: 2px 3px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   transition: border-color 0.15s linear,
+      box-shadow 0.15s linear;
+}
+
+textarea {
+   padding: 2px 3px;
+   width: 100%;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   transition: border-color 0.15s linear,
+      box-shadow 0.15s linear;
+   resize: vertical;
+}
+
+.BBCodeToolbar-icon {
+   height: 20px;
+   width: 20px;
+}
+
+input:focus,
+form input:focus,
+      form textarea:focus,
+            textarea:focus,
+form button:focus,
+
+      .sceditor-container iframe,
+.sceditor-container textarea,
+[contenteditable="true"]:focus {
+   outline: none;
+}
+
+.sceditor-container:focus-within {
+   outline: none;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+img {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   max-width: 100%;
+}
+
+.dropzone {
+   border-width: 1px;
+}
+
+table.shoutTable {
+   width: 100%;
+   border-collapse: collapse;
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+}
+
+td.shoutTable {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding: 8px;
+   text-align: left;
+   font-size: 11.6px;
+}
+
+tr.row1 {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+tr.row2 {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.field_div {
+   margin-bottom: 10px;
+   margin-top: 1px;
+}
+
+.edit_changelog textarea {
+   width: 600px;
+}
+
+input::placeholder,
+textarea::placeholder {
+   opacity: 1;
+}
+
+span.size1 {
+   font-size: 0.75em;
+}
+
+span.size2 {
+   font-size: 1em;
+}
+
+span.size3 {
+   font-size: 1.25em;
+}
+
+span.size4 {
+   font-size: 1.5em;
+}
+
+span.size5 {
+   font-size: 1.75em;
+}
+
+span.size6 {
+   font-size: 2em;
+}
+
+span.size7 {
+   font-size: 2.25em;
+}
+
+span.size8 {
+   font-size: 2.5em;
+}
+
+span.size9 {
+   font-size: 2.75em;
+}
+
+span.size10 {
+   font-size: 3em;
+}
+
+ul.thin {
+   margin: 0 0 0 25px;
+   padding: 0;
+}
+
+ul.thin li {
+   margin: 0;
+   padding: 0;
+}
+
+#header {
+   background-position: center top;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   width: 100%;
+   padding: 0;
+}
+
+#content {
+   margin: auto;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   top: 60px;
+}
+
+#wrapper {
+   width: 100%;
+   margin: 0 auto;
+}
+
+#footer {
+   margin-top: 140px;
+   width: 100%;
+   text-align: center;
+   padding: 1em 0;
+   background-position: center 184px;
+   background-size: initial;
+   background-repeat: repeat-x;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 3px;
+   border-top-style: solid;
+   clear: both;
+}
+
+#logo {
+   width: 100%;
+   height: 290px;
+   margin: 0 auto;
+}
+
+#logo a {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   width: 320px;
+   height: 150px;
+   display: block;
+}
+
+#menu {
+   position: absolute;
+   top: 295px;
+   width: 100%;
+   text-align: center;
+   font-size: 13.33px;
+   z-index: 1001;
+   min-width: 850px;
+}
+
+#menudrop ul {
+   list-style: none;
+   position: relative;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+#menudrop ul a {
+   display: block;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 32px;
+   padding: 0 15px;
+   transition: color 0.2s;
+}
+
+#menudrop ul li {
+   position: relative;
+   float: left;
+   margin: 0;
+   padding: 0;
+   width: 145px;
+}
+
+#menudrop ul li.current-menu-item {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-bottom-width: 2px;
+   border-bottom-style: solid;
+}
+
+#menudrop ul ul {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   padding: 0;
+   text-align: left;
+}
+
+#menudrop ul ul ul {
+   top: 0;
+   left: 100%;
+}
+
+#menudrop ul ul ul ul {
+   max-height: 300px;
+   overflow-y: auto;
+   position: absolute;
+   left: 100%;
+   top: 0;
+   z-index: 1;
+}
+
+#menu ul li a.active,
+#menu ul li a:focus,
+#menu ul li a:hover {
+   text-decoration: none;
+}
+
+#menudrop ul ul li {
+   float: none;
+   width: 145px;
+}
+
+#menudrop ul ul li:last-child {
+   border-bottom-width: medium;
+   border-bottom-style: none;
+}
+
+#menudrop ul ul a {
+   line-height: 120%;
+   padding: 10px 15px;
+}
+
+#menudrop ul li:hover > ul {
+   display: block;
+}
+
+#userinfo {
+   width: 100%;
+   text-align: center;
+   font-size: 10.67px;
+   padding: 3px 0;
+   z-index: 10;
+   min-width: 850px;
+   position: relative;
+   top: 35px;
+}
+
+#userinfo ul {
+   display: inline;
+   margin: 0 0.8%;
+   padding: 4px;
+}
+
+#userinfo ul li {
+   position: relative;
+   display: inline;
+   margin: 0 0.1em;
+   line-height: 20px;
+   vertical-align: middle;
+   padding: 2px;
+}
+
+#userinfo a:hover {
+   text-decoration: underline;
+}
+
+#userinfo b a {
+   font-weight: 400;
+   font-size: 0.9em;
+}
+
+#stats_bjpontos .stat,
+#stats_leeching .stat,
+#stats_ratio .stat,
+#stats_seeding .stat {
+   font-weight: 700;
+}
+
+#userinfo_username,
+#userinfo_major {
+   position: absolute;
+   top: 10px;
+   width: 202px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   text-align: center;
+   font-size: 10.67px;
+   padding: 3px 0;
+   z-index: 10;
+   border-radius: 4px;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+#userinfo_username {
+   left: 4%;
+}
+
+#userinfo_major {
+   right: 4%;
+}
+
+#userinfo_major .brackets:before,
+#userinfo_major .brackets:after {
+   font-weight: 700;
+}
+
+#searchbars {
+   position: absolute;
+   top: 265px;
+   width: 100%;
+   text-align: center;
+   padding: 4px 0;
+   min-width: 850px;
+}
+
+#searchbars input {
+   position: relative;
+   padding: 4px 10px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   font-size: 0.9em;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   border-radius: 3px;
+}
+
+#searchbars ul {
+   margin: 0 auto;
+   display: block;
+}
+
+#searchbars ul li {
+   display: inline;
+   margin: 0 1px;
+   list-style: none;
+   position: relative;
+}
+
+#searchbars ul li ul {
+   display: block;
+   position: absolute;
+   top: 1em;
+   left: 0;
+   z-index: 1000;
+   width: 12em;
+   margin-top: 12px;
+}
+
+#searchbars ul li ul li {
+   margin: 0;
+   padding: 0;
+   display: block;
+   width: 100%;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+}
+
+#searchbars ul li ul li.highlight {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+#searchbars ul li form {
+   display: inline;
+}
+
+#alerts {
+   position: relative;
+   margin-top: 32px;
+   margin-bottom: -60px;
+   padding: 10px 0;
+   width: 100%;
+   min-width: 850px;
+}
+
+.alertbar {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   text-align: center;
+   font-weight: 700;
+   font-size: 0.93em;
+   width: 432px;
+   margin: 0 auto 3px auto;
+   padding: 10px;
+   border-radius: 3px;
+}
+
+.alertbar.blend {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   width: 432px;
+   margin-top: -1px;
+}
+
+.alertbar a {
+   text-decoration: underline;
+}
+
+.alertbar a:hover {
+   text-decoration: none;
+}
+
+#cat-selector ul {
+   width: 100%;
+}
+
+#cat-selector ul li {
+   display: inline;
+   width: 12em;
+   height: 1em;
+   float: left;
+}
+
+.autocomplete-suggestions {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+.hidden,
+input.hidden {
+   display: none;
+}
+
+.thin {
+   max-width: 1228px;
+   margin: 0 auto;
+}
+
+.widethin {
+   width: 95%;
+   margin: 0 auto;
+}
+
+div.linkbox {
+   text-align: center;
+   padding: 5px;
+}
+
+.center {
+   text-align: center;
+}
+
+.right {
+   text-align: right;
+}
+
+.min_padding {
+   padding: 0;
+   margin: 0;
+}
+
+p.min_padding {
+   margin: 2px 0;
+}
+
+.nobr {
+   white-space: nowrap;
+}
+
+.number_column {
+   text-align: center;
+   padding-left: 5px;
+}
+
+.spellcheck {
+   margin: 25px 0;
+   font-size: 1.25em;
+   font-weight: 700;
+}
+
+.two_columns {
+   width: 47%;
+}
+
+.pad {
+   padding: 0.5em;
+   font-family: inter, Roboto, tahoma, helvetica, sans-serif;
+   overflow-wrap: break-word;
+   word-break: break-word;
+}
+
+.sidebar .pad {
+   padding: 0;
+}
+
+.vertical_space {
+   margin-bottom: 10px;
+}
+
+.box {
+   font-size: 11.87px;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   margin-bottom: 10px;
+   border-radius: 2px;
+}
+
+.box2 {
+   font-size: 11.87px;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   margin-bottom: 10px;
+   border-radius: 2px;
+}
+
+.pad h3,
+.pad h4,
+.padbox h3,
+.padbox h4 {
+   margin-top: 0;
+   padding-top: 0;
+}
+
+.sidebar {
+   float: right;
+   width: clamp(135px, calc(22.6vw + 44.6px), 276px);
+}
+
+.sidebar img {
+   max-width: 98%;
+   margin: 3px 0 0 0;
+}
+
+.featimg {
+   max-width: 100% !important;
+   margin: 4px 0 0 7px !important;
+}
+
+ul.collage_images {
+   padding: 0;
+   border-collapse: collapse;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-gap: 15px;
+}
+
+ul.collage_images img {
+   height: 100%;
+   width: 100%;
+   max-width: 215px;
+   max-height: 321px;
+   margin-left: 2%;
+   margin-top: 2%;
+   margin-bottom: 0;
+}
+
+.head {
+   padding: 4px;
+   border-bottom-width: 2px;
+   border-bottom-style: solid;
+}
+
+.body {
+   padding-left: 4.5px;
+   padding-right: 4.5px;
+}
+
+.main_column {
+   overflow: hidden;
+   padding-right: 10px;
+}
+
+.main_column table {
+   margin-bottom: 10px;
+}
+
+.tags {
+   padding: 0 0 0 20px;
+   font-style: italic;
+}
+
+.tags a:hover {
+   text-decoration: none;
+}
+
+.noborder {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+}
+
+ul.nobullet {
+   list-style-type: none;
+}
+
+div.sidebar #event_div {
+   margin-left: -232px;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+tr.resolution_header,
+tr.season_header,
+td.season_header {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+tr {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+td,
+th {
+   padding: 5px;
+   text-align: left;
+}
+
+.colhead {
+   font-weight: 700;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+}
+
+.width5 {
+   width: 3%;
+}
+
+.width50 {
+   width: 60%;
+}
+
+.message_table .width95 {
+   width: 37%;
+}
+
+.colhead td {
+   padding-left: 10px;
+   padding-right: 20px;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+}
+
+.colhead th {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+td.colhead {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.colhead_dark {
+   vertical-align: middle;
+   border-bottom-width: 2px;
+   border-bottom-style: solid;
+}
+
+td.label {
+   font-weight: 700;
+   width: 180px;
+   padding-top: 10px;
+}
+
+table.slice {
+   margin-top: -1px;
+}
+
+.error_message {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding: 3px 0;
+   text-align: center;
+   font-weight: 700;
+}
+
+.save_message {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding: 3px 0;
+   text-align: center;
+   font-weight: 700;
+}
+
+.noty_text {
+   margin: 0 0 0 23px;
+}
+
+.noty_message {
+   background-position: 4px 7px;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   height: 33px;
+   background-size: 26px 16px;
+   display: block;
+}
+
+.noty_buttons {
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+}
+
+.noty_buttons a {
+   border-radius: 3px;
+   margin: 5px;
+   padding: 2px 5px;
+}
+
+.elem_error {
+   border-top-width: 3px;
+   border-top-style: solid;
+   border-right-width: 3px;
+   border-right-style: solid;
+   border-bottom-width: 3px;
+   border-bottom-style: solid;
+   border-left-width: 3px;
+   border-left-style: solid;
+}
+
+ul.stats li {
+   padding: 0 0 1px 0;
+}
+
+.show_torrents {
+   width: 28px;
+   height: 28px;
+   display: inline-block;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-size: contain;
+}
+
+.hide_torrents {
+   width: 28px;
+   height: 28px;
+   display: inline-block;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-size: contain;
+}
+
+.show_torrents_link {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   width: 28px;
+   height: 28px;
+   display: block;
+}
+
+.filter_torrents {
+   width: 100%;
+   margin: auto;
+}
+
+.filter_torrents .submit {
+   text-align: right;
+   padding-top: 5px;
+}
+
+#content form.search_form + .torrent_table {
+   margin-top: 20px;
+}
+
+.cat_list tr td {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+}
+
+.torrent_table tr {
+   vertical-align: top;
+}
+
+#torrent_table {
+   border-collapse: collapse;
+   font-size: 100%;
+}
+
+.colhead .sign,
+.colhead_dark .sign {
+   padding: 0 8px;
+   vertical-align: middle;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+tr.torrent {
+   border-left-width: 1px !important;
+   border-left-style: solid !important;
+   border-right-width: 1px !important;
+   border-right-style: solid !important;
+   font-size: 11.84px;
+   transition: background-color 0.2s ease;
+}
+
+.torrent {
+   transition: background-color 0.2s ease;
+}
+
+.torrent_table div.tags {
+   font-weight: 400;
+}
+
+.torrent_table tr .center {
+   vertical-align: middle;
+   text-align: center;
+}
+
+.group_torrent span {
+   float: right;
+}
+
+.torrent span {
+   font-weight: 400;
+   float: right;
+}
+
+table#torrent_table.torrent_table {
+   margin: auto;
+}
+
+blockquote,
+blockquote blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote {
+   border-left-width: 2px;
+   border-left-style: solid;
+   border-right-width: 2px;
+   border-right-style: solid;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote {
+   border-left-width: 2px;
+   border-left-style: solid;
+   border-right-width: 2px;
+   border-right-style: solid;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
+   border-left-width: 2px;
+   border-left-style: solid;
+   border-right-width: 2px;
+   border-right-style: solid;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+:is(iframe.youtube, iframe.dailymotion) {
+   display: block;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 100%;
+   contain-intrinsic-size: 1600px 900px;
+   aspect-ratio: 16 / 9;
+   height: auto;
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   min-height: 200px;
+}
+
+.last_read {
+   width: 15px;
+   height: 15px;
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   margin-left: 5px;
+}
+
+.last_read a {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+
+.unread_locked_sticky {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.read_locked_sticky {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.unread_sticky {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.read_sticky {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.unread_locked {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.read_locked {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.unread {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.read {
+   background-position: center center;
+   background-size: 17px auto;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+table.forum_post {
+   margin: 10px 0;
+}
+
+table.forum_post td {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+td.avatar {
+   width: 158px;
+   padding: 4px;
+}
+
+table.forum_post td.body {
+   max-width: 675px;
+}
+
+.post_id {
+   font-weight: 400;
+}
+
+#forum_search_cat_list,
+#forum_search_cat_list tr {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+}
+
+.permission_head {
+   width: 400px;
+   margin: 0 auto;
+}
+
+.permissions {
+   width: 930px;
+   margin: 0 auto;
+}
+
+.permission_container {
+   float: left;
+   width: 310px;
+   padding: 5px;
+}
+
+.permission_container input {
+   margin: 0 3px 5px 0;
+   vertical-align: top;
+}
+
+.submit_container {
+   clear: both;
+   text-align: right;
+}
+
+ul .invitetree {
+   margin: 0 0 0 25px;
+}
+
+.invitetree li {
+   list-style: none;
+   margin: 10px 2px;
+}
+
+.user_options .options_list li {
+   margin: 0;
+}
+
+.left_poll {
+   width: 2px;
+   height: 9px;
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.center_poll {
+   height: 9px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.right_poll {
+   width: 2px;
+   height: 9px;
+   background-position: center center;
+   background-size: initial;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.curtain {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1001;
+}
+
+.lightbox {
+   position: fixed;
+   text-align: center;
+   top: 5%;
+   left: 5%;
+   width: 90%;
+   height: 90%;
+   padding: 0;
+   z-index: 1002;
+   overflow: auto;
+}
+
+ul.poll li {
+   padding: 0 0 0 10px;
+   margin: 0;
+   clear: left;
+}
+
+ul.poll li.graph {
+   margin-bottom: 3px;
+   padding-left: 20px;
+}
+
+.chat_mark_bg {
+   border-top-width: medium;
+   border-top-style: none;
+   border-right-width: medium;
+   border-right-style: none;
+   border-bottom-width: medium;
+   border-bottom-style: none;
+   border-left-width: medium;
+   border-left-style: none;
+   padding: 5px;
+   text-align: left;
+}
+
+select {
+   -webkit-appearance: none;
+   appearance: none;
+   background-position: right 8px center;
+   background-repeat: no-repeat;
+   background-size: 10px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.1s linear,
+      border-color 0.1s linear;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding: 5px 25px 5px 5px;
+}
+
+select:focus {
+   outline: none;
+}
+
+.open > .dropdown-menu {
+   display: block;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   overflow-y: auto;
+   z-index: 1;
+   max-height: 227px;
+   position: absolute;
+}
+
+.multiselect-container > li > a > label.radio,
+.multiselect-container > li > a > label.checkbox {
+   margin: 0;
+}
+
+.btn:hover,
+.btn:focus {
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
+   text-decoration: none !important;
+}
+
+#irtopo,
+#irfinal {
+   position: fixed;
+   right: 10px;
+   cursor: pointer;
+   width: 42px;
+   height: 42px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   text-indent: -9999px;
+   display: none;
+   border-radius: 6px;
+}
+
+#irtopo {
+   bottom: 60px;
+}
+
+#irtopo span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -8px;
+   margin-top: -12px;
+   height: 0;
+   width: 0;
+   border-top-width: 8px;
+   border-top-style: solid;
+   border-right-width: 8px;
+   border-right-style: solid;
+   border-bottom-width: 8px;
+   border-bottom-style: solid;
+   border-left-width: 8px;
+   border-left-style: solid;
+}
+
+#irtopo:hover {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   opacity: 1;
+}
+
+#irfinal {
+   bottom: 10px;
+}
+
+#irfinal span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -8px;
+   margin-top: -4px;
+   height: 0;
+   width: 0;
+   border-top-width: 8px;
+   border-top-style: solid;
+   border-right-width: 8px;
+   border-right-style: solid;
+   border-bottom-width: 8px;
+   border-bottom-style: solid;
+   border-left-width: 8px;
+   border-left-style: solid;
+}
+
+#irfinal:hover {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   opacity: 1;
+}
+
+a.BJinfoBox {
+   position: relative;
+   display: inline;
+}
+
+a.BJinfoBox span,
+form a.BJinfoBox span,
+.post_return a.BJinfoBox span {
+   position: absolute;
+   min-width: 197px;
+   line-height: 15px;
+   visibility: hidden;
+   border-radius: 6px;
+   text-decoration: none;
+   font-weight: normal;
+   padding: 7px 5px;
+   margin-left: -25px;
+   opacity: 0;
+   bottom: 0;
+   transition: opacity 0.3s,
+      bottom 0.3s;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+form a.BJinfoBox span {
+   padding: 10px 5px 5px;
+   margin-left: -20px;
+}
+
+.post_return a.BJinfoBox span {
+   line-height: 18px;
+   padding: 4px 0 4px 2px;
+   margin-left: -60px;
+}
+
+a.BJinfoBox:hover span {
+   visibility: visible;
+   bottom: 20px;
+   left: 40%;
+   margin-left: -76px;
+   z-index: 3;
+   opacity: 0.92;
+}
+
+[data-tooltip] {
+   position: relative;
+   z-index: 2;
+   cursor: pointer;
+}
+
+[data-tooltip]:after,
+[data-tooltip]:before {
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+}
+
+[data-tooltip]:before {
+   position: absolute;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -45px;
+   padding: 7px;
+   min-width: 66px;
+   border-radius: 3px;
+   content: attr(data-tooltip);
+   text-align: center;
+   font-size: 13px;
+   line-height: 1.2;
+   font-weight: 400;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+}
+
+[data-tooltip]:after {
+   position: absolute;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -5px;
+   width: 0;
+   border-top-width: 5px;
+   border-top-style: solid;
+   border-right-width: 5px;
+   border-right-style: solid;
+   border-left-width: 5px;
+   border-left-style: solid;
+   content: " ";
+   font-size: 0;
+   line-height: 0;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+   visibility: visible;
+   opacity: 1;
+   transition: all 0.3s;
+}
+
+a[data-tooltip]:hover {
+   text-decoration: none;
+}
+
+.homesldframe {
+   width: clamp(112px, calc(22.1vw + 23.5px), 250px) !important;
+   aspect-ratio: 5 / 7;
+   left: -12px;
+   top: -4px;
+   position: relative;
+   overflow: hidden;
+}
+
+li.bjqs-slide img,
+#banner-fade img,
+#banner-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   display: block;
+}
+
+ul.bjqs {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+   display: none;
+}
+
+li.bjqs-slide {
+   position: absolute;
+   display: none;
+}
+
+ul.bjqs-controls {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   z-index: 9999;
+}
+
+ul.bjqs-controls.v-centered {
+   position: absolute;
+   top: 104%;
+   left: 5%;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 12px;
+   box-sizing: border-box;
+}
+
+ul.bjqs-controls.v-centered li a {
+   display: block;
+   padding: 10px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   text-decoration: none;
+   border-radius: 6px;
+   font-size: 12px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a,
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+   min-width: 100px;
+   cursor: pointer;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   vertical-align: middle;
+   text-align: center;
+   padding: 6px 8px;
+   letter-spacing: 0.075em;
+}
+
+ul.bjqs-controls.v-centered li a:hover {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   text-decoration: none;
+}
+
+ol.bjqs-markers {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+}
+
+ol.bjqs-markers.h-centered {
+   text-align: center;
+}
+
+ol.bjqs-markers li {
+   display: inline;
+}
+
+ol.bjqs-markers li a {
+   display: inline-block;
+   padding: 5px 10px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   margin: 5px;
+   text-decoration: none;
+   border-radius: 3px;
+}
+
+ol.bjqs-markers li a:hover,
+ol.bjqs-markers li.active-marker a {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+p.bjqs-caption {
+   font-family: "Varela Round", sans-serif;
+   display: block;
+   width: 190px;
+   margin: 25px;
+   padding: 2%;
+   position: absolute;
+   bottom: -10px;
+   font-size: 14px;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-radius: 3px;
+}
+
+#container {
+   position: relative;
+   width: 263px;
+   padding-top: 10px;
+   padding-bottom: 0;
+}
+
+#banner-fade,
+#banner-slide {
+   margin-bottom: 40px;
+   margin-top: -12px;
+}
+
+.internalbox {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   padding: 1px 2px;
+   border-left-width: 3px;
+   border-left-style: solid;
+   border-right-width: 3px;
+   border-right-style: solid;
+   border-radius: 4px;
+   transition: background 0.2s ease;
+   position: relative;
+}
+
+.internalbox:hover {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.internalbox::before {
+   content: "" !important;
+   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free" !important;
+   font-size: 10px !important;
+   margin-right: 2px !important;
+}
+
+.internalbox:hover::after {
+   content: "Este é um lançamento Internal, feito por um uploader do BJ-Share.";
+   position: absolute;
+   bottom: 130%;
+   left: 240%;
+   transform: translateX(-50%);
+   padding: 6px 10px;
+   border-radius: 4px;
+   font-size: 11px !important;
+   line-height: 1.4;
+   white-space: nowrap;
+   z-index: 9999;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   font-weight: 500;
+   pointer-events: none;
+}
+
+.torrent_label.bjtooltip.leeching,
+.torrent_label.bjtooltip.seeding,
+.torrent_label.bjtooltip.tl_snatched,
+.torrent_label.bjtooltip.snatched,
+.torrent_label.bjtooltip.repack {
+   display: inline-block;
+   font-size: 0;
+   line-height: 0;
+   overflow: hidden;
+   vertical-align: -3px;
+   flex-shrink: 0;
+   transition: transform 0.2s ease;
+}
+
+.torrent_label.bjtooltip.leeching {
+   width: 15px;
+   height: 14px;
+   background-position: center center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.torrent_label.bjtooltip.seeding {
+   width: 15px;
+   height: 13px;
+   background-position: center center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.torrent_label.bjtooltip.tl_snatched,
+.torrent_label.bjtooltip.snatched {
+   width: 15px;
+   height: 15px;
+   background-position: center center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.torrent_label.bjtooltip.repack {
+   width: 15px;
+   height: 14px;
+   background-position: center center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+.torrent_label.bjtooltip.leeching:hover,
+.torrent_label.bjtooltip.seeding:hover,
+.torrent_label.bjtooltip.tl_snatched:hover,
+.torrent_label.bjtooltip.snatched:hover,
+.torrent_label.bjtooltip.repack:hover {
+   transform: scale(1.15);
+}
+
+dialog {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   border-radius: 8px;
+   padding: 1.5rem;
+   max-width: 90vw;
+   max-height: 90vh;
+   overflow: auto;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+@keyframes jelly-effect {
+0%,
+   100% {
+   transform: scale(1, 1);
+}
+
+25% {
+   transform: scale(0.9, 1.1);
+}
+
+50% {
+   transform: scale(1.1, 0.9);
+}
+
+75% {
+   transform: scale(0.95, 1.05);
+}
+
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   text-decoration: none;
+   animation: jelly-effect 0.5s;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+   cursor: pointer;
+   outline: 0;
+   transition: background 0.15s linear,
+      box-shadow 0.15s linear;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   border-radius: 5px;
+   padding: 6px 10px;
+   margin: 0.5% 0 0 0;
+   backface-visibility: hidden;
+   transform: translateZ(0);
+   -webkit-font-smoothing: antialiased;
+}
+
+button {
+   display: inline-flex;
+}
+
+button[onclick="atualizarLancamentos()"] {
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   padding-top: 8px;
+   padding-bottom: 7px;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   cursor: default;
+}
+
+input[value="Deletar"],
+input[value="Delete"],
+input[value="Remover"] {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+}
+
+input[value="Deletar"]:hover,
+input[value="Delete"]:hover,
+input[value="Remover"]:hover,
+input[value="Deletar"]:focus,
+input[value="Delete"]:focus,
+input[value="Remover"]:focus {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   animation: jelly-effect 0.5s;
+}
+
+@keyframes attn-cycle {
+0%,
+   12%,
+   100% {
+   transform: translateY(0);
+   filter: brightness(1);
+   box-shadow: 0 0 0 0 rgba(244,188,100,0);
+}
+
+5% {
+   transform: translateY(-2px);
+   filter: brightness(1.25);
+   box-shadow: 0 0 0 5px rgba(244,188,100,0.4);
+}
+
+10% {
+   transform: translateY(0);
+   filter: brightness(1);
+   box-shadow: 0 0 0 10px rgba(244,188,100,0);
+}
+
+}
+
+.brackets[onclick*="gorjeta"] {
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+   border-radius: 50px;
+   will-change: transform, box-shadow;
+   transform: translateZ(0);
+   transition: transform 0.2s,
+      filter 0.2s;
+   animation: attn-cycle 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+*,
+   *::before,
+   *::after {
+   animation-duration: 0.001ms !important;
+   animation-iteration-count: 1 !important;
+   transition-duration: 0.001ms !important;
+   scroll-behavior: auto !important;
+}
+
+}
+
+#noteAlertMsg {
+   position: absolute;
+   z-index: 6001;
+   top: 0;
+   left: 0;
+   right: 0;
+   text-align: center;
+   line-height: 2.5;
+   overflow: hidden;
+}
+
+.browse_rating {
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-right-width: 1px;
+   border-right-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-left-width: 1px;
+   border-left-style: solid;
+   border-radius: 3px;
+}
+
+.field_div label:first-child {
+   width: max-content;
+   text-align: left;
+   margin-right: 10px;
+}
+
+/* MENU FIXO: troque somente a próxima linha para
+ * @media not all { para desativar. Até 900px o menu rola com a página. */
+@media all {
+#menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 2000;
+}
+
+#userinfo {
+   position: fixed;
+   top: 32px;
+   left: 0;
+   width: 100%;
+   z-index: 1999;
+}
+
+body {
+   padding-top: 60px;
+}
+
+#content {
+   top: 65px;
+}
+
+.thin {
+   margin: 0 auto;
+   padding-top: 5px;
+}
+
+#searchbars ul {
+   margin: 90px auto;
+   display: block;
+}
+
+#searchbars {
+   pointer-events: none;
+}
+
+#searchbars * {
+   pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+#menu,
+      #userinfo {
+   position: static;
+   top: auto;
+}
+
+body {
+   padding-top: 0;
+}
+
+.thin {
+   margin: 0 auto;
+   padding-top: 0;
+}
+
+#searchbars ul {
+   margin: 0 auto;
+}
+
+#searchbars {
+   pointer-events: auto;
+}
+
+}
+
+}
+
+@media (min-width: 1921px) {
+.thin {
+   max-width: 1400px;
+}
+
+}
+
+@media (min-width: 3840px) {
+.thin {
+   max-width: 1600px;
+}
+
+}
+
+@media (max-width: 1024px) {
+body,
+   #menu,
+   #userinfo,
+   #searchbars,
+   #alerts {
+   min-width: 0;
+}
+
+body {
+   overflow-x: hidden;
+}
+
+.thin,
+   .widethin {
+   max-width: 100%;
+   width: 100% !important;
+}
+
+.two_columns {
+   width: 100%;
+}
+
+.permissions {
+   width: 100%;
+}
+
+.permission_container {
+   float: none;
+   width: 100%;
+}
+
+}
+
+@media (max-width: 768px) {
+.box,
+   .box2 {
+   font-size: 10.5px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a,
+   ul.bjqs-controls.v-centered li.bjqs-prev a {
+   min-width: 0;
+   font-size: 10px;
+   padding: 5px 6px;
+}
+
+}
+
+@media (max-width: 550px) {
+.main_column {
+   padding-right: 6px;
+}
+
+}
+
+@media (max-width: 420px) {
+ul.bjqs-controls.v-centered li.bjqs-next a,
+   ul.bjqs-controls.v-centered li.bjqs-prev a {
+   font-size: 9px;
+   padding: 4px 3px;
+   letter-spacing: 0;
+}
+
+}
+
+@media (max-width: 300px) {
+.sidebar {
+   float: none;
+   width: 100%;
+   margin: 0 0 10px 0;
+}
+
+.main_column {
+   padding-right: 0;
+}
+
+div.sidebar #event_div {
+   margin-left: 0;
+}
+
+.homesldframe {
+   width: 250px !important;
+   margin: 0 auto;
+}
+
+}
+
+@media (max-width: 900px) {
+#header {
+   height: auto;
+   padding-bottom: 10px;
+   background-size: contain;
+}
+
+#logo {
+   position: static;
+   height: auto;
+   padding: 10px 0;
+}
+
+#logo a {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 320px;
+   height: auto;
+   aspect-ratio: 320 / 150;
+}
+
+#userinfo_username,
+   #userinfo_major {
+   position: static;
+   width: 90%;
+   margin: 4px auto;
+   left: auto;
+   right: auto;
+}
+
+#userinfo {
+   position: static;
+   top: auto;
+}
+
+#menu {
+   position: static;
+   top: auto;
+   width: 100%;
+}
+
+#menudrop ul {
+   float: none;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#menudrop ul li {
+   float: none;
+   width: auto;
+}
+
+#menudrop ul ul {
+   position: static;
+}
+
+#menudrop ul ul ul,
+   #menudrop ul ul ul ul {
+   position: static;
+   left: auto;
+   top: auto;
+}
+
+#searchbars {
+   position: static;
+   top: auto;
+   width: 100%;
+   min-width: 0;
+}
+
+#searchbars ul li {
+   display: inline-block;
+   margin: 2px;
+}
+
+#alerts {
+   position: static;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   min-width: 0;
+}
+
+#content {
+   top: 0;
+   width: 100%;
+   padding: 0 10px;
+}
+
+#footer {
+   margin-top: 20px;
+}
+
+}
+
+/* Ajustes mínimos encontrados na prévia do exemplo, comuns aos dez temas. */
+@media (min-width: 901px) {
+   /* O left global de ul ganha de right quando ambos têm largura fixa. */
+   #userinfo_major {
+      left: auto;
+   }
+}
+
+@media (max-width: 900px) {
+   /* position: static não empilha um ul que ainda tem display: inline. */
+   #userinfo #userinfo_username,
+   #userinfo #userinfo_major {
+      display: block;
+   }
+
+   /* Os 432px do alerta não cabem em uma tela de 320–420px. */
+   .alertbar {
+      max-width: 100%;
+   }
+}

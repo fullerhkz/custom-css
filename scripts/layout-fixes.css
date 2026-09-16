@@ -1,0 +1,20 @@
+/* Ajustes mínimos encontrados na prévia do exemplo, comuns aos dez temas. */
+@media (min-width: 901px) {
+   /* O left global de ul ganha de right quando ambos têm largura fixa. */
+   #userinfo_major {
+      left: auto;
+   }
+}
+
+@media (max-width: 900px) {
+   /* position: static não empilha um ul que ainda tem display: inline. */
+   #userinfo #userinfo_username,
+   #userinfo #userinfo_major {
+      display: block;
+   }
+
+   /* Os 432px do alerta não cabem em uma tela de 320–420px. */
+   .alertbar {
+      max-width: 100%;
+   }
+}
