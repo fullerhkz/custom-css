@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prévia dos temas BJ-Share</title>
-<link id="theme" rel="stylesheet" href="../new/BJ-Midnight.css">
+<link id="theme" rel="stylesheet" href="../BJ-Midnight.css">
 <body id="index">
 <div id="wrapper">
   <div id="header">
@@ -65,7 +65,7 @@ function toggleFixed() {
   }
 }
 selector.addEventListener('change', () => {
-  document.querySelector('#theme').href = '../new/BJ-' + selector.value + '.css';
+  document.querySelector('#theme').href = '../BJ-' + selector.value + '.css';
 });
 document.querySelector('#theme').addEventListener('load', toggleFixed);
 document.querySelector('#fixed-toggle').addEventListener('change', toggleFixed);

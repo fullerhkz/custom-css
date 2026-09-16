@@ -6,20 +6,22 @@ Os arquivos disponíveis aqui são folhas de estilo organizadas para facilitar c
 
 ## Revisão de 16/09/2026
 
-Os dez temas novos estão em **[new/](new/)**. Cada CSS é independente e pode ser usado inteiro, sem `@import` ou arquivos CSS auxiliares. Os arquivos na raiz continuam sendo a versão anterior; seus caminhos não foram substituídos.
+A **raiz da `main` sempre contém a versão atual dos dez temas**, publicada em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css). Cada CSS é independente e pode ser usado inteiro, sem `@import` ou arquivos CSS auxiliares.
+
+A versão substituída está arquivada em [old/ee82239/](old/ee82239/), além do histórico Git. Os originais usados como fonte de cores permanecem em [old/](old/). A pasta temporária `new/` foi removida; gerador, testes e prévia usam os CSS da raiz. Nas próximas atualizações, preserve a versão substituída em `old/<commit>/` e publique a nova na raiz da `main`.
 
 | Tema | Nova versão |
 | --- | --- |
-| Black | [BJ-Black.css](new/BJ-Black.css) |
-| Blue | [BJ-Blue.css](new/BJ-Blue.css) |
-| Clean | [BJ-Clean.css](new/BJ-Clean.css) |
-| DarkBlue | [BJ-DarkBlue.css](new/BJ-DarkBlue.css) |
-| Darkness | [BJ-Darkness.css](new/BJ-Darkness.css) |
-| Grey | [BJ-Grey.css](new/BJ-Grey.css) |
-| Midnight | [BJ-Midnight.css](new/BJ-Midnight.css) |
-| NewBlack | [BJ-NewBlack.css](new/BJ-NewBlack.css) |
-| Pink | [BJ-Pink.css](new/BJ-Pink.css) |
-| Red | [BJ-Red.css](new/BJ-Red.css) |
+| Black | [BJ-Black.css](BJ-Black.css) |
+| Blue | [BJ-Blue.css](BJ-Blue.css) |
+| Clean | [BJ-Clean.css](BJ-Clean.css) |
+| DarkBlue | [BJ-DarkBlue.css](BJ-DarkBlue.css) |
+| Darkness | [BJ-Darkness.css](BJ-Darkness.css) |
+| Grey | [BJ-Grey.css](BJ-Grey.css) |
+| Midnight | [BJ-Midnight.css](BJ-Midnight.css) |
+| NewBlack | [BJ-NewBlack.css](BJ-NewBlack.css) |
+| Pink | [BJ-Pink.css](BJ-Pink.css) |
+| Red | [BJ-Red.css](BJ-Red.css) |
 
 A estrutura vem de [examples/CSS new.css](examples/CSS%20new.css), cópia do exemplo recebido com extensão `.cts`. As cores, imagens, gradientes e sombras vêm de **[old/](old/)**, recuperado do commit [`ba4e315`](https://github.com/fullerhkz/custom-css/commit/ba4e31540ff0843df7c2a8e4b3f6fbc07cc894c4), anterior à reformulação responsiva. A aparência é transferida por seletor e declaração, preservando a ordem e `!important`, inclusive as diferenças entre temas claros e escuros. Não há substituição aproximada de paleta.
 

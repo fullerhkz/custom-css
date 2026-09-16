@@ -204,7 +204,7 @@ def main():
                          + '/* ===== Estrutura comum e menu opcional do exemplo ===== */\n' + layout
                          + FIXES.read_text())
             generated = '\n'.join(line.rstrip() for line in generated.splitlines()) + '\n'
-            (ROOT / 'new' / f'{theme}.css').write_text(generated)
+            (ROOT / f'{theme}.css').write_text(generated)
             print(f'{theme}: {len(generated)} bytes')
         browser.close()
 

@@ -73,11 +73,16 @@ def main():
             for width in WIDTHS:
                 render(text, width)
                 reference[enabled, width] = styles(page, LAYOUT_SELECTORS, LAYOUT_PROPS)
-        for path in sorted((ROOT / 'new').glob('BJ-*.css')):
+        current_themes = sorted(ROOT.glob('BJ-*.css'))
+        assert len(current_themes) == 10
+        assert {p.name for p in current_themes} == {p.name for p in (ROOT / 'old').glob('BJ-*.css')}
+        for path in current_themes:
             theme = path.stem
             old_bytes = (ROOT / 'old' / path.name).read_bytes()
             archived = subprocess.check_output(['git', 'show', f'ba4e315:{path.name}'])
             assert old_bytes == archived, f'{theme}: archive changed'
+            assert (ROOT / 'old/ee82239' / path.name).read_bytes() == subprocess.check_output(
+                ['git', 'show', f'ee82239:{path.name}']), f'{theme}: previous published archive changed'
             new = path.read_text()
             errors = syntax_errors(new)
             assert not errors, (theme, errors)

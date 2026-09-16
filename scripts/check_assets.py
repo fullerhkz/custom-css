@@ -15,7 +15,7 @@ def check(url):
 
 
 if __name__ == '__main__':
-    urls = sorted({url for path in (ROOT / 'new').glob('*.css')
+    urls = sorted({url for path in ROOT.glob('*.css')
                    for url in re.findall(r'url\("([^\"]+)"\)', path.read_text())})
     with ThreadPoolExecutor(max_workers=8) as executor:
         results = list(executor.map(check, urls))
