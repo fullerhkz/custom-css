@@ -1,0 +1,46 @@
+{
+  "banner": "https://i.bj-share.info/d8837e6abd86bcefd987e116dc58b4ef.png",
+  "previousRegressionReproduced": true,
+  "checks": [
+    {
+      "width": 375,
+      "fixedMenu": true,
+      "bannerVisible": true
+    },
+    {
+      "width": 375,
+      "fixedMenu": false,
+      "bannerVisible": true
+    },
+    {
+      "width": 900,
+      "fixedMenu": true,
+      "bannerVisible": true
+    },
+    {
+      "width": 900,
+      "fixedMenu": false,
+      "bannerVisible": true
+    },
+    {
+      "width": 1440,
+      "fixedMenu": true,
+      "bannerVisible": true
+    },
+    {
+      "width": 1440,
+      "fixedMenu": false,
+      "bannerVisible": true
+    },
+    {
+      "width": 1910,
+      "fixedMenu": true,
+      "bannerVisible": true
+    },
+    {
+      "width": 1910,
+      "fixedMenu": false,
+      "bannerVisible": true
+    }
+  ]
+}

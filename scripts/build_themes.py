@@ -108,6 +108,11 @@ def transform(nodes, cache, theme, mode, keyframes=None):
                     continue
                 for prop, value, important in split(d, cache, theme):
                     if mode == 'paint':
+                        # Legacy NewBlack hid this black background with width:0.
+                        # The common layout gives #logo width:100%, so its old
+                        # paint would cover the banner drawn by parent #header.
+                        if theme == 'BJ-NewBlack' and selector == '#logo' and prop == 'background-color':
+                            value = 'transparent'
                         # Background geometry describes the image. The common
                         # layout below can still resize it at mobile breakpoints.
                         if is_paint(prop) or prop in BACKGROUND:

@@ -10,3 +10,5 @@ Este é o último commit da linha principal antes de `2b1a758` (`feat(css): add 
 O teste `scripts/validate_themes.py` compara os bytes de cada arquivo com `git show ba4e315:<nome>` e registra o SHA-256 no relatório. Até erros legados, como o `ECECEC` solto no Blue, são preservados neste arquivo histórico; os temas atuais estão na raiz da `main`.
 
 A subpasta [ee82239/](ee82239/) preserva os dez CSS que estavam publicados na raiz antes da promoção dos temas novos, byte a byte conforme o commit `ee8223954fb463cf4a383be5bec362d275e3af65`. Assim, a URL principal sempre serve o tema atual e as duas gerações anteriores permanecem no GitHub.
+
+A subpasta [d0d6041/](d0d6041/) preserva o NewBlack publicado antes da correção do fundo preto de `#logo`, que cobria o banner na estrutura nova. Os outros nove temas não foram alterados nessa correção.

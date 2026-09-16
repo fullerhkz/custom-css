@@ -33,6 +33,7 @@ Em cada arquivo novo, procure o comentário `MENU FIXO`. A única regra `@media 
 
 - [scripts/layout-fixes.css](scripts/layout-fixes.css) contém três correções comuns ao exemplo: posicionamento do bloco de perfil à direita, empilhamento dos blocos de usuário no celular e limite de largura dos alertas. Essas regras já estão incorporadas nos dez CSS.
 - A declaração inválida `ECECEC`, encontrada no `tbody` do Blue antigo, é omitida na geração. O arquivo arquivado permanece intacto.
+- No NewBlack, o fundo de `#logo` é transparente: o preto do tema antigo ficava invisível com largura zero, mas cobria o banner quando aplicado ao bloco de largura total do exemplo. A imagem original de `#header` foi mantida. O teste visual [scripts/validate_newblack_banner.py](scripts/validate_newblack_banner.py) reproduz a falha anterior e compara a imagem renderizada em oito cenários.
 - URLs relativas de imagens foram transformadas em URLs HTTPS do BJ-Share. As pastas nativas de Midnight, DarkBlue, Darkness, Red e Pink retornaram 404. Nesses casos, somente os ícones genéricos relativos usam os recursos compartilhados do Black (temas escuros) ou Blue (Pink). Logos, banners, texturas e imagens com URLs explícitas mantêm suas fontes antigas.
 
 ### Prévia e validação
@@ -48,6 +49,7 @@ python -m venv .venv
 .venv/bin/python scripts/validate_themes.py
 .venv/bin/python scripts/check_assets.py
 .venv/bin/python scripts/capture_preview.py
+.venv/bin/python scripts/validate_newblack_banner.py
 ```
 
 Os scripts usam `/usr/bin/google-chrome-stable`; ajuste esse caminho se o Chrome estiver instalado em outro local. Resultados: [comparação dos temas](validation/report.json) e [disponibilidade das imagens](validation/assets.json). As capturas são geradas em `validation/screenshots/` e não são versionadas.
