@@ -1,124 +1,44 @@
-/* ====================================================================
- * BJ-Share Custom CSS — Tema: BJ-Darkness
- * Versão: 2.0 (Otimizado, Modular e Reorganizado)
- * Descrição: Tema ultra-escuro (deep dark) para ambientes com pouca luz e economia visual.
- * Paleta principal: Fundo: #1a1a1a / Texto: #fff, #ccc / Realces: #444, #555
- *
- * ÍNDICE DAS SEÇÕES:
- *   1. DEFAULTS AUXILIARES (@layer bj-defaults)
- *   2. PALETA DE CORES E APARÊNCIA ESPECÍFICA DO TEMA
- *      2.1  Fundo Geral, Tipografia Base e Listas
- *      2.2  Links, Estados de Hover e Artistas Similares
- *      2.3  Formulários, Campos de Entrada e Barra BBCode
- *      2.4  Imagens, Badges de Status e Indicadores de Ratio
- *      2.5  Cabeçalho, Logotipo e Rodapé
- *      2.6  Menu Principal e Menus Dropdown
- *      2.7  Barra de Informações do Usuário e Estatísticas
- *      2.8  Barras de Pesquisa e Notificações de Alerta
- *      2.9  Estrutura de Conteúdo, Caixas e Painéis
- *      2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- *      2.11 Listagem de Torrents, Detalhes e Tópicos
- *      2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
- *      2.13 Chat e Mensagens Rápidas (Shoutbox)
- *      2.14 Botões, Controles e Menus de Seleção
- *      2.15 Atalhos Fixos de Navegação (#irtopo, #irfinal)
- *      2.16 Tooltips Informativos e Caixas Flutuantes
- *      2.17 Sliders e Carrossel de Destaques (BJQS)
- *      2.18 Badges Internos, Modais, Diálogos e Avisos
- *   3. ESTRUTURA GLOBAL E LAYOUT RESPONSIVO (BASE COMUM)
- *      3.1  Reset Global de Box Model e Fundo Base
- *      3.2  Tipografia e Elementos Básicos
- *      3.3  Links e Estados de Texto
- *      3.4  Formulários, Campos e Mídia Básica
- *      3.5  Chat, Formulários e Controles
- *      3.6  Indicadores de Ratio
- *      3.7  Tamanhos BBCode
- *      3.8  Estrutura Principal da Página
- *      3.9  Menu Principal e Dropdowns
- *      3.10 Barra de Usuário e Estatísticas (#userinfo)
- *      3.11 Busca, Alertas e Seletores (#searchbars, #alerts)
- *      3.12 Utilitários de Visibilidade e Alinhamento
- *      3.13 Containers, Caixas, Sidebar e Imagens
- *      3.14 Tabelas, Cabeçalhos e Mensagens
- *      3.15 Listagem e Filtros de Torrents
- *      3.16 Citações e Mídia Embutida
- *      3.17 Fórum, Leitura e Estados de Tópicos
- *      3.18 Permissões, Enquetes e Overlays
- *      3.19 Selects, Multiselect e Dropdowns
- *      3.20 Atalhos Fixos de Navegação (#irtopo, #irfinal)
- *      3.21 Tooltips BJinfoBox e Data-Tooltip
- *      3.22 Info Boxes e Imagens de Destaque
- *      3.23 Slider BJQS e Carrossel
- *      3.24 Marcadores Internos e Labels de Torrent
- *      3.25 Diálogos e Modais
- *      3.26 Animações nos Botões (Jelly Effect e Botões Destrutivos)
- *      3.27 Acessibilidade: Respeita Redução de Movimento
- *      3.28 Alertas e Ajustes Finais
- *   4. CONTROLE DO MENU FIXO (STICKY NAVIGATION)
- *      Troque '@media all' por '@media not all' na Seção 4 para desligar o menu fixo.
- *   5. MEDIA QUERIES E RESPONSIVIDADE (MOBILE / TABLET / 4K)
- *   6. AJUSTES FINAIS DE LAYOUT E COMPATIBILIDADE MOBILE
- * ==================================================================== */
+/* BJ-Share — BJ-Clean — base CSS new, cores/imagens de ba4e315.
+ * Gerado por scripts/build_themes.py. Arquivo independente, sem @import. */
 
-/* ====================================================================
- * SEÇÃO 1: DEFAULTS AUXILIARES (COMPONENTES MODERNOS)
- * Aplicação em camada (@layer bj-defaults) para garantir baixa especificidade
- * e fácil sobrescrita por regras nativas do tema.
- * ==================================================================== */
+/* Cores auxiliares derivadas deste tema antigo, para componentes novos. */
 @layer bj-defaults {
-   input,
-   textarea,
-   .sceditor-container textarea {
-      color: rgb(221, 221, 221);
-   }
-
-   dialog {
-      color: #fff;
-      background-color: #323131;
-   }
-
-   .sceditor-container {
-      background-color: rgb(24, 24, 24);
-   }
-
-   .sceditor-container:focus-within {
-      border-color: #444;
-      box-shadow: 0 0 15px #555;
-   }
+input, textarea, .sceditor-container textarea {
+   color: rgb(0, 0, 0);
 }
 
-/* ====================================================================
- * SEÇÃO 2: PALETA DE CORES E APARÊNCIA ESPECÍFICA DO TEMA
- * Cores de fundo, texto, bordas, sombras e imagens exclusivas deste tema.
- * ==================================================================== */
-/* ----------------------------------------------------------------------
- * 2.1 Fundo Geral, Tipografia Base e Listas
- * ---------------------------------------------------------------------- */
+dialog {
+   color: rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+}
+
+.sceditor-container {
+   background-color: rgb(232, 232, 232);
+}
+
+.sceditor-container:focus-within {
+   border-color: rgb(153, 153, 153);
+   box-shadow: 0 0 15px rgb(153, 153, 153);
+}
+
+}
+
+/* ===== Aparência original: cores, imagens e sombras ===== */
 body {
-   color: #C6C7CF;
-   background-color: rgb(24, 24, 26) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
+   color: #000;
+   background-color: #eaeaea;
 }
 
-/* ----------------------------------------------------------------------
- * 2.2 Links, Estados de Hover e Artistas Similares
- * ---------------------------------------------------------------------- */
 a {
    border-top-color: currentcolor;
    border-right-color: currentcolor;
    border-bottom-color: currentcolor;
    border-left-color: currentcolor;
-   color: #bdc0c5;
+   color: #222;
 }
 
 a:hover {
-   color: #aaa;
+   color: #000;
 }
 
 a.similar_artist {
@@ -143,18 +63,8 @@ a.similar_artist:hover {
    border-left-color: rgb(255, 255, 255);
 }
 
-/* ----------------------------------------------------------------------
- * 2.1 Fundo Geral, Tipografia Base e Listas
- * ---------------------------------------------------------------------- */
-h2 {
-   color: #fff;
-}
-
-/* ----------------------------------------------------------------------
- * 2.3 Formulários, Campos de Entrada e Barra BBCode
- * ---------------------------------------------------------------------- */
 input {
-   background-color: rgb(24, 24, 24);
+   background-color: rgb(232, 232, 232);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -166,12 +76,11 @@ input {
    border-right-color: rgba(49, 47, 47, 0.94);
    border-bottom-color: rgba(49, 47, 47, 0.94);
    border-left-color: rgba(49, 47, 47, 0.94);
-   color: #ddd;
    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
 }
 
 textarea {
-   background-color: rgb(24, 24, 24);
+   background-color: rgb(232, 232, 232);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -183,25 +92,13 @@ textarea {
    border-right-color: rgba(49, 47, 47, 0.94);
    border-bottom-color: rgba(49, 47, 47, 0.94);
    border-left-color: rgba(49, 47, 47, 0.94);
-   color: #ddd;
    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
 }
 
-.BBCodeToolbar-icon {
-   fill: #777;
-}
-
-input:focus,
-form input:focus,
-form textarea:focus,
-textarea:focus,
-form button:focus {
+input:focus, form input:focus, form textarea:focus, textarea:focus, form button:focus {
    border-color: #999;
 }
 
-/* ----------------------------------------------------------------------
- * 2.4 Imagens, Badges de Status e Indicadores de Ratio
- * ---------------------------------------------------------------------- */
 img {
    border-top-color: currentcolor;
    border-right-color: currentcolor;
@@ -261,71 +158,23 @@ img {
    color: #418b00;
 }
 
-span.size1 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size2 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size3 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size4 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size5 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size6 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size7 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size8 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size9 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-span.size10 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* ----------------------------------------------------------------------
- * 2.5 Cabeçalho, Logotipo e Rodapé
- * ---------------------------------------------------------------------- */
 #header {
    background-color: initial;
-   background-image: url("https://i.bj-share.info/46ffa0586e35ee56f0a4c00728322056.gif");
+   background-image: url("https://i.bj-share.info/b0f204dc5c4ffc13778787ff1a29831b.png");
    background-position: center top;
    background-size: initial;
    background-repeat: no-repeat;
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+#content {
+   background-color: #eaeaea;
 }
 
 #footer {
-   color: #fff;
-   background-color: rgb(27, 27, 27);
-   background-image: url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png");
-   background-position: center 184px;
-   background-size: initial;
-   background-repeat: repeat-x;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-color: rgb(36, 36, 36);
    box-shadow: 0 0 10px 1px #000;
 }
 
@@ -343,16 +192,9 @@ span.size10 {
    border-left-color: currentcolor;
 }
 
-/* ----------------------------------------------------------------------
- * 2.6 Menu Principal e Menus Dropdown
- * ---------------------------------------------------------------------- */
 #menu {
-   background-color: #202021;
-   box-shadow: 0 1px 3px #000;
-}
-
-#menudrop ul a {
-   color: #ccc;
+   background-color: #D7D7D7;
+   box-shadow: 0 2px 4px #9F9F9F;
 }
 
 #menudrop ul li.current-menu-item {
@@ -367,44 +209,39 @@ span.size10 {
 }
 
 #menudrop ul ul {
-   background-color: #1f1f20;
+   background-color: #f2f2f2;
 }
 
 #menudrop ul ul ul ul {
-   background-color: #1f1f20;
+   background-color: #f2f2f2;
 }
 
 #menudrop ul li:hover {
-   background-color: #1b1b1c;
+   background-color: rgb(238, 238, 238);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
 }
 
-#menu ul li a.active,
-#menu ul li a:focus,
-#menu ul li a:hover {
+#menu ul li a.active, #menu ul li a:focus, #menu ul li a:hover {
    color: #565656;
 }
 
-/* ----------------------------------------------------------------------
- * 2.7 Barra de Informações do Usuário e Estatísticas
- * ---------------------------------------------------------------------- */
 #userinfo {
-   background-color: rgb(24, 24, 26) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
-   color: #777;
+   background-color: #eaeaea;
+   color: #b5b5b5;
 }
 
 #userinfo ul li {
-   color: #ddd;
+   color: #000;
 }
 
 #userinfo a {
-   color: #bbb;
+   color: #222;
 }
 
 #stats_seeding .stat {
@@ -416,7 +253,7 @@ span.size10 {
 }
 
 #stats_bjpontos .stat {
-   color: #E5C599;
+   color: #B39874;
 }
 
 #userinfo_username {
@@ -443,11 +280,17 @@ span.size10 {
    color: #777;
 }
 
-/* ----------------------------------------------------------------------
- * 2.8 Barras de Pesquisa e Notificações de Alerta
- * ---------------------------------------------------------------------- */
 #searchbars input {
-   background-color: rgba(24, 25, 26, 0.9);
+   color: #444;
+   border-top-color: rgb(204, 204, 204);
+   border-right-color: rgb(204, 204, 204);
+   border-bottom-color: rgb(204, 204, 204);
+   border-left-color: rgb(204, 204, 204);
+   background-color: #D3D3D3;
+}
+
+#searchbars ul {
+   background-color: rgb(210, 210, 210);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -455,7 +298,6 @@ span.size10 {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   color: #ddd9;
 }
 
 #searchbars ul li ul li {
@@ -481,35 +323,17 @@ span.size10 {
 }
 
 #alerts {
-   background-color: rgb(24, 24, 26) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
+   background-color: #eaeaea;
 }
 
 #alerts a {
-   color: #ccc;
+   color: #555;
 }
 
 .alertbar {
-   background-color: rgba(45, 46, 47, 0.46);
-   border-top-color: rgb(53, 51, 51);
-   border-right-color: rgb(53, 51, 51);
-   border-bottom-color: rgb(53, 51, 51);
-   border-left-color: rgb(53, 51, 51);
-   color: #ccc;
+   background-color: #FFF;
+   color: #444;
    box-shadow: 0px 0px 2px #000;
-}
-
-.alertbar.blend {
-   border-top-color: rgb(53, 51, 51);
-   border-right-color: rgb(53, 51, 51);
-   border-bottom-color: rgb(53, 51, 51);
-   border-left-color: rgb(53, 51, 51);
 }
 
 .alertbar a {
@@ -520,28 +344,26 @@ span.size10 {
    color: #777;
 }
 
-/* ----------------------------------------------------------------------
- * 2.9 Estrutura de Conteúdo, Caixas e Painéis
- * ---------------------------------------------------------------------- */
 .box {
-   background-color: #202021;
-   border-top-color: rgb(48, 48, 48);
-   border-right-color: rgb(48, 48, 48);
-   border-bottom-color: rgb(48, 48, 48);
-   border-left-color: rgb(48, 48, 48);
+   background-color: #fff;
+   border-top-color: rgb(202, 202, 202);
+   border-right-color: rgb(202, 202, 202);
+   border-bottom-color: rgb(202, 202, 202);
+   border-left-color: rgb(202, 202, 202);
    box-shadow: 0 1px 3px #000;
 }
 
 .box2 {
-   background-color: #202021;
-   border-top-color: rgb(48, 48, 48);
-   border-right-color: rgb(48, 48, 48);
-   border-bottom-color: rgb(48, 48, 48);
-   border-left-color: rgb(48, 48, 48);
+   background-color: #fff;
+   border-top-color: rgb(202, 202, 202);
+   border-right-color: rgb(202, 202, 202);
+   border-bottom-color: rgb(202, 202, 202);
+   border-left-color: rgb(202, 202, 202);
 }
 
 .head {
-   background-color: #1a1a1a;
+   border-bottom-color: rgb(102, 102, 102);
+   background-color: rgb(242, 242, 242);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -549,10 +371,9 @@ span.size10 {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   color: #E0E0E6;
-   background-color: #1a1a1a;
-   box-shadow: 0px 0px 0px #161616;
-   border-bottom-color: rgb(19, 19, 19);
+   color: #1e4754;
+   background-color: #f2f2f2;
+   box-shadow: 0px 0px 3px #000;
 }
 
 .tags a {
@@ -570,67 +391,56 @@ span.size10 {
    border-left-color: currentcolor;
 }
 
-/* ----------------------------------------------------------------------
- * 2.1 Fundo Geral, Tipografia Base e Listas
- * ---------------------------------------------------------------------- */
-ul.nobullet {
-   color: #C6C7CF;
-}
-
-/* ----------------------------------------------------------------------
- * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- * ---------------------------------------------------------------------- */
 table {
    border-top-color: rgb(48, 48, 48);
    border-right-color: rgb(48, 48, 48);
    border-bottom-color: rgb(48, 48, 48);
    border-left-color: rgb(48, 48, 48);
-   box-shadow: 0 1px 2px #000;
+   box-shadow: 0 1px 3px #000;
 }
 
 tr.resolution_header {
-   background-color: initial;
-   background-image: linear-gradient(0deg, rgba(16, 17, 19, 0.73) 0px, rgba(40, 40, 40, 0.81));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-color: rgba(0, 0, 0, 0);
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   background-color: rgb(187, 187, 187) !important;
+   background-image: initial !important;
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
 }
 
-tr.season_header,
-td.season_header {
-   background-color: initial;
-   background-image: linear-gradient(0deg, rgba(16, 17, 19, 0.73) 0px, rgba(40, 40, 40, 0.81));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-color: rgba(0, 0, 0, 0);
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+tr.season_header, td.season_header {
+   background-color: rgb(187, 187, 187) !important;
+   background-image: initial !important;
+   background-position: initial !important;
+   background-size: initial !important;
+   background-repeat: initial !important;
+   background-origin: initial !important;
+   background-clip: initial !important;
+   background-attachment: initial !important;
 }
 
-tr {
-   border-top-color: rgb(48, 48, 48);
-   border-right-color: rgb(48, 48, 48);
-   border-bottom-color: rgb(48, 48, 48);
-   border-left-color: rgb(48, 48, 48);
-   background-color: #232324eb;
+tr.rowa {
+   background-color: #F2F2F2;
 }
 
-td,
-th {
-   box-shadow: 0px 0px 0px #000;
+td, th {
+   border-top-color: rgb(202, 202, 202);
+   border-right-color: rgb(202, 202, 202);
+   border-bottom-color: rgb(202, 202, 202);
+   border-left-color: rgb(202, 202, 202);
 }
 
 .colhead {
-   background-color: #1c1c1c;
-   color: #E0E0E6;
+   background-color: rgb(242, 242, 242);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
    border-bottom-color: rgb(0, 0, 0);
 }
 
@@ -639,14 +449,13 @@ th {
 }
 
 .colhead_dark {
-   background-color: #1a1a1a;
-   color: #E0E0E6;
-   box-shadow: 0px 0px 0px #000;
-   border-bottom-color: rgb(19, 19, 19);
+   background-color: #f2f2f2;
+   color: #333;
+   box-shadow: 0px 0px 3px #ddd;
 }
 
 .colhead_dark a {
-   color: #E0E0E6;
+   color: #1e4754;
 }
 
 .error_message {
@@ -668,7 +477,7 @@ th {
 }
 
 .noty_message {
-   background-color: rgb(34, 34, 34);
+   background-color: initial;
    background-image: url("https://bj-share.info/static/common/icons/bj.svg");
    background-position: 4px 7px;
    background-size: initial;
@@ -676,23 +485,12 @@ th {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   color: #dddddd;
+   background-repeat: no-repeat;
    background-size: 26px 16px;
 }
 
-.noty_buttons {
-   background-color: rgb(53, 53, 53) !important;
-   background-image: initial !important;
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
-}
-
 .noty_buttons a {
-   color: #e4dcdc;
+   color: #1c1a1a;
 }
 
 .elem_error {
@@ -742,15 +540,8 @@ th {
    border-left-color: currentcolor;
 }
 
-/* ----------------------------------------------------------------------
- * 2.11 Listagem de Torrents, Detalhes e Tópicos
- * ---------------------------------------------------------------------- */
-.torrentinfo_release {
-   color: #DDC39F;
-}
-
 .torrent_table tr.group {
-   background-color: rgb(34, 34, 36);
+   background-color: rgb(236, 236, 236);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -758,64 +549,52 @@ th {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-   box-shadow: 0 -3px 5px -5px rgba(55, 51, 51);
+   box-shadow: 0 -6px 5px -5px rgba(0, 0, 0, 0.4);
 }
 
-/* ----------------------------------------------------------------------
- * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- * ---------------------------------------------------------------------- */
 tr.group_torrent {
-   background-color: #202021d6;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+   background-color: #fafafa;
 }
 
 tr.torrent {
-   background-color: #222224;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+   background-color: #F2F2F2;
    border-left-color: rgb(40, 43, 46) !important;
    border-right-color: rgb(40, 43, 46) !important;
-   box-shadow: 0 -3px 5px -5px rgba(55, 51, 51);
 }
 
-tr.torrent:hover,
-tr.group_torrent:hover,
-tr.group:hover {
-   background-color: #1d1d1e;
+tr.torrent:hover, tr.group_torrent:hover, tr.group:hover {
+   background-color: #E6E6E6;
 }
 
-/* ----------------------------------------------------------------------
- * 2.11 Listagem de Torrents, Detalhes e Tópicos
- * ---------------------------------------------------------------------- */
-.torrentdetails {
-   background-color: #1b1b1c !important;
+.torrent_label.bjtooltip.tl_snatched {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/check.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 
-/* ----------------------------------------------------------------------
- * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
- * ---------------------------------------------------------------------- */
-blockquote {
-   background-color: rgba(45, 45, 48, 0.46);
-   border-bottom-color: rgba(0, 0, 0, 0.1);
-   border-left-color: rgb(102, 98, 98);
-   border-right-color: rgb(102, 98, 98);
-   border-top-color: rgba(0, 0, 0, 0.1);
+.torrent_label.bjtooltip.snatched {
+   background-color: initial;
+   background-image: url("https://bj-share.info/static/common/check.svg");
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 
-:is(iframe.youtube,
-iframe.dailymotion) {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
-
-/* ----------------------------------------------------------------------
- * 2.11 Listagem de Torrents, Detalhes e Tópicos
- * ---------------------------------------------------------------------- */
 .last_read {
    background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/go_last_read.png");
+   background-image: url("https://bj-share.info/static/styles/bj-clean/images/go_last_read.png");
    background-position: center center;
    background-size: initial;
    background-repeat: no-repeat;
@@ -954,23 +733,53 @@ strong.quoteheader {
    color: #999;
 }
 
+table.forum_post td {
+   border-top-color: rgb(151, 151, 151);
+   border-right-color: rgb(151, 151, 151);
+   border-bottom-color: rgb(151, 151, 151);
+   border-left-color: rgb(151, 151, 151);
+}
+
+table.forum_unread {
+   border-top-color: rgb(151, 151, 151);
+   border-right-color: rgb(151, 151, 151);
+   border-bottom-color: rgb(151, 151, 151);
+   border-left-color: rgb(151, 151, 151);
+}
+
 tbody {
-   background-color: #1e1e1f;
+   background-color: rgb(255, 255, 255);
+   background-image: initial;
+   background-position: initial;
+   background-size: initial;
+   background-repeat: initial;
+   background-origin: initial;
+   background-clip: initial;
+   background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- * ---------------------------------------------------------------------- */
+blockquote {
+   background-color: rgba(230, 230, 230, 0.5);
+   border-bottom-color: rgba(0, 0, 0, 0.1);
+   border-left-color: rgb(203, 194, 194);
+   border-right-color: rgb(203, 194, 194);
+   border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+:is(iframe.youtube, iframe.dailymotion) {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
+}
+
 tr.unreadpm {
-   background-color: #692222;
+   background-color: #FF7E7E;
 }
 
-/* ----------------------------------------------------------------------
- * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
- * ---------------------------------------------------------------------- */
 .left_poll {
    background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_left.gif");
+   background-image: url("https://bj-share.info/static/styles/bj-clean/images/bar_left.gif");
    background-position: center center;
    background-size: initial;
    background-repeat: no-repeat;
@@ -981,7 +790,7 @@ tr.unreadpm {
 
 .center_poll {
    background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar.gif");
+   background-image: url("https://bj-share.info/static/styles/bj-clean/images/bar.gif");
    background-position: initial;
    background-size: initial;
    background-repeat: repeat;
@@ -992,7 +801,7 @@ tr.unreadpm {
 
 .right_poll {
    background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_right.gif");
+   background-image: url("https://bj-share.info/static/styles/bj-clean/images/bar_right.gif");
    background-position: center center;
    background-size: initial;
    background-repeat: no-repeat;
@@ -1006,13 +815,10 @@ tr.unreadpm {
 }
 
 form tr {
-   background-color: #212121d9;
+   background-color: #fff;
    box-shadow: 0px 0px 0px #000;
 }
 
-/* ----------------------------------------------------------------------
- * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- * ---------------------------------------------------------------------- */
 tr.torrent .bookmark>a:before {
    color: #999;
 }
@@ -1021,13 +827,7 @@ tr.torrent .bookmark>a:after {
    color: #999;
 }
 
-/* ----------------------------------------------------------------------
- * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
- * ---------------------------------------------------------------------- */
-.linkbox .brackets:after,
-.linkbox .brackets:before,
-.top10_quantity_links .brackets:after,
-.top10_quantity_links .brackets:before {
+.linkbox .brackets:after, .linkbox .brackets:before, .top10_quantity_links .brackets:after, .top10_quantity_links .brackets:before {
    color: #999;
 }
 
@@ -1042,44 +842,29 @@ tr.torrent .bookmark>a:after {
    background-attachment: initial;
 }
 
-.small_upvote,
-.small_upvoted,
-.vote_album_up,
-.vote_artist_up,
-.vote_tag_up {
+.small_upvote, .small_upvoted, .vote_album_up, .vote_artist_up, .vote_tag_up {
    color: green;
 }
 
-.small_downvote,
-.small_downvoted,
-.vote_album_down,
-.vote_artist_down,
-.vote_tag_down {
+.small_downvote, .small_downvoted, .vote_album_down, .vote_artist_down, .vote_tag_down {
    color: red;
 }
 
-#forum_search_cat_list,
-#forum_search_cat_list tr {
+#forum_search_cat_list, #forum_search_cat_list tr {
    border-top-color: currentcolor;
    border-right-color: currentcolor;
    border-bottom-color: currentcolor;
    border-left-color: currentcolor;
 }
 
-/* ----------------------------------------------------------------------
- * 2.13 Chat e Mensagens Rápidas (Shoutbox)
- * ---------------------------------------------------------------------- */
 .chat_mark_bg {
-   background-color: rgba(21, 20, 20, 0.64);
+   background-color: rgb(21, 21, 21);
    border-top-color: currentcolor;
    border-right-color: currentcolor;
    border-bottom-color: currentcolor;
    border-left-color: currentcolor;
 }
 
-/* ----------------------------------------------------------------------
- * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
- * ---------------------------------------------------------------------- */
 table.shoutTable {
    border-top-color: currentcolor;
    border-right-color: currentcolor;
@@ -1102,18 +887,15 @@ table.shoutTable a {
 }
 
 tr.row1 {
-   background-color: rgb(34, 34, 36);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background-color: #f5f7fa;
 }
 
 tr.row2 {
-   background-color: rgb(37, 37, 39);
+   background-color: #FFFFFF;
+}
+
+button:hover, input[type=button]:hover, input[type=submit]:hover {
+   background-color: rgb(216, 217, 212);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -1123,27 +905,9 @@ tr.row2 {
    background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 2.14 Botões, Controles e Menus de Seleção
- * ---------------------------------------------------------------------- */
-button:hover,
-input[type=button]:hover,
-input[type=submit]:hover {
-   background-color: rgb(33, 33, 36);
+button, input[type=button], input[type=submit] {
+   background-color: rgb(230, 230, 230);
    background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
-
-button,
-input[type=button],
-input[type=submit] {
-   background-color: initial;
-   background-image: linear-gradient(rgb(26, 26, 27) 0px, rgb(64, 64, 68) 1px, rgb(32, 32, 35) 2px, rgb(39, 39, 41));
    background-position: initial;
    background-size: initial;
    background-repeat: initial;
@@ -1155,29 +919,10 @@ input[type=submit] {
    border-bottom-color: rgb(27, 27, 27);
    border-left-color: rgb(27, 27, 27);
    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-   color: #d0d0d0;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   color: #0b0b0b;
 }
 
-button[onclick="atualizarLancamentos()"] {
-   background-color: #1e1e22;
-   border-top-color: rgb(32, 32, 32);
-   border-right-color: rgb(32, 32, 32);
-   border-bottom-color: rgb(32, 32, 32);
-   border-left-color: rgb(32, 32, 32);
-}
-
-button:disabled,
-input[type="button"]:disabled,
-input[type="submit"]:disabled {
-   background-color: rgb(36, 35, 38);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
    color: #686868;
 }
 
@@ -1186,42 +931,43 @@ select {
    background-position: right 8px center;
    background-repeat: no-repeat;
    background-size: 10px 10px;
-   background-color: rgba(24, 25, 26, 0.9);
+   background-color: #fff;
    border-top-color: rgba(45, 43, 43, 0.86);
    border-right-color: rgba(45, 43, 43, 0.86);
    border-bottom-color: rgba(45, 43, 43, 0.86);
    border-left-color: rgba(45, 43, 43, 0.86);
    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
-   color: #aaa;
-}
-
-select:hover {
-   color: #888;
-}
-
-select a.active,
-select a:hover {
    color: #000;
 }
 
-.checkbox:hover {
-   background-color: #383838;
+select:hover {
+   background-color: #fbfbfb;
 }
 
-.multiselect-container > li > a > label.radio,
-.multiselect-container > li > a > label.checkbox {
-   color: #fff;
+select a.active, select a:hover {
+   color: #000;
+}
+
+.open > .dropdown-menu {
+   background-color: #e8e8e8;
+}
+
+.checkbox:hover {
+   background-color: #fbfbfb;
+}
+
+.multiselect-container > li > a > label.radio, .multiselect-container > li > a > label.checkbox {
+   color: #000;
 }
 
 .btn-default {
-   color: #bbb !important;
-   background-color: #2b2b2d !important;
+   color: #000 !important;
+   background-color: #e6e6e6 !important;
    border-color: #444 !important;
 }
 
-.btn:hover,
-.btn:focus {
-   background-color: rgb(51, 51, 51) !important;
+.btn:hover, .btn:focus {
+   background-color: rgb(221, 221, 221) !important;
    background-image: initial !important;
    background-position: initial !important;
    background-size: initial !important;
@@ -1231,22 +977,8 @@ select a:hover {
    background-attachment: initial !important;
 }
 
-.open > .dropdown-menu {
-   background-color: #202020;
-}
-
-/* ----------------------------------------------------------------------
- * 2.15 Atalhos Fixos de Navegação (#irtopo, #irfinal)
- * ---------------------------------------------------------------------- */
 #irtopo {
-   background-color: initial;
-   background-image: linear-gradient(rgba(20, 20, 21, 0.75) 0px, rgba(33, 33, 34, 0.3) 1px, rgb(24, 24, 26) 2px, rgb(34, 34, 36));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background-image: linear-gradient(to top, #3498db, #256f9c);
 }
 
 #irtopo span {
@@ -1254,22 +986,23 @@ select a:hover {
    border-right-color: transparent;
    border-bottom-color: transparent;
    border-left-color: transparent;
-   border-bottom-color: #fff;
+   border-bottom-color: #ffffff;
 }
 
 #irtopo:hover {
-   background-image: linear-gradient(to top, #505355, #161718);
+   background-image: linear-gradient(to top, #38a6eb, #318ecc);
 }
 
 #irfinal {
-   background-color: initial;
-   background-image: linear-gradient(rgba(26, 26, 27, 0) 0px, rgba(64, 64, 68, 0.02) 1px, rgb(24, 24, 26) 2px, rgb(34, 34, 36));
+   background-color: rgb(52, 152, 219);
+   background-image: initial;
    background-position: initial;
    background-size: initial;
    background-repeat: initial;
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
+   background-image: linear-gradient(to bottom, #3498db, #256f9c);
 }
 
 #irfinal span {
@@ -1281,7 +1014,7 @@ select a:hover {
 }
 
 #irfinal:hover {
-   background-color: rgb(80, 83, 85);
+   background-color: rgb(56, 166, 235);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -1289,15 +1022,12 @@ select a:hover {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   background-image: linear-gradient(to bottom, #505355, #171616);
+   background-image: linear-gradient(to bottom, #38a6eb, #318ecc);
 }
 
-/* ----------------------------------------------------------------------
- * 2.2 Links, Estados de Hover e Artistas Similares
- * ---------------------------------------------------------------------- */
 a.BJinfoBox span {
    color: #eee;
-   background-color: rgb(24, 24, 26) !important;
+   background-color: rgb(29, 29, 29) !important;
    background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
    background-position: 0px center !important;
    background-size: initial !important;
@@ -1308,12 +1038,9 @@ a.BJinfoBox span {
    box-shadow: 0 1px 4px #000;
 }
 
-/* ----------------------------------------------------------------------
- * 2.16 Tooltips Informativos e Caixas Flutuantes
- * ---------------------------------------------------------------------- */
 form a.BJinfoBox span {
    color: #eee;
-   background-color: rgb(24, 24, 26) !important;
+   background-color: rgb(29, 29, 29) !important;
    background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
    background-position: 0px center !important;
    background-size: initial !important;
@@ -1326,7 +1053,7 @@ form a.BJinfoBox span {
 
 .post_return a.BJinfoBox span {
    color: #D4D4D4;
-   background-color: rgb(24, 24, 26) !important;
+   background-color: rgb(29, 29, 29) !important;
    background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
    background-position: 0px center !important;
    background-size: initial !important;
@@ -1337,16 +1064,10 @@ form a.BJinfoBox span {
    box-shadow: 0 1px 4px #000;
 }
 
-/* ----------------------------------------------------------------------
- * 2.2 Links, Estados de Hover e Artistas Similares
- * ---------------------------------------------------------------------- */
 a.BJinfoBox:hover {
-   color: #eee;
+   color: #000;
 }
 
-/* ----------------------------------------------------------------------
- * 2.16 Tooltips Informativos e Caixas Flutuantes
- * ---------------------------------------------------------------------- */
 [data-tooltip]:before {
    background-color: #000;
    color: #fff;
@@ -1358,48 +1079,33 @@ a.BJinfoBox:hover {
    border-left-color: transparent;
 }
 
-/* ----------------------------------------------------------------------
- * 2.17 Sliders e Carrossel de Destaques (BJQS)
- * ---------------------------------------------------------------------- */
 ul.bjqs-controls.v-centered li.bjqs-next a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
    border-top-color: #494649;
-   border-right-color: #494649;
-   border-bottom-color: #494649;
-   border-left-color: #494649;
-   border-top-color: #494649;
    border-left-color: #494649;
    border-bottom-color: #494649;
    border-right-color: #494649;
-   background-color: initial;
-   background-image: linear-gradient(rgb(26, 26, 27) 0px, rgb(64, 64, 68) 1px, rgb(26, 26, 27) 2px, rgb(34, 34, 36));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
+   background-color: rgba(185, 185, 185, 0.2);
+   background-repeat: no-repeat;
+   color: #000;
    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 }
 
 ul.bjqs-controls.v-centered li.bjqs-prev a {
+   border-top-color: currentcolor;
+   border-right-color: currentcolor;
+   border-bottom-color: currentcolor;
+   border-left-color: currentcolor;
    border-top-color: #494649;
-   border-right-color: #494649;
-   border-bottom-color: #494649;
-   border-left-color: #494649;
-   border-top-color: #494649;
    border-left-color: #494649;
    border-bottom-color: #494649;
    border-right-color: #494649;
-   background-color: initial;
-   background-image: linear-gradient(rgb(26, 26, 27) 0px, rgb(64, 64, 68) 1px, rgb(26, 26, 27) 2px, rgb(34, 34, 36));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
+   background-color: rgba(185, 185, 185, 0.2);
+   background-repeat: no-repeat;
+   color: #000;
    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 }
 
@@ -1420,7 +1126,7 @@ ul.bjqs-controls.v-centered li a {
 }
 
 ul.bjqs-controls.v-centered li a:hover {
-   background-color: rgb(36, 36, 38);
+   background-color: rgb(216, 217, 212);
    background-image: initial;
    background-position: initial;
    background-size: initial;
@@ -1442,8 +1148,7 @@ ol.bjqs-markers li a {
    color: #fff;
 }
 
-ol.bjqs-markers li a:hover,
-ol.bjqs-markers li.active-marker a {
+ol.bjqs-markers li a:hover, ol.bjqs-markers li.active-marker a {
    background-color: rgb(153, 153, 153);
    background-image: initial;
    background-position: initial;
@@ -1465,11 +1170,8 @@ p.bjqs-caption {
    background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 2.18 Badges Internos, Modais, Diálogos e Avisos
- * ---------------------------------------------------------------------- */
 .internalbox {
-   background-color: rgb(29, 33, 36) !important;
+   background-color: rgb(19, 45, 75) !important;
    background-image: initial !important;
    background-position: initial !important;
    background-size: initial !important;
@@ -1477,9 +1179,9 @@ p.bjqs-caption {
    background-origin: initial !important;
    background-clip: initial !important;
    background-attachment: initial !important;
-   color: #ffb300 !important;
-   border-left-color: rgb(255, 179, 0);
-   border-right-color: rgb(255, 179, 0);
+   color: #fff !important;
+   border-left-color: rgb(51, 98, 170);
+   border-right-color: rgb(51, 98, 170);
 }
 
 .internalbox:hover {
@@ -1501,15 +1203,12 @@ p.bjqs-caption {
    background-color: #333;
    color: #fff;
    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
+   border-top-color: rgb(0, 0, 0);
+   border-right-color: rgb(0, 0, 0);
+   border-bottom-color: rgb(0, 0, 0);
+   border-left-color: rgb(0, 0, 0);
 }
 
-/* ----------------------------------------------------------------------
- * 2.11 Listagem de Torrents, Detalhes e Tópicos
- * ---------------------------------------------------------------------- */
 .torrent_label.bjtooltip.leeching {
    background-color: initial !important;
    background-image: url("https://bj-share.info/static/common/Downloadv2.svg") !important;
@@ -1559,53 +1258,17 @@ p.bjqs-caption {
    color: transparent !important;
 }
 
-/* ----------------------------------------------------------------------
- * 2.18 Badges Internos, Modais, Diálogos e Avisos
- * ---------------------------------------------------------------------- */
-dialog {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-   background-color: rgb(50, 49, 49);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
-}
-
-.brackets[onclick*="gorjeta"] {
-   color: #f4bc64;
-}
-
 #noteAlertMsg {
    -webkit-box-shadow: 0 0 0px #282828;
    -moz-box-shadow: 0 0 0px #282828;
    box-shadow: 0 0 0px #282828;
 }
 
-.browse_rating {
-   background-color: rgb(51, 51, 51);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+.brackets[onclick*="gorjeta"] {
+   color: #1212d8;
 }
 
-/* ====================================================================
- * SEÇÃO 3: ESTRUTURA GLOBAL E LAYOUT RESPONSIVO (BASE COMUM)
- * Dimensionamento, flex/grid, alinhamentos, posições e tipografia estrutural.
- * ==================================================================== */
-/* ----------------------------------------------------------------------
- * 3.1 Reset Global de Box Model e Fundo Base
- * ---------------------------------------------------------------------- */
+/* ===== Estrutura comum e menu opcional do exemplo ===== */
 *,
 *::before,
 *::after {
@@ -1626,9 +1289,6 @@ form a.BJinfoBox span,
    background-attachment: scroll !important;
 }
 
-/* ----------------------------------------------------------------------
- * 3.2 Tipografia e Elementos Básicos
- * ---------------------------------------------------------------------- */
 body {
    font-size: 11px;
    min-width: 950px;
@@ -1670,9 +1330,6 @@ ol {
    margin-left: 1em;
 }
 
-/* ----------------------------------------------------------------------
- * 3.3 Links e Estados de Texto
- * ---------------------------------------------------------------------- */
 a {
    text-decoration: none;
    border-top-width: medium;
@@ -1718,9 +1375,6 @@ a.similar_artist {
    padding: 3px 5px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.4 Formulários, Campos e Mídia Básica
- * ---------------------------------------------------------------------- */
 input {
    padding: 2px 3px;
    background-position: initial;
@@ -1770,10 +1424,11 @@ textarea {
 
 input:focus,
 form input:focus,
-form textarea:focus,
-textarea:focus,
+      form textarea:focus,
+            textarea:focus,
 form button:focus,
-.sceditor-container iframe,
+
+      .sceditor-container iframe,
 .sceditor-container textarea,
 [contenteditable="true"]:focus {
    outline: none;
@@ -1807,9 +1462,6 @@ img {
    border-width: 1px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 table.shoutTable {
    width: 100%;
    border-collapse: collapse;
@@ -1855,32 +1507,20 @@ tr.row2 {
    background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 3.28 Alertas e Ajustes Finais
- * ---------------------------------------------------------------------- */
 .field_div {
    margin-bottom: 10px;
    margin-top: 1px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.4 Formulários, Campos e Mídia Básica
- * ---------------------------------------------------------------------- */
 .edit_changelog textarea {
    width: 600px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.5 Chat, Formulários e Controles
- * ---------------------------------------------------------------------- */
 input::placeholder,
 textarea::placeholder {
    opacity: 1;
 }
 
-/* ----------------------------------------------------------------------
- * 3.7 Tamanhos BBCode
- * ---------------------------------------------------------------------- */
 span.size1 {
    font-size: 0.75em;
 }
@@ -1921,9 +1561,6 @@ span.size10 {
    font-size: 3em;
 }
 
-/* ----------------------------------------------------------------------
- * 3.8 Estrutura Principal da Página
- * ---------------------------------------------------------------------- */
 ul.thin {
    margin: 0 0 0 25px;
    padding: 0;
@@ -1994,9 +1631,6 @@ ul.thin li {
    display: block;
 }
 
-/* ----------------------------------------------------------------------
- * 3.9 Menu Principal e Dropdowns
- * ---------------------------------------------------------------------- */
 #menu {
    position: absolute;
    top: 295px;
@@ -2092,9 +1726,6 @@ ul.thin li {
    display: block;
 }
 
-/* ----------------------------------------------------------------------
- * 3.10 Barra de Usuário e Estatísticas (#userinfo)
- * ---------------------------------------------------------------------- */
 #userinfo {
    width: 100%;
    text-align: center;
@@ -2176,9 +1807,6 @@ ul.thin li {
    font-weight: 700;
 }
 
-/* ----------------------------------------------------------------------
- * 3.11 Busca, Alertas e Seletores (#searchbars, #alerts)
- * ---------------------------------------------------------------------- */
 #searchbars {
    position: absolute;
    top: 265px;
@@ -2307,9 +1935,6 @@ ul.thin li {
    text-decoration: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.19 Selects, Multiselect e Dropdowns
- * ---------------------------------------------------------------------- */
 #cat-selector ul {
    width: 100%;
 }
@@ -2321,9 +1946,6 @@ ul.thin li {
    float: left;
 }
 
-/* ----------------------------------------------------------------------
- * 3.5 Chat, Formulários e Controles
- * ---------------------------------------------------------------------- */
 .autocomplete-suggestions {
    background-position: initial;
    background-size: initial;
@@ -2341,33 +1963,21 @@ ul.thin li {
    border-left-style: solid;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .hidden,
 input.hidden {
    display: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.8 Estrutura Principal da Página
- * ---------------------------------------------------------------------- */
 .thin {
    max-width: 1228px;
    margin: 0 auto;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 .widethin {
    width: 95%;
    margin: 0 auto;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 div.linkbox {
    text-align: center;
    padding: 5px;
@@ -2386,16 +1996,10 @@ div.linkbox {
    margin: 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.2 Tipografia e Elementos Básicos
- * ---------------------------------------------------------------------- */
 p.min_padding {
    margin: 2px 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .nobr {
    white-space: nowrap;
 }
@@ -2415,9 +2019,6 @@ p.min_padding {
    width: 47%;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 .pad {
    padding: 0.5em;
    font-family: inter, Roboto, tahoma, helvetica, sans-serif;
@@ -2429,16 +2030,10 @@ p.min_padding {
    padding: 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .vertical_space {
    margin-bottom: 10px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 .box {
    font-size: 11.87px;
    border-top-width: 1px;
@@ -2480,9 +2075,6 @@ p.min_padding {
    width: clamp(135px, calc(22.6vw + 44.6px), 276px);
 }
 
-/* ----------------------------------------------------------------------
- * 3.4 Formulários, Campos e Mídia Básica
- * ---------------------------------------------------------------------- */
 .sidebar img {
    max-width: 98%;
    margin: 3px 0 0 0;
@@ -2493,9 +2085,6 @@ p.min_padding {
    margin: 4px 0 0 7px !important;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 ul.collage_images {
    padding: 0;
    border-collapse: collapse;
@@ -2504,9 +2093,6 @@ ul.collage_images {
    grid-gap: 15px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.4 Formulários, Campos e Mídia Básica
- * ---------------------------------------------------------------------- */
 ul.collage_images img {
    height: 100%;
    width: 100%;
@@ -2517,9 +2103,6 @@ ul.collage_images img {
    margin-bottom: 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 .head {
    padding: 4px;
    border-bottom-width: 2px;
@@ -2560,23 +2143,14 @@ ul.collage_images img {
    border-left-style: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.2 Tipografia e Elementos Básicos
- * ---------------------------------------------------------------------- */
 ul.nobullet {
    list-style-type: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 div.sidebar #event_div {
    margin-left: -232px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 table {
    width: 100%;
    border-collapse: collapse;
@@ -2739,16 +2313,10 @@ table.slice {
    border-left-style: solid;
 }
 
-/* ----------------------------------------------------------------------
- * 3.10 Barra de Usuário e Estatísticas (#userinfo)
- * ---------------------------------------------------------------------- */
 ul.stats li {
    padding: 0 0 1px 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 .show_torrents {
    width: 28px;
    height: 28px;
@@ -2762,9 +2330,6 @@ ul.stats li {
    background-size: contain;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .hide_torrents {
    width: 28px;
    height: 28px;
@@ -2778,9 +2343,6 @@ ul.stats li {
    background-size: contain;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 .show_torrents_link {
    border-top-width: medium;
    border-top-style: none;
@@ -2795,9 +2357,6 @@ ul.stats li {
    display: block;
 }
 
-/* ----------------------------------------------------------------------
- * 3.15 Listagem e Filtros de Torrents
- * ---------------------------------------------------------------------- */
 .filter_torrents {
    width: 100%;
    margin: auto;
@@ -2808,16 +2367,10 @@ ul.stats li {
    padding-top: 5px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.8 Estrutura Principal da Página
- * ---------------------------------------------------------------------- */
 #content form.search_form + .torrent_table {
    margin-top: 20px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 .cat_list tr td {
    border-top-width: medium;
    border-top-style: none;
@@ -2856,31 +2409,19 @@ tr.torrent {
    transition: background-color 0.2s ease;
 }
 
-/* ----------------------------------------------------------------------
- * 3.15 Listagem e Filtros de Torrents
- * ---------------------------------------------------------------------- */
 .torrent {
    transition: background-color 0.2s ease;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 .torrent_table div.tags {
    font-weight: 400;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .torrent_table tr .center {
    vertical-align: middle;
    text-align: center;
 }
 
-/* ----------------------------------------------------------------------
- * 3.15 Listagem e Filtros de Torrents
- * ---------------------------------------------------------------------- */
 .group_torrent span {
    float: right;
 }
@@ -2890,16 +2431,10 @@ tr.torrent {
    float: right;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 table#torrent_table.torrent_table {
    margin: auto;
 }
 
-/* ----------------------------------------------------------------------
- * 3.16 Citações e Mídia Embutida
- * ---------------------------------------------------------------------- */
 blockquote,
 blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote {
@@ -2946,8 +2481,7 @@ blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
    padding: 10px;
 }
 
-:is(iframe.youtube,
-iframe.dailymotion) {
+:is(iframe.youtube, iframe.dailymotion) {
    display: block;
    margin: 0 auto;
    width: 100%;
@@ -2966,9 +2500,6 @@ iframe.dailymotion) {
    min-height: 200px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.17 Fórum, Leitura e Estados de Tópicos
- * ---------------------------------------------------------------------- */
 .last_read {
    width: 15px;
    height: 15px;
@@ -3067,9 +2598,6 @@ iframe.dailymotion) {
    background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 table.forum_post {
    margin: 10px 0;
 }
@@ -3090,23 +2618,14 @@ td.avatar {
    padding: 4px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.13 Containers, Caixas, Sidebar e Imagens
- * ---------------------------------------------------------------------- */
 table.forum_post td.body {
    max-width: 675px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.17 Fórum, Leitura e Estados de Tópicos
- * ---------------------------------------------------------------------- */
 .post_id {
    font-weight: 400;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 #forum_search_cat_list,
 #forum_search_cat_list tr {
    border-top-width: medium;
@@ -3119,9 +2638,6 @@ table.forum_post td.body {
    border-left-style: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.18 Permissões, Enquetes e Overlays
- * ---------------------------------------------------------------------- */
 .permission_head {
    width: 400px;
    margin: 0 auto;
@@ -3148,9 +2664,6 @@ table.forum_post td.body {
    text-align: right;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 ul .invitetree {
    margin: 0 0 0 25px;
 }
@@ -3160,16 +2673,10 @@ ul .invitetree {
    margin: 10px 2px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.18 Permissões, Enquetes e Overlays
- * ---------------------------------------------------------------------- */
 .user_options .options_list li {
    margin: 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.12 Utilitários de Visibilidade e Alinhamento
- * ---------------------------------------------------------------------- */
 .left_poll {
    width: 2px;
    height: 9px;
@@ -3211,9 +2718,6 @@ ul .invitetree {
    padding: 0;
 }
 
-/* ----------------------------------------------------------------------
- * 3.18 Permissões, Enquetes e Overlays
- * ---------------------------------------------------------------------- */
 .curtain {
    position: fixed;
    top: 0;
@@ -3246,9 +2750,6 @@ ul.poll li.graph {
    padding-left: 20px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.5 Chat, Formulários e Controles
- * ---------------------------------------------------------------------- */
 .chat_mark_bg {
    border-top-width: medium;
    border-top-style: none;
@@ -3262,9 +2763,6 @@ ul.poll li.graph {
    text-align: left;
 }
 
-/* ----------------------------------------------------------------------
- * 3.19 Selects, Multiselect e Dropdowns
- * ---------------------------------------------------------------------- */
 select {
    -webkit-appearance: none;
    appearance: none;
@@ -3322,9 +2820,6 @@ select:focus {
    text-decoration: none !important;
 }
 
-/* ----------------------------------------------------------------------
- * 3.20 Atalhos Fixos de Navegação (#irtopo, #irfinal)
- * ---------------------------------------------------------------------- */
 #irtopo,
 #irfinal {
    position: fixed;
@@ -3415,17 +2910,11 @@ select:focus {
    opacity: 1;
 }
 
-/* ----------------------------------------------------------------------
- * 3.21 Tooltips BJinfoBox e Data-Tooltip
- * ---------------------------------------------------------------------- */
 a.BJinfoBox {
    position: relative;
    display: inline;
 }
 
-/* ----------------------------------------------------------------------
- * 3.16 Citações e Mídia Embutida
- * ---------------------------------------------------------------------- */
 a.BJinfoBox span,
 form a.BJinfoBox span,
 .post_return a.BJinfoBox span {
@@ -3452,26 +2941,17 @@ form a.BJinfoBox span,
    border-left-style: solid;
 }
 
-/* ----------------------------------------------------------------------
- * 3.21 Tooltips BJinfoBox e Data-Tooltip
- * ---------------------------------------------------------------------- */
 form a.BJinfoBox span {
    padding: 10px 5px 5px;
    margin-left: -20px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.16 Citações e Mídia Embutida
- * ---------------------------------------------------------------------- */
 .post_return a.BJinfoBox span {
    line-height: 18px;
    padding: 4px 0 4px 2px;
    margin-left: -60px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.21 Tooltips BJinfoBox e Data-Tooltip
- * ---------------------------------------------------------------------- */
 a.BJinfoBox:hover span {
    visibility: visible;
    bottom: 20px;
@@ -3545,9 +3025,6 @@ a[data-tooltip]:hover {
    text-decoration: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.23 Slider BJQS e Carrossel
- * ---------------------------------------------------------------------- */
 .homesldframe {
    width: clamp(112px, calc(22.1vw + 23.5px), 250px) !important;
    aspect-ratio: 5 / 7;
@@ -3557,9 +3034,6 @@ a[data-tooltip]:hover {
    overflow: hidden;
 }
 
-/* ----------------------------------------------------------------------
- * 3.4 Formulários, Campos e Mídia Básica
- * ---------------------------------------------------------------------- */
 li.bjqs-slide img,
 #banner-fade img,
 #banner-slide img {
@@ -3570,9 +3044,6 @@ li.bjqs-slide img,
    display: block;
 }
 
-/* ----------------------------------------------------------------------
- * 3.23 Slider BJQS e Carrossel
- * ---------------------------------------------------------------------- */
 ul.bjqs {
    list-style: none;
    padding: 0;
@@ -3586,9 +3057,6 @@ li.bjqs-slide {
    display: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.14 Tabelas, Cabeçalhos e Mensagens
- * ---------------------------------------------------------------------- */
 ul.bjqs-controls {
    list-style: none;
    margin: 0;
@@ -3647,9 +3115,6 @@ ul.bjqs-controls.v-centered li a:hover {
    text-decoration: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.23 Slider BJQS e Carrossel
- * ---------------------------------------------------------------------- */
 ol.bjqs-markers {
    list-style: none;
    padding: 0;
@@ -3720,9 +3185,6 @@ p.bjqs-caption {
    margin-top: -12px;
 }
 
-/* ----------------------------------------------------------------------
- * 3.24 Marcadores Internos e Labels de Torrent
- * ---------------------------------------------------------------------- */
 .internalbox {
    background-position: initial;
    background-size: initial;
@@ -3780,9 +3242,6 @@ p.bjqs-caption {
    pointer-events: none;
 }
 
-/* ----------------------------------------------------------------------
- * 3.15 Listagem e Filtros de Torrents
- * ---------------------------------------------------------------------- */
 .torrent_label.bjtooltip.leeching,
 .torrent_label.bjtooltip.seeding,
 .torrent_label.bjtooltip.tl_snatched,
@@ -3850,9 +3309,6 @@ p.bjqs-caption {
    transform: scale(1.15);
 }
 
-/* ----------------------------------------------------------------------
- * 3.25 Diálogos e Modais
- * ---------------------------------------------------------------------- */
 dialog {
    position: fixed;
    top: 50%;
@@ -3880,31 +3336,26 @@ dialog {
    background-attachment: initial;
 }
 
-/* ----------------------------------------------------------------------
- * 3.26 Animações nos Botões (Jelly Effect e Botões Destrutivos)
- * ---------------------------------------------------------------------- */
 @keyframes jelly-effect {
-   0%,
+0%,
    100% {
-      transform: scale(1, 1);
-   }
-
-   25% {
-      transform: scale(0.9, 1.1);
-   }
-
-   50% {
-      transform: scale(1.1, 0.9);
-   }
-
-   75% {
-      transform: scale(0.95, 1.05);
-   }
+   transform: scale(1, 1);
 }
 
-/* ----------------------------------------------------------------------
- * 3.19 Selects, Multiselect e Dropdowns
- * ---------------------------------------------------------------------- */
+25% {
+   transform: scale(0.9, 1.1);
+}
+
+50% {
+   transform: scale(1.1, 0.9);
+}
+
+75% {
+   transform: scale(0.95, 1.05);
+}
+
+}
+
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
@@ -3976,9 +3427,6 @@ input[type="submit"]:disabled {
    cursor: default;
 }
 
-/* ----------------------------------------------------------------------
- * 3.26 Animações nos Botões (Jelly Effect e Botões Destrutivos)
- * ---------------------------------------------------------------------- */
 input[value="Deletar"],
 input[value="Delete"],
 input[value="Remover"] {
@@ -4014,25 +3462,26 @@ input[value="Remover"]:focus {
 }
 
 @keyframes attn-cycle {
-   0%,
+0%,
    12%,
    100% {
-      transform: translateY(0);
-      filter: brightness(1);
-      box-shadow: 0 0 0 0 rgba(244,188,100,0);
-   }
+   transform: translateY(0);
+   filter: brightness(1);
+   box-shadow: 0 0 0 0 rgba(20, 0, 255, 0);
+}
 
-   5% {
-      transform: translateY(-2px);
-      filter: brightness(1.25);
-      box-shadow: 0 0 0 5px rgba(244,188,100,0.4);
-   }
+5% {
+   transform: translateY(-2px);
+   filter: brightness(1.25);
+   box-shadow: 0 0 0 5px rgba(20, 0, 255, 0.4);
+}
 
-   10% {
-      transform: translateY(0);
-      filter: brightness(1);
-      box-shadow: 0 0 0 10px rgba(244,188,100,0);
-   }
+10% {
+   transform: translateY(0);
+   filter: brightness(1);
+   box-shadow: 0 0 0 10px rgba(20, 0, 255, 0);
+}
+
 }
 
 .brackets[onclick*="gorjeta"] {
@@ -4047,23 +3496,18 @@ input[value="Remover"]:focus {
    animation: attn-cycle 5s ease-in-out infinite;
 }
 
-/* ----------------------------------------------------------------------
- * 3.27 Acessibilidade: Respeita Redução de Movimento
- * ---------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-   *,
+*,
    *::before,
    *::after {
-      animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
-      scroll-behavior: auto !important;
-   }
+   animation-duration: 0.001ms !important;
+   animation-iteration-count: 1 !important;
+   transition-duration: 0.001ms !important;
+   scroll-behavior: auto !important;
 }
 
-/* ----------------------------------------------------------------------
- * 3.28 Alertas e Ajustes Finais
- * ---------------------------------------------------------------------- */
+}
+
 #noteAlertMsg {
    position: absolute;
    z-index: 6001;
@@ -4099,318 +3543,293 @@ input[value="Remover"]:focus {
    margin-right: 10px;
 }
 
-/* ====================================================================
- * SEÇÃO 4: CONTROLE DO MENU FIXO (STICKY NAVIGATION)
- *
- * INSTRUÇÕES:
- *   - Para MANTER o menu fixo: use '@media all {'
- *   - Para DESATIVAR o menu fixo (menu estático no topo): troque para '@media not all {'
- *   Em resoluções mobile (<= 900px), o menu sempre rola naturalmente.
- * ==================================================================== */
+/* MENU FIXO: troque somente a próxima linha para
+ * @media not all { para desativar. Até 900px o menu rola com a página. */
 @media all {
-   #menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 2000;
-   }
+#menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 2000;
+}
 
-   #userinfo {
-      position: fixed;
-      top: 32px;
-      left: 0;
-      width: 100%;
-      z-index: 1999;
-   }
+#userinfo {
+   position: fixed;
+   top: 32px;
+   left: 0;
+   width: 100%;
+   z-index: 1999;
+}
 
-   body {
-      padding-top: 60px;
-   }
+body {
+   padding-top: 60px;
+}
 
-   #content {
-      top: 65px;
-   }
+#content {
+   top: 65px;
+}
 
-   .thin {
-      margin: 0 auto;
-      padding-top: 5px;
-   }
+.thin {
+   margin: 0 auto;
+   padding-top: 5px;
+}
 
-   #searchbars ul {
-      margin: 90px auto;
-      display: block;
-   }
+#searchbars ul {
+   margin: 90px auto;
+   display: block;
+}
 
-   #searchbars {
-      pointer-events: none;
-   }
+#searchbars {
+   pointer-events: none;
+}
 
-   #searchbars * {
-      pointer-events: auto;
-   }
+#searchbars * {
+   pointer-events: auto;
+}
 
-   @media (max-width: 900px) {
-      #menu,
+@media (max-width: 900px) {
+#menu,
       #userinfo {
-         position: static;
-         top: auto;
-      }
-
-      body {
-         padding-top: 0;
-      }
-
-      .thin {
-         margin: 0 auto;
-         padding-top: 0;
-      }
-
-      #searchbars ul {
-         margin: 0 auto;
-      }
-
-      #searchbars {
-         pointer-events: auto;
-      }
-   }
+   position: static;
+   top: auto;
 }
 
-/* ====================================================================
- * SEÇÃO 5: MEDIA QUERIES E RESPONSIVIDADE (MOBILE / TABLET / 4K)
- * Adaptação de larguras, colunas, menus e caixas para diferentes resoluções.
- * ==================================================================== */
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (min-width: 1921px) — Monitores Ultrawide e 1440p (2K)
- * ---------------------------------------------------------------------- */
+body {
+   padding-top: 0;
+}
+
+.thin {
+   margin: 0 auto;
+   padding-top: 0;
+}
+
+#searchbars ul {
+   margin: 0 auto;
+}
+
+#searchbars {
+   pointer-events: auto;
+}
+
+}
+
+}
+
 @media (min-width: 1921px) {
-   .thin {
-      max-width: 1400px;
-   }
+.thin {
+   max-width: 1400px;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (min-width: 3840px) — Monitores 4K UHD
- * ---------------------------------------------------------------------- */
+}
+
 @media (min-width: 3840px) {
-   .thin {
-      max-width: 1600px;
-   }
+.thin {
+   max-width: 1600px;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (max-width: 1024px) — Notebooks compactos e tablets em modo paisagem
- * ---------------------------------------------------------------------- */
+}
+
 @media (max-width: 1024px) {
-   body,
+body,
    #menu,
    #userinfo,
    #searchbars,
    #alerts {
-      min-width: 0;
-   }
+   min-width: 0;
+}
 
-   body {
-      overflow-x: hidden;
-   }
+body {
+   overflow-x: hidden;
+}
 
-   .thin,
+.thin,
    .widethin {
-      max-width: 100%;
-      width: 100% !important;
-   }
-
-   .two_columns {
-      width: 100%;
-   }
-
-   .permissions {
-      width: 100%;
-   }
-
-   .permission_container {
-      float: none;
-      width: 100%;
-   }
+   max-width: 100%;
+   width: 100% !important;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (max-width: 768px) — Tablets em modo retrato e telas intermediárias
- * ---------------------------------------------------------------------- */
+.two_columns {
+   width: 100%;
+}
+
+.permissions {
+   width: 100%;
+}
+
+.permission_container {
+   float: none;
+   width: 100%;
+}
+
+}
+
 @media (max-width: 768px) {
-   .box,
+.box,
    .box2 {
-      font-size: 10.5px;
-   }
-
-   ul.bjqs-controls.v-centered li.bjqs-next a,
-   ul.bjqs-controls.v-centered li.bjqs-prev a {
-      min-width: 0;
-      font-size: 10px;
-      padding: 5px 6px;
-   }
+   font-size: 10.5px;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (max-width: 550px) — Smartphones grandes / telas menores que 550px
- * ---------------------------------------------------------------------- */
+ul.bjqs-controls.v-centered li.bjqs-next a,
+   ul.bjqs-controls.v-centered li.bjqs-prev a {
+   min-width: 0;
+   font-size: 10px;
+   padding: 5px 6px;
+}
+
+}
+
 @media (max-width: 550px) {
-   .main_column {
-      padding-right: 6px;
-   }
+.main_column {
+   padding-right: 6px;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (max-width: 420px) — Smartphones comuns (<= 420px)
- * ---------------------------------------------------------------------- */
+}
+
 @media (max-width: 420px) {
-   ul.bjqs-controls.v-centered li.bjqs-next a,
+ul.bjqs-controls.v-centered li.bjqs-next a,
    ul.bjqs-controls.v-centered li.bjqs-prev a {
-      font-size: 9px;
-      padding: 4px 3px;
-      letter-spacing: 0;
-   }
+   font-size: 9px;
+   padding: 4px 3px;
+   letter-spacing: 0;
 }
 
-/* ----------------------------------------------------------------------
- * Breakpoint: @media (max-width: 300px) — Dispositivos ultra-compactos (<= 300px)
- * ---------------------------------------------------------------------- */
+}
+
 @media (max-width: 300px) {
-   .sidebar {
-      float: none;
-      width: 100%;
-      margin: 0 0 10px 0;
-   }
-
-   .main_column {
-      padding-right: 0;
-   }
-
-   div.sidebar #event_div {
-      margin-left: 0;
-   }
-
-   .homesldframe {
-      width: 250px !important;
-      margin: 0 auto;
-   }
+.sidebar {
+   float: none;
+   width: 100%;
+   margin: 0 0 10px 0;
 }
 
-/* ====================================================================
- * SEÇÃO 6: AJUSTES FINAIS DE LAYOUT E COMPATIBILIDADE MOBILE
- * Ajustes de contenção de largura de alertas, empilhamento de perfil e alinhamento.
- * ==================================================================== */
-/* position: static não empilha um ul que ainda tem display: inline (mobile). */
+.main_column {
+   padding-right: 0;
+}
+
+div.sidebar #event_div {
+   margin-left: 0;
+}
+
+.homesldframe {
+   width: 250px !important;
+   margin: 0 auto;
+}
+
+}
+
 @media (max-width: 900px) {
-   #header {
-      height: auto;
-      padding-bottom: 10px;
-      background-size: contain;
-   }
+#header {
+   height: auto;
+   padding-bottom: 10px;
+   background-size: contain;
+}
 
-   #logo {
-      position: static;
-      height: auto;
-      padding: 10px 0;
-   }
+#logo {
+   position: static;
+   height: auto;
+   padding: 10px 0;
+}
 
-   #logo a {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-      aspect-ratio: 320 / 150;
-   }
+#logo a {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 320px;
+   height: auto;
+   aspect-ratio: 320 / 150;
+}
 
-   #userinfo_username,
+#userinfo_username,
    #userinfo_major {
-      position: static;
-      width: 90%;
-      margin: 4px auto;
-      left: auto;
-      right: auto;
-   }
+   position: static;
+   width: 90%;
+   margin: 4px auto;
+   left: auto;
+   right: auto;
+}
 
-   #userinfo {
-      position: static;
-      top: auto;
-   }
+#userinfo {
+   position: static;
+   top: auto;
+}
 
-   #menu {
-      position: static;
-      top: auto;
-      width: 100%;
-   }
+#menu {
+   position: static;
+   top: auto;
+   width: 100%;
+}
 
-   #menudrop ul {
-      float: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-   }
+#menudrop ul {
+   float: none;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
 
-   #menudrop ul li {
-      float: none;
-      width: auto;
-   }
+#menudrop ul li {
+   float: none;
+   width: auto;
+}
 
-   #menudrop ul ul {
-      position: static;
-   }
+#menudrop ul ul {
+   position: static;
+}
 
-   #menudrop ul ul ul,
+#menudrop ul ul ul,
    #menudrop ul ul ul ul {
-      position: static;
-      left: auto;
-      top: auto;
-   }
-
-   #searchbars {
-      position: static;
-      top: auto;
-      width: 100%;
-      min-width: 0;
-   }
-
-   #searchbars ul li {
-      display: inline-block;
-      margin: 2px;
-   }
-
-   #alerts {
-      position: static;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      min-width: 0;
-   }
-
-   #content {
-      top: 0;
-      width: 100%;
-      padding: 0 10px;
-   }
-
-   #footer {
-      margin-top: 20px;
-   }
+   position: static;
+   left: auto;
+   top: auto;
 }
 
-/* O left global de ul ganha de right quando ambos têm largura fixa (desktop). */
+#searchbars {
+   position: static;
+   top: auto;
+   width: 100%;
+   min-width: 0;
+}
+
+#searchbars ul li {
+   display: inline-block;
+   margin: 2px;
+}
+
+#alerts {
+   position: static;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   min-width: 0;
+}
+
+#content {
+   top: 0;
+   width: 100%;
+   padding: 0 10px;
+}
+
+#footer {
+   margin-top: 20px;
+}
+
+}
+
+/* Ajustes mínimos encontrados na prévia do exemplo, comuns aos dez temas. */
 @media (min-width: 901px) {
+   /* O left global de ul ganha de right quando ambos têm largura fixa. */
    #userinfo_major {
       left: auto;
    }
 }
 
-/* position: static não empilha um ul que ainda tem display: inline (mobile). */
 @media (max-width: 900px) {
+   /* position: static não empilha um ul que ainda tem display: inline. */
    #userinfo #userinfo_username,
    #userinfo #userinfo_major {
       display: block;
    }
 
+   /* Os 432px do alerta não cabem em uma tela de 320–420px. */
    .alertbar {
       max-width: 100%;
    }
 }
-

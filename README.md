@@ -4,24 +4,28 @@ Repositório com arquivos CSS personalizados para uso em interfaces e temas visu
 
 Os arquivos disponíveis aqui são folhas de estilo organizadas para facilitar consulta e manutenção.
 
-## Revisão de 16/09/2026
+## Versão 2.0 (17/09/2026) — Temas Otimizados e Reorganizados
 
-A **raiz da `main` sempre contém a versão atual dos dez temas**, publicada em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css). Cada CSS é independente e pode ser usado inteiro, sem `@import` ou arquivos CSS auxiliares.
+A **raiz da `main` contém a versão atual dos nove temas ativos**, servida diretamente via GitHub Pages em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css) ou [BJ-NewBlack.css](https://theme.bj-share.org/BJ-NewBlack.css). Cada folha CSS é totalmente independente, sem dependência de `@import` ou arquivos auxiliares.
 
-A versão substituída está arquivada em [old/ee82239/](old/ee82239/), além do histórico Git. Os originais usados como fonte de cores permanecem em [old/](old/). A pasta temporária `new/` foi removida; gerador, testes e prévia usam os CSS da raiz. Nas próximas atualizações, preserve a versão substituída em `old/<commit>/` e publique a nova na raiz da `main`.
+Os temas foram modularizados e organizados em seções documentadas com sumário interno, indentação uniforme padronizada (3 espaços), remoção de artefatos vazios e correção de erros de sintaxe (como a declaração de banner em Midnight).
 
-| Tema | Nova versão |
-| --- | --- |
-| Black | [BJ-Black.css](BJ-Black.css) |
-| Blue | [BJ-Blue.css](BJ-Blue.css) |
-| Clean | [BJ-Clean.css](BJ-Clean.css) |
-| DarkBlue | [BJ-DarkBlue.css](BJ-DarkBlue.css) |
-| Darkness | [BJ-Darkness.css](BJ-Darkness.css) |
-| Grey | [BJ-Grey.css](BJ-Grey.css) |
-| Midnight | [BJ-Midnight.css](BJ-Midnight.css) |
-| NewBlack | [BJ-NewBlack.css](BJ-NewBlack.css) |
-| Pink | [BJ-Pink.css](BJ-Pink.css) |
-| Red | [BJ-Red.css](BJ-Red.css) |
+A versão anterior (`f8e8be5`) está preservada na íntegra em [old/f8e8be5/](old/f8e8be5/), com todos os dez temas históricos (incluindo o antigo DarkBlue, que foi descontinuado).
+
+| Tema | Arquivo na Raiz (`main`) | URL GitHub Pages |
+| --- | --- | --- |
+| Black | [BJ-Black.css](BJ-Black.css) | `https://theme.bj-share.org/BJ-Black.css` |
+| Blue | [BJ-Blue.css](BJ-Blue.css) | `https://theme.bj-share.org/BJ-Blue.css` |
+| Clean | [BJ-Clean.css](BJ-Clean.css) | `https://theme.bj-share.org/BJ-Clean.css` |
+| Darkness | [BJ-Darkness.css](BJ-Darkness.css) | `https://theme.bj-share.org/BJ-Darkness.css` |
+| Grey | [BJ-Grey.css](BJ-Grey.css) | `https://theme.bj-share.org/BJ-Grey.css` |
+| Midnight | [BJ-Midnight.css](BJ-Midnight.css) | `https://theme.bj-share.org/BJ-Midnight.css` |
+| NewBlack | [BJ-NewBlack.css](BJ-NewBlack.css) | `https://theme.bj-share.org/BJ-NewBlack.css` |
+| Pink | [BJ-Pink.css](BJ-Pink.css) | `https://theme.bj-share.org/BJ-Pink.css` |
+| Red | [BJ-Red.css](BJ-Red.css) | `https://theme.bj-share.org/BJ-Red.css` |
+
+> **Nota:** O tema `BJ-DarkBlue` foi descontinuado e removido dos temas ativos. Sua versão anterior permanece arquivada em [old/f8e8be5/BJ-DarkBlue.css](old/f8e8be5/BJ-DarkBlue.css).
+
 
 A estrutura vem de [examples/CSS new.css](examples/CSS%20new.css), cópia do exemplo recebido com extensão `.cts`. As cores, imagens, gradientes e sombras vêm de **[old/](old/)**, recuperado do commit [`ba4e315`](https://github.com/fullerhkz/custom-css/commit/ba4e31540ff0843df7c2a8e4b3f6fbc07cc894c4), anterior à reformulação responsiva. A aparência é transferida por seletor e declaração, preservando a ordem e `!important`, inclusive as diferenças entre temas claros e escuros. Não há substituição aproximada de paleta.
 

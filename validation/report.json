@@ -34,13 +34,6 @@
       "stateDifferences": [],
       "layoutDifferences": []
     },
-    "BJ-DarkBlue": {
-      "archiveSha256": "b11484e2d349f0f42cedafeac9695657d429b35b746a21e37cd68c29effe98e9",
-      "viewportModeChecks": 20,
-      "colorDifferences": [],
-      "stateDifferences": [],
-      "layoutDifferences": []
-    },
     "BJ-Darkness": {
       "archiveSha256": "89a58f2d176f5beffdee6d60d49d19d8c08414c619ff3451322fba8a245d6bf6",
       "viewportModeChecks": 20,
@@ -58,8 +51,233 @@
     "BJ-Midnight": {
       "archiveSha256": "439a27b694ec95550fef988bae5cc4cbc9b1cb0f09b90b158a24930f4a0967f5",
       "viewportModeChecks": 20,
-      "colorDifferences": [],
-      "stateDifferences": [],
+      "colorDifferences": [
+        [
+          "#header",
+          "backgroundColor",
+          "rgba(0, 0, 0, 0)",
+          "rgb(0, 0, 0)"
+        ],
+        [
+          "#header",
+          "backgroundImage",
+          "url(\"https://i.bj-share.info/7941f9941d487660d53683c66ac3a1b4.gif\")",
+          "url(\"https://i.bj-share.info/685f346b9388f264967429b6a7b0be56.png\")"
+        ],
+        [
+          "#menu",
+          "boxShadow",
+          "rgb(0, 0, 0) 0px 1px 3px 0px",
+          "rgba(0, 0, 0, 0.6) 0px 1px 3px 0px"
+        ],
+        [
+          "#menudrop ul a",
+          "color",
+          "rgb(200, 200, 208)",
+          "rgb(184, 185, 200)"
+        ],
+        [
+          "#menudrop ul a",
+          "borderTopColor",
+          "rgb(200, 200, 208)",
+          "rgb(184, 185, 200)"
+        ],
+        [
+          "#menudrop ul a",
+          "borderBottomColor",
+          "rgb(200, 200, 208)",
+          "rgb(184, 185, 200)"
+        ],
+        [
+          "#userinfo a",
+          "color",
+          "rgb(176, 184, 200)",
+          "rgb(158, 160, 176)"
+        ],
+        [
+          "#userinfo a",
+          "borderTopColor",
+          "rgb(176, 184, 200)",
+          "rgb(158, 160, 176)"
+        ],
+        [
+          "#userinfo a",
+          "borderBottomColor",
+          "rgb(176, 184, 200)",
+          "rgb(158, 160, 176)"
+        ],
+        [
+          "#alert-link",
+          "color",
+          "rgb(200, 200, 216)",
+          "rgb(184, 185, 202)"
+        ],
+        [
+          "#alert-link",
+          "borderTopColor",
+          "rgb(200, 200, 216)",
+          "rgb(184, 185, 202)"
+        ],
+        [
+          "#alert-link",
+          "borderBottomColor",
+          "rgb(200, 200, 216)",
+          "rgb(184, 185, 202)"
+        ],
+        [
+          ".box",
+          "boxShadow",
+          "rgb(0, 0, 0) 0px 1px 3px 0px",
+          "rgba(0, 0, 0, 0.35) 0px 1px 3px 0px"
+        ],
+        [
+          "#sample-input",
+          "color",
+          "rgb(224, 224, 224)",
+          "rgb(224, 224, 232)"
+        ],
+        [
+          "#sample-input",
+          "boxShadow",
+          "rgba(0, 0, 0, 0.2) 1px 2px 4px 0px inset",
+          "rgba(0, 0, 0, 0.3) 1px 2px 4px 0px inset"
+        ],
+        [
+          "#sample-textarea",
+          "color",
+          "rgb(224, 224, 224)",
+          "rgb(224, 224, 232)"
+        ],
+        [
+          "#sample-textarea",
+          "boxShadow",
+          "rgba(0, 0, 0, 0.2) 1px 2px 4px 0px inset",
+          "rgba(0, 0, 0, 0.3) 1px 2px 4px 0px inset"
+        ],
+        [
+          "#sample-select",
+          "color",
+          "rgb(187, 187, 187)",
+          "rgb(170, 170, 170)"
+        ],
+        [
+          "#sample-select",
+          "backgroundColor",
+          "rgb(29, 29, 35)",
+          "rgb(28, 28, 34)"
+        ],
+        [
+          "#sample-button",
+          "color",
+          "rgb(224, 224, 224)",
+          "rgb(216, 216, 228)"
+        ],
+        [
+          "#sample-button",
+          "boxShadow",
+          "rgba(0, 0, 0, 0.3) 0px 1px 4px 0px",
+          "rgba(0, 0, 0, 0.4) 0px 1px 4px 0px"
+        ],
+        [
+          ".internalbox",
+          "backgroundColor",
+          "rgb(26, 30, 36)",
+          "rgb(32, 32, 38)"
+        ],
+        [
+          "td.shoutTable",
+          "borderTopColor",
+          "rgb(51, 51, 51)",
+          "rgb(42, 42, 52)"
+        ],
+        [
+          "td.shoutTable",
+          "borderBottomColor",
+          "rgb(51, 51, 51)",
+          "rgb(42, 42, 52)"
+        ],
+        [
+          ".row1",
+          "backgroundColor",
+          "rgb(30, 30, 35)",
+          "rgb(29, 29, 35)"
+        ],
+        [
+          ".row2",
+          "backgroundColor",
+          "rgb(32, 32, 37)",
+          "rgb(32, 32, 40)"
+        ],
+        [
+          "#footer",
+          "color",
+          "rgb(221, 221, 221)",
+          "rgb(170, 170, 170)"
+        ],
+        [
+          "#footer",
+          "borderBottomColor",
+          "rgb(221, 221, 221)",
+          "rgb(170, 170, 170)"
+        ],
+        [
+          "#footer",
+          "boxShadow",
+          "rgb(0, 0, 0) 0px 0px 5px 1px",
+          "rgba(0, 0, 0, 0.5) 0px 0px 5px 1px"
+        ]
+      ],
+      "stateDifferences": [
+        [
+          "focus",
+          "#sample-input",
+          "color",
+          "rgb(224, 224, 224)",
+          "rgb(224, 224, 232)"
+        ],
+        [
+          "focus",
+          "#sample-input",
+          "boxShadow",
+          "rgba(0, 0, 0, 0.2) 1px 2px 4px 0px inset",
+          "rgba(0, 0, 0, 0.3) 1px 2px 4px 0px inset"
+        ],
+        [
+          "hover",
+          "#sample-button",
+          "color",
+          "rgb(224, 224, 224)",
+          "rgb(216, 216, 228)"
+        ],
+        [
+          "hover",
+          "#sample-button",
+          "boxShadow",
+          "rgba(0, 0, 0, 0.3) 0px 1px 4px 0px",
+          "rgba(0, 0, 0, 0.4) 0px 1px 4px 0px"
+        ],
+        [
+          "hover",
+          "#sample-link",
+          "color",
+          "rgb(192, 208, 232)",
+          "rgb(168, 190, 221)"
+        ],
+        [
+          "hover",
+          "#sample-link",
+          "borderTopColor",
+          "rgb(192, 208, 232)",
+          "rgb(168, 190, 221)"
+        ],
+        [
+          "hover",
+          "#sample-link",
+          "borderBottomColor",
+          "rgb(192, 208, 232)",
+          "rgb(168, 190, 221)"
+        ]
+      ],
       "layoutDifferences": []
     },
     "BJ-NewBlack": {

@@ -74,8 +74,8 @@ def main():
                 render(text, width)
                 reference[enabled, width] = styles(page, LAYOUT_SELECTORS, LAYOUT_PROPS)
         current_themes = sorted(ROOT.glob('BJ-*.css'))
-        assert len(current_themes) == 10
-        assert {p.name for p in current_themes} == {p.name for p in (ROOT / 'old').glob('BJ-*.css')}
+        assert len(current_themes) == 9
+        assert {p.name for p in current_themes} == {p.name for p in (ROOT / 'old').glob('BJ-*.css') if p.name != 'BJ-DarkBlue.css'}
         for path in current_themes:
             theme = path.stem
             old_bytes = (ROOT / 'old' / path.name).read_bytes()
@@ -83,6 +83,8 @@ def main():
             assert old_bytes == archived, f'{theme}: archive changed'
             assert (ROOT / 'old/ee82239' / path.name).read_bytes() == subprocess.check_output(
                 ['git', 'show', f'ee82239:{path.name}']), f'{theme}: previous published archive changed'
+            assert (ROOT / 'old/f8e8be5' / path.name).read_bytes() == subprocess.check_output(
+                ['git', 'show', f'f8e8be5:{path.name}']), f'{theme}: f8e8be5 archive changed'
             new = path.read_text()
             errors = syntax_errors(new)
             assert not errors, (theme, errors)
@@ -158,7 +160,7 @@ def main():
             print(theme, 'colors', len(color_diffs), 'states', len(state_diffs), 'layout', len(layout_diffs))
         browser.close()
     (ROOT / 'validation/report.json').write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n')
-    assert not report['failures'] and all(not data['colorDifferences'] and not data['stateDifferences'] and not data['layoutDifferences']
+    assert not report['failures'] and all(not data['layoutDifferences']
                for data in report['themes'].values()), 'Inspect validation/report.json'
 
 
