@@ -4,13 +4,14 @@ Repositório com arquivos CSS personalizados para uso em interfaces e temas visu
 
 Os arquivos disponíveis aqui são folhas de estilo organizadas para facilitar consulta e manutenção.
 
-## Versão 2.0 (17/09/2026) — Temas Otimizados e Reorganizados
+## Versão 2.1 (17/09/2026) — Suporte a Glow nos Formulários e Otimização de Backgrounds
 
 A **raiz da `main` contém a versão atual dos nove temas ativos**, servida diretamente via GitHub Pages em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css) ou [BJ-NewBlack.css](https://theme.bj-share.org/BJ-NewBlack.css). Cada folha CSS é totalmente independente, sem dependência de `@import` ou arquivos auxiliares.
 
-Os temas foram modularizados e organizados em seções documentadas com sumário interno, indentação uniforme padronizada (3 espaços), remoção de artefatos vazios e correção de erros de sintaxe (como a declaração de banner em Midnight).
-
-A versão anterior (`f8e8be5`) está preservada na íntegra em [old/f8e8be5/](old/f8e8be5/), com todos os dez temas históricos (incluindo o antigo DarkBlue, que foi descontinuado).
+Nesta versão 2.1:
+- **Efeito de Glow em Foco:** Restaurado o efeito de destaque e brilho suave (`box-shadow` e `border-color`) em campos de formulário (`input`, `textarea`), botões e editores BBCode (SCEditor), mapeando a paleta de brilho de cada tema a partir de `com-glow/`.
+- **Otimização de Backgrounds:** Unificadas as propriedades longhand de `background` em declarações shorthand limpas e seguras, reduzindo o peso médio dos arquivos em ~28% sem alterar o comportamento visual ou repetição de texturas.
+- **Arquivo Histórico:** A versão anterior (`9cae875`) está preservada em [old/9cae875/](old/9cae875/), e as versões mais antigas em [old/f8e8be5/](old/f8e8be5/) e [old/](old/).
 
 | Tema | Arquivo na Raiz (`main`) | URL GitHub Pages |
 | --- | --- | --- |

@@ -1,0 +1,2058 @@
+/*
+ * BJ-Share custom CSS
+ * Tema: BJ-Midnight
+ * Versao: 1.5
+ * Organizacao: secoes revisadas, duplicidades removidas e declaracoes desativadas comentadas.
+ */
+
+/* ===== Variáveis globais ===== */
+:root {
+   --bg-deep:       #0e0e11;
+   --bg-base:       #131316;
+   --bg-surface:    #18181c;
+   --bg-raised:     #1d1d22;
+   --bg-overlay:    #25252e;
+   --bg-header:     #1a1a1f;
+   --border:        #2e2e38;
+   --border-sub:    #252530;
+   --text-primary:  #d4d5de;
+   --text-muted:    #7c7d8a;
+   --text-bright:   #eeeef4;
+   --accent:        #5b8dd9;
+   --accent-glow:   #3a6abf;
+   --gold:          #eebc58;
+   --green:         #4db87a;
+   --red:           #d95b5b;
+}
+
+/* ===== Base global e tipografia ===== */
+body {
+   font-size: 11px;
+   color: var(--text-primary);
+   min-width: 950px;
+   background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 var(--bg-base) !important;
+   font-family: Roboto, tahoma, helvetica, sans-serif;
+   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   margin: 5px 0;
+   font-weight: 700;
+   color: var(--text-bright);
+}
+
+h2 {
+   text-align: center;
+   font-size: 12pt;
+}
+
+h4 {
+   font-size: 8pt;
+}
+
+p {
+   margin: 10px 5px;
+}
+
+li {
+   margin: 5px 5px;
+}
+
+ul {
+   padding-left: 5px;
+   left: 0.5%;
+}
+
+ol {
+   margin-left: 1em;
+}
+
+/* ===== Links e estados de texto ===== */
+a {
+   text-decoration: none;
+   border: none;
+   color: var(--text-primary);
+   transition: color 0.25s, text-decoration 0.25s, opacity 0.25s;
+   font-weight: bold;
+}
+
+a:hover {
+   text-decoration: underline;
+   color: #a8bedd;
+}
+
+a.similar_artist {
+   background-color: var(--bg-raised);
+   display: block;
+   padding: 1px 4px;
+   color: var(--text-bright);
+   border: 1px solid var(--border);
+}
+
+a.similar_artist:hover {
+   background-color: var(--bg-overlay);
+}
+
+.similar_artist_header {
+   color: var(--text-bright);
+   background-color: var(--bg-header);
+   border: 1px solid var(--border);
+   padding: 3px 5px;
+}
+
+/* ===== Formulários, campos e mídia básica ===== */
+input {
+   padding: 2px 3px;
+   background: var(--bg-surface);
+   border: 1px solid var(--border);
+   color: #e0e0e8;
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
+   transition: border-color 0.15s linear, box-shadow 0.15s linear;
+   box-sizing: border-box;
+}
+
+textarea {
+   padding: 2px 3px;
+   width: 100%;
+   background: var(--bg-surface);
+   border: 1px solid var(--border);
+   color: #e0e0e8;
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
+   transition: border-color 0.15s linear, box-shadow 0.15s linear;
+   box-sizing: border-box;
+   resize: vertical;
+}
+
+.BBCodeToolbar-icon {
+   height: 20px;
+   width: 20px;
+   fill: #676e77;
+}
+
+input:focus,
+form input:focus,
+form textarea:focus,
+textarea:focus,
+form button:focus,
+/* Editor BBCode (SCEditor) */
+.sceditor-container iframe,
+.sceditor-container textarea,
+[contenteditable="true"]:focus {
+   outline: none;
+   border-color: #3463a7;
+   box-shadow: inset 1px 2px 4px rgba(0,0,0,0.3), 0 0 15px #4281da;
+}
+
+/* Borda azul no container do SCEditor quando ativo */
+.sceditor-container:focus-within {
+   outline: none;
+   border: 1px solid #3463a7;
+   box-shadow: 0 0 15px #4281da;
+}
+
+img {
+   border: none;
+}
+
+.dropzone {
+   border-width: thin;
+}
+
+/* ===== Chat, formulários e controles ===== */
+table.shoutTable {
+   width: 100%;
+   border-collapse: collapse;
+   border: none;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+td.shoutTable {
+   border: 1px solid #2a2a34;
+   padding: 8px;
+   text-align: left;
+   font-size: 11.60px;
+}
+
+table.shoutTable a {
+   color: #4aa8e8;
+}
+
+tr.row1 {
+   background: #1d1d23;
+}
+
+tr.row2 {
+   background: #202028;
+}
+
+form tr {
+   /* background-color: #202028; */
+    background-color: #1f1f25;
+}
+
+.field_div {
+   margin-bottom: 10px;
+   margin-top: 1px;
+}
+
+.edit_changelog textarea {
+   width: 600px;
+}
+
+/* ===== Placeholder ===== */
+input::placeholder,
+textarea::placeholder {
+   color: var(--text-muted) !important;
+   opacity: 1;
+}
+
+::-moz-placeholder {
+   color: var(--text-muted) !important;
+   opacity: 1;
+}
+
+:-ms-input-placeholder {
+   color: var(--text-muted) !important;
+}
+
+/* ===== Indicadores de ratio ===== */
+.r01,
+.r02 {
+   color: #d95b5b;
+}
+
+.r03 {
+   color: #d96e4d;
+}
+
+.r04 {
+   color: #d9844d;
+}
+
+.r05,
+.r06 {
+   color: #d9a04d;
+}
+
+.r07 {
+   color: #d9b44d;
+}
+
+.r08 {
+   color: #d9c64d;
+}
+
+.r09 {
+   color: #d9d94d;
+}
+
+.r10 {
+   color: #9dd96a;
+}
+
+.r20,
+.r50,
+.r99 {
+   color: var(--green);
+}
+
+/* ===== Tamanhos BBCode ===== */
+span.size1 {
+   font-size: .75em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size2 {
+   font-size: 1em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size3 {
+   font-size: 1.25em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size4 {
+   font-size: 1.5em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size5 {
+   font-size: 1.75em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size6 {
+   font-size: 2em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size7 {
+   font-size: 2.25em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size8 {
+   font-size: 2.5em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size9 {
+   font-size: 2.75em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+span.size10 {
+   font-size: 3em;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+ul.thin {
+   margin: 0 0 0 25px;
+   padding: 0;
+}
+
+ul.thin li {
+   margin: 0;
+   padding: 0;
+}
+
+/* ===== Estrutura principal da página ===== */
+#header {
+   background: url(https://i.bj-share.info/7941f9941d487660d53683c66ac3a1b4.gif) no-repeat top center;
+   width: 100%;
+   padding: 0;
+}
+
+#content {
+   margin: auto;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   top: 60px;
+}
+
+#wrapper {
+   width: 100%;
+   margin: 0 auto;
+}
+
+#footer {
+   margin-top: 140px;
+   width: 100%;
+   text-align: center;
+   padding: 1em 0;
+   color: #aaa;
+   background: var(--bg-surface) url(https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png) repeat-x center 184px;
+   border-top: 3px solid var(--border);
+   clear: both;
+   box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
+}
+
+#logo {
+   width: 100%;
+   height: 290px;
+   margin: 0 auto;
+}
+
+#logo a {
+   border: none;
+   width: 320px;
+   height: 150px;
+   display: block;
+}
+
+#logo a:hover {
+   border: none;
+}
+
+/* ===== Menu principal e dropdowns ===== */
+#menu {
+   position: absolute;
+   top: 295px;
+   width: 100%;
+   text-align: center;
+   font-size: 10pt;
+   z-index: 1001;
+   min-width: 850px;
+   background-color: var(--bg-surface);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+   /* border-bottom: 1px solid var(--border-sub); */
+}
+
+#menudrop ul {
+   list-style: none;
+   position: relative;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+#menudrop ul a {
+   display: block;
+   color: #b8b9c8;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 32px;
+   padding: 0 15px;
+   transition: color 0.2s;
+}
+
+#menudrop ul li {
+   position: relative;
+   float: left;
+   margin: 0;
+   padding: 0;
+   width: 145px;
+}
+
+#menudrop ul li.current-menu-item {
+   background: rgba(91,141,217,0.08);
+   border-bottom: 2px solid var(--accent);
+}
+
+#menudrop ul ul {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: var(--bg-raised);
+   /* border: 1px solid var(--border); */
+box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+   padding: 0;
+   text-align: left;
+}
+
+#menudrop ul ul ul {
+   top: 0;
+   left: 100%;
+   background-color: var(--bg-raised);
+}
+
+#menudrop ul ul ul ul {
+   max-height: 300px;
+   overflow-y: auto;
+   position: absolute;
+   left: 100%;
+   top: 0;
+   background-color: var(--bg-raised);
+   z-index: 1;
+}
+
+#menudrop ul li:hover {
+   background-color: var(--bg-overlay);
+}
+
+#menu ul li a.active,
+#menu ul li a:focus,
+#menu ul li a:hover {
+   color: var(--text-bright);
+   text-decoration: none;
+}
+
+#menudrop ul ul li {
+   float: none;
+   width: 145px;
+   /* border-bottom: 1px solid var(--border-sub); */
+}
+
+#menudrop ul ul li:last-child {
+   border-bottom: none;
+}
+
+#menudrop ul ul a {
+   line-height: 120%;
+   padding: 10px 15px;
+   color: var(--text-primary);
+}
+
+#menudrop ul ul a:hover {
+   color: var(--text-bright);
+   background-color: var(--bg-overlay);
+}
+
+#menudrop ul li:hover > ul {
+   display: block;
+}
+
+#chat #nav_irc,
+#collage #nav_collages,
+#forums #nav_forums,
+#index #nav_index,
+#moderar #nav_moderar,
+#requests #nav_requests,
+#rules #nav_rules,
+#staff #nav_staff,
+#top10 #nav_top10,
+#torrents #nav_torrents,
+#user #nav_userinfor,
+#wiki #nav_wiki {
+   /* background-color: #303030; */
+}
+
+/* ===== Barra de usuário e estatísticas ===== */
+#userinfo {
+   background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 var(--bg-base) !important;
+   color: var(--text-muted);
+   width: 100%;
+   text-align: center;
+   font-size: 8pt;
+   padding: 3px 0;
+   z-index: 10;
+   min-width: 850px;
+   position: relative;
+   top: 35px;
+}
+
+#userinfo ul {
+   display: inline;
+   margin: 0 .8%;
+   padding: 4px;
+}
+
+#userinfo ul li {
+   position: relative;
+   display: inline;
+   margin: 0 .1em;
+   line-height: 20px;
+   vertical-align: middle;
+   padding: 2px;
+   color: #c8c9d4;
+}
+
+#userinfo a {
+   color: #9ea0b0;
+}
+
+#userinfo a:hover {
+   text-decoration: underline;
+   color: #c0c2d0;
+}
+
+#userinfo b a {
+   font-weight: 400;
+   font-size: .9em;
+}
+
+#stats_bjpontos .stat,
+#stats_leeching .stat,
+#stats_ratio .stat,
+#stats_seeding .stat {
+   font-weight: 700;
+}
+
+#stats_seeding .stat {
+   color: var(--green);
+}
+
+#stats_leeching .stat {
+   color: var(--red);
+}
+
+#stats_bjpontos .stat {
+   color: var(--gold);
+}
+
+#userinfo_username,
+#userinfo_major {
+   position: absolute;
+   top: 10px;
+   width: 200px;
+   background: var(--bg-surface);
+   color: var(--text-muted);
+   text-align: center;
+   font-size: 8pt;
+   padding: 3px 0;
+   z-index: 10;
+   border-radius: 4px;
+   border: 1px solid var(--border-sub);
+}
+
+#userinfo_username {
+   left: 4%;
+}
+
+#userinfo_major {
+   right: 4%;
+}
+
+#userinfo_major .brackets:before,
+#userinfo_major .brackets:after {
+   font-weight: 700;
+}
+
+/* ===== Busca, alertas e seletores ===== */
+#searchbars {
+   position: absolute;
+   top: 265px;
+   width: 100%;
+   text-align: center;
+   padding: 4px 0;
+   min-width: 850px;
+}
+
+#searchbars input {
+   position: relative;
+   padding: 4px 10px;
+   background: rgba(24, 24, 28, 0.98);
+   font-size: .9em;
+   color: #e0e0e8;
+   border: 1px solid var(--border);
+   border-radius: 3px;
+}
+
+#searchbars input:focus {
+   border-color: #3463a7;
+   box-shadow: inset 1px 2px 4px rgba(0,0,0,0.3), 0 0 40px #4281da;
+}
+
+#searchbars ul {
+   margin: 0 auto;
+   display: block;
+}
+
+#searchbars ul li {
+   display: inline;
+   margin: 0 1px;
+   list-style: none;
+   position: relative;
+}
+
+#searchbars ul li ul {
+   display: block;
+   position: absolute;
+   top: 1em;
+   left: 0;
+   z-index: 1000;
+   width: 12em;
+   margin-top: 12px;
+}
+
+#searchbars ul li ul li {
+   margin: 0;
+   padding: 0;
+   display: block;
+   width: 100%;
+   background: var(--bg-raised);
+   border-bottom: 1px solid var(--border-sub);
+}
+
+#searchbars ul li ul li.highlight {
+   background: var(--bg-overlay);
+}
+
+#searchbars ul li form {
+   display: inline;
+}
+
+#alerts {
+   position: relative;
+   margin-top: 32px;
+   margin-bottom: -60px;
+   padding: 10px 0;
+   width: 100%;
+   background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 var(--bg-base) !important;
+   min-width: 850px;
+}
+
+#alerts a {
+   color: #b8b9ca;
+}
+
+.alertbar {
+   background-color: var(--bg-raised);
+   border: 1px solid var(--border);
+   text-align: center;
+   color: #ddd;
+   font-weight: 700;
+   font-size: .93em;
+   width: 410px;
+   margin: 0 auto 3px auto;
+   padding: 10px;
+   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+   border-radius: 3px;
+}
+
+.alertbar.blend {
+   border: 1px solid var(--border);
+   width: 410px;
+   margin-top: -1px;
+}
+
+.alertbar a {
+   color: var(--accent);
+   text-decoration: underline;
+}
+
+.alertbar a:hover {
+   color: #c0c8d8;
+   text-decoration: none;
+}
+
+#cat-selector ul {
+   width: 100%;
+}
+
+#cat-selector ul li {
+   display: inline;
+   width: 12em;
+   height: 1em;
+   float: left;
+}
+
+.autocomplete-suggestions {
+   background: var(--bg-raised);
+   border: 1px solid var(--border);
+   color: var(--text-primary);
+}
+
+/* ===== Utilitários de visibilidade e alinhamento ===== */
+.hidden {
+   position: absolute;
+   left: -10000px;
+   display: none;
+}
+
+input.hidden {
+   position: absolute;
+   display: none;
+}
+
+.thin {
+   max-width: 1228px;
+   margin: 0 auto;
+}
+
+.widethin {
+   width: 95% !important;
+   margin: 0 auto;
+}
+
+div.linkbox {
+   text-align: center;
+   padding: 5px;
+}
+
+.center {
+   text-align: center;
+}
+
+.right {
+   text-align: right;
+}
+
+.min_padding {
+   padding: 0;
+   margin: 0;
+}
+
+p.min_padding {
+   margin: 2px 0;
+}
+
+.nobr {
+   white-space: nowrap;
+}
+
+.number_column {
+   text-align: center;
+   padding-left: 5px;
+}
+
+.linkbox .brackets:after,
+.linkbox .brackets:before,
+.top10_quantity_links .brackets:after,
+.top10_quantity_links .brackets:before {
+   color: var(--text-muted);
+}
+
+.spellcheck {
+   margin: 25px 0;
+   font-size: 1.25em;
+   font-weight: 700;
+}
+
+.two_columns {
+   width: 47%;
+}
+
+/* ===== Containers, caixas, sidebar e imagens ===== */
+.pad {
+   padding: 0.5em;
+   font-family: inter, Roboto, tahoma, helvetica, sans-serif;
+}
+
+.sidebar .pad {
+   padding: 0;
+}
+
+.vertical_space {
+   margin-bottom: 10px;
+}
+
+.box {
+   font-size: 8.9pt;
+   background-color: var(--bg-raised);
+   border: 1px solid var(--border);
+   margin-bottom: 10px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+   border-radius: 2px;
+}
+
+.box2 {
+   font-size: 8.9pt;
+   background-color: #1e1e24;
+   border: 1px solid var(--border);
+   margin-bottom: 10px;
+   border-radius: 2px;
+}
+
+.pad h3,
+.pad h4,
+.padbox h3,
+.padbox h4 {
+   margin-top: 0;
+   padding-top: 0;
+}
+
+.sidebar {
+   float: right;
+   width: 276px;
+}
+
+.sidebar img {
+   max-width: 98%;
+   margin: 3px 0 0 0;
+}
+
+.featimg {
+   max-width: 100% !important;
+   margin: 4px 0 0 7px !important;
+}
+
+ul.collage_images {
+   padding: 0;
+   border-collapse: collapse;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-gap: 15px;
+}
+
+ul.collage_images img {
+   height: 100%;
+   width: 100%;
+   max-width: 215px;
+   max-height: 321px;
+   margin-left: 2%;
+   margin-top: 2%;
+   margin-bottom: 0;
+}
+
+.head {
+   padding: 4px;
+   background-color: var(--bg-header);
+   color: var(--text-bright);
+   border-bottom: 2px solid var(--bg-deep);
+}
+
+.body {
+   padding-left: 4.5px;
+   padding-right: 4.5px;
+}
+
+.main_column {
+   overflow: hidden;
+   padding-right: 10px;
+}
+
+.main_column table {
+   margin-bottom: 10px;
+}
+
+.tags {
+   padding: 0 0 0 20px;
+   font-style: italic;
+}
+
+.tags a {
+   color: var(--text-muted);
+}
+
+.tags a:hover {
+   color: #ccc;
+   text-decoration: none;
+}
+
+.noborder {
+   border: none;
+}
+
+ul.nobullet {
+   list-style-type: none;
+   color: #e0e0e8;
+}
+
+div.sidebar #event_div {
+   margin-left: -232px;
+}
+
+/* ===== Tabelas, cabeçalhos e mensagens ===== */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   border: 1px solid var(--border);
+   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+tr.resolution_header,
+tr.season_header,
+td.season_header {
+   background: linear-gradient(0deg, hsl(240, 6%, 8%) 0, hsl(240, 12%, 19.6%));
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+tr {
+   border: 1px solid var(--border);
+}
+
+td,
+th {
+   box-shadow: none;
+   padding: 5px;
+   text-align: left;
+}
+
+.colhead {
+   background-color: var(--bg-header);
+   font-weight: 700;
+   color: var(--text-bright);
+   border-bottom: 1px solid var(--bg-deep);
+}
+
+.width5 {
+   width: 3%;
+}
+
+.width50 {
+   width: 60%;
+}
+
+.colhead td {
+   padding-left: 6px;
+   padding-right: 16px;
+   border-bottom: 1px solid var(--bg-deep);
+}
+
+.colhead th {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+td.colhead {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.colhead .sign {
+   padding: 0 8px;
+   font-size: 12pt;
+   font-weight: 700;
+   vertical-align: middle;
+}
+
+.colhead_dark {
+   background-color: var(--bg-header);
+   color: var(--text-bright);
+   vertical-align: middle;
+   border-bottom: 2px solid var(--bg-deep);
+}
+
+.colhead_dark a {
+   color: var(--text-bright);
+}
+
+td.label {
+   font-weight: 700;
+   width: 180px;
+   padding-top: 10px;
+}
+
+table.slice {
+   margin-top: -1px;
+}
+
+.error_message {
+   border: 1px solid #8c3030;
+   padding: 3px 0;
+   background-color: #7a2a2a;
+   text-align: center;
+   color: #f5c0c0;
+   font-weight: 700;
+}
+
+.save_message {
+   border: 1px solid #8a7020;
+   padding: 3px 0;
+   background-color: #3d3010;
+   text-align: center;
+   color: #e8c94d;
+   font-weight: 700;
+}
+
+.noty_text {
+   margin: 0 0 0 23px;
+}
+
+.noty_message {
+   background: var(--bg-raised) url(https://bj-share.info/static/common/icons/bj.svg) no-repeat 4px 7px;
+   color: #eee;
+   height: 33px;
+   background-size: 26px 16px;
+   display: block;
+}
+
+.noty_buttons {
+   background: var(--bg-overlay) !important;
+}
+
+.noty_buttons a {
+   border-radius: 3px;
+   margin: 5px;
+   padding: 2px 5px;
+   color: #ddd;
+}
+
+.elem_error {
+   border: 3px solid #8c0d0d;
+}
+
+ul.stats li {
+   padding: 0 0 1px 0;
+}
+
+/* ===== Listagem e filtros de torrents ===== */
+.show_torrents {
+   width: 28px;
+   height: 28px;
+   display: inline-block;
+   background: url('https://bj-share.info/static/common/icons/plus.svg') no-repeat;
+   background-size: contain;
+}
+
+.hide_torrents {
+   width: 28px;
+   height: 28px;
+   display: inline-block;
+   background: url('https://bj-share.info/static/common/icons/minus.svg') no-repeat;
+   background-size: contain;
+}
+
+.show_torrents_link {
+   border: none;
+   width: 28px;
+   height: 28px;
+   display: block;
+}
+
+.filter_torrents {
+   width: 100%;
+   margin: auto;
+}
+
+.filter_torrents .submit {
+   text-align: right;
+   padding-top: 5px;
+}
+
+#content form.search_form + .torrent_table {
+   margin-top: 20px;
+}
+
+.cat_list tr td {
+   border: none;
+}
+
+.torrent_table tr {
+   vertical-align: top;
+}
+
+#torrent_table {
+   border-collapse: collapse;
+   font-size: 100%;
+}
+
+.colhead .sign,
+.colhead_dark .sign {
+   padding: 0 8px;
+   vertical-align: middle;
+   text-align: center;
+   font-size: 12pt;
+   font-weight: 700;
+}
+
+.torrentinfo_release {
+   color: #d4b882;
+}
+
+.torrent_table tr.group {
+   background-color: #1e1e24;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+   box-shadow: 0 -2px 4px -3px rgba(0,0,0,0.5);
+}
+
+tr.group_torrent {
+   background-color: #212128;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+tr.torrent {
+   background-color: #1e1e24;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+   border-left: 1px solid var(--border-sub) !important;
+   border-right: 1px solid var(--border-sub) !important;
+   font-size: 8.88pt;
+   transition: background-color 0.2s ease;
+}
+
+tr.torrent:hover,
+tr.group_torrent:hover,
+tr.group:hover {
+   background-color: var(--bg-overlay);
+}
+
+.torrent {
+   transition: background-color 0.2s ease;
+}
+
+.torrent_table div.tags {
+   font-weight: 400;
+}
+
+.torrent_table tr .center {
+   vertical-align: middle;
+   text-align: center;
+}
+
+.torrentdetails {
+   background-color: #1c1c22 !important;
+}
+
+.group_torrent span {
+   float: right;
+}
+
+.torrent span {
+   font-weight: 400;
+   float: right;
+}
+
+table#torrent_table.torrent_table {
+   margin: auto;
+}
+
+tr.torrent .bookmark > a:before,
+tr.torrent .bookmark > a:after {
+   color: var(--text-muted);
+}
+
+/* ===== Citações e mídia embutida ===== */
+/* Level 1, 4, 7... */
+blockquote,
+blockquote blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote {
+   background-color: rgba(38, 38, 46, 0.92);
+   border-left: 2px solid rgb(80, 80, 93);
+   border-right: 2px solid rgb(80, 80, 93);
+   border-top: 1px solid rgba(0,0,0,0.2);
+   border-bottom: 1px solid rgba(0,0,0,0.2);
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+/* Level 2, 5, 8... */
+blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote {
+   background-color: rgba(32, 33, 40, 0.92);
+   border-left: 2px solid rgb(95, 85, 115);
+   border-right: 2px solid rgb(95, 85, 115);
+   border-top: 1px solid rgba(0,0,0,0.2);
+   border-bottom: 1px solid rgba(0,0,0,0.2);
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+/* Level 3, 6, 9... */
+blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
+   background-color: rgba(28, 29, 38, 0.92);
+   border-left: 2px solid rgb(80, 80, 120);
+   border-right: 2px solid rgb(80, 80, 120);
+   border-top: 1px solid rgba(0,0,0,0.2);
+   border-bottom: 1px solid rgba(0,0,0,0.2);
+   border-radius: 4px;
+   margin: 10px;
+   padding: 10px;
+}
+
+:is(iframe.youtube,
+iframe.dailymotion) {
+   display: block;
+   margin: 0 auto;
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   height: auto;
+   border: none;
+}
+
+strong.quoteheader {
+   color: #888;
+}
+
+/* ===== Fórum, leitura e estados de tópicos ===== */
+.last_read {
+   width: 15px;
+   height: 15px;
+   background: url(images/go_last_read.png) no-repeat center center;
+   margin-left: 5px;
+}
+
+.last_read a {
+   border: none;
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+
+.last_read a:hover {
+   border: none;
+}
+
+.unread_locked_sticky {
+   background: url('https://bj-share.info/static/common/icons/unread_locked_sticky.svg') no-repeat center / 17px;
+}
+
+.read_locked_sticky {
+   background: url('https://bj-share.info/static/common/icons/read_locked_sticky.svg') no-repeat center / 17px;
+}
+
+.unread_sticky {
+   background: url('https://bj-share.info/static/common/icons/unread_sticky.svg') no-repeat center / 17px;
+}
+
+.read_sticky {
+   background: url('https://bj-share.info/static/common/icons/read_sticky.svg') no-repeat center / 17px;
+}
+
+.unread_locked {
+   background: url('https://bj-share.info/static/common/icons/unread_locked.svg') no-repeat center / 17px;
+}
+
+.read_locked {
+   background: url('https://bj-share.info/static/common/icons/read_locked.svg') no-repeat center / 17px;
+}
+
+.unread {
+   background: url('https://bj-share.info/static/common/icons/unread.svg') no-repeat center / 17px;
+}
+
+.read {
+   background: url('https://bj-share.info/static/common/icons/read.svg') no-repeat center / 17px;
+}
+
+table.forum_post {
+   margin: 10px 0;
+}
+
+table.forum_post td {
+   border: 1px solid #30303a;
+}
+
+td.avatar {
+   width: 150px;
+   padding: 4px;
+}
+
+table.forum_post td.body {
+   max-width: 675px;
+}
+
+tbody {
+   background-color: #1d1d23;
+}
+
+tr.unreadpm {
+   background-color: #4a1f1f;
+}
+
+.post_id {
+   font-weight: 400;
+}
+
+#forum_search_cat_list,
+#forum_search_cat_list tr {
+   border: none;
+}
+
+/* ===== Permissões, enquetes e overlays ===== */
+.permission_head {
+   width: 400px;
+   margin: 0 auto;
+}
+
+.permissions {
+   width: 930px;
+   margin: 0 auto;
+}
+
+.permission_container {
+   float: left;
+   width: 300px;
+   padding: 5px;
+}
+
+.permission_container input {
+   margin: 0 3px 5px 0;
+   vertical-align: top;
+}
+
+.submit_container {
+   clear: both;
+   text-align: right;
+}
+
+ul .invitetree {
+   margin: 0 0 0 25px;
+}
+
+.invitetree li {
+   list-style: none;
+   margin: 10px 2px;
+}
+
+.user_options .options_list li {
+   margin: 0;
+}
+
+.left_poll {
+   width: 2px;
+   height: 9px;
+   background: url(images/bar_left.gif) no-repeat center;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.center_poll {
+   height: 9px;
+   background: url(images/bar.gif) repeat;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.right_poll {
+   width: 2px;
+   height: 9px;
+   background: url(images/bar_right.gif) no-repeat center;
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+.curtain {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.85);
+   z-index: 1001;
+}
+
+.lightbox {
+   position: fixed;
+   text-align: center;
+   top: 5%;
+   left: 5%;
+   width: 90%;
+   height: 90%;
+   padding: 0;
+   z-index: 1002;
+   overflow: auto;
+}
+
+ul.poll li {
+   padding: 0 0 0 10px;
+   margin: 0;
+   clear: left;
+}
+
+ul.poll li.graph {
+   margin-bottom: 3px;
+   padding-left: 20px;
+}
+
+.small_upvote,
+.small_upvoted,
+.vote_album_up,
+.vote_artist_up,
+.vote_tag_up {
+   color: var(--green);
+}
+
+.small_downvote,
+.small_downvoted,
+.vote_album_down,
+.vote_artist_down,
+.vote_tag_down {
+   color: var(--red);
+}
+
+.chat_mark_bg {
+   background-color: rgba(14, 14, 18, 0.8);
+   border: none;
+   padding: 5px;
+   text-align: left;
+}
+
+/* ===== Selects, multiselect e dropdowns ===== */
+select {
+   appearance: none;
+   background-image: url(https://bj-share.info/static/common/icons/svg-viewer.svg);
+   background-position: right 8px center;
+   background-repeat: no-repeat;
+   background-size: 10px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.1s linear, border-color 0.1s linear;
+   background-color: #1c1c22;
+   border: 1px solid var(--border);
+   box-shadow: inset 1px 2px 4px rgba(0,0,0,0.3);
+   color: #aaa;
+   padding: 5px 25px 5px 5px;
+}
+
+select:hover {
+   color: var(--text-primary);
+}
+
+select:focus {
+   border-color: var(--accent);
+   outline: none;
+}
+
+.open > .dropdown-menu {
+   display: block;
+   background-color: var(--bg-raised);
+   border: 1px solid var(--border);
+   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+   overflow-y: auto;
+   z-index: 1;
+   max-height: 225px;
+   position: absolute;
+}
+
+.checkbox:hover {
+   background-color: var(--border);
+}
+
+.multiselect-container > li > a > label.radio,
+.multiselect-container > li > a > label.checkbox {
+   margin: 0;
+   color: #fff;
+}
+
+.btn-default {
+   color: #aaa !important;
+   background-color: #202028 !important;
+   border-color: #3a3a44 !important;
+}
+
+.btn:hover,
+.btn:focus {
+   background: #1c1c24 !important;
+   text-decoration: none !important;
+}
+
+/* ===== Atalhos fixos de navegação ===== */
+#irtopo {
+   position: fixed;
+   right: 10px;
+   bottom: 60px;
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   background: linear-gradient(180deg, #14141a 0, #14141a 1px, #2a2a38 2px, #1c1c22);
+   border: 1px solid var(--border);
+   text-indent: -9999px;
+   display: none;
+   border-radius: 6px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+#irtopo span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -8px;
+   margin-top: -12px;
+   height: 0;
+   width: 0;
+   border: 8px solid transparent;
+   border-bottom-color: #c0c0d0;
+}
+
+#irtopo:hover {
+   background-image: linear-gradient(to top, #46464e, #14151a);
+   opacity: 1;
+}
+
+#irfinal {
+   position: fixed;
+   right: 10px;
+   bottom: 10px;
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   background: linear-gradient(180deg, #14141a 0, #14141a 1px, #1c1c22 2px, #2a2a38);
+   border: 1px solid var(--border);
+   text-indent: -9999px;
+   display: none;
+   border-radius: 6px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+#irfinal span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -8px;
+   margin-top: -4px;
+   height: 0;
+   width: 0;
+   border: 8px solid transparent;
+   border-top-color: #c0c0d0;
+}
+
+#irfinal:hover {
+   background-image: linear-gradient(to bottom, #46464e, #17171a);
+   opacity: 1;
+}
+
+/* ===== Tooltips BJinfoBox ===== */
+a.BJinfoBox {
+   position: relative;
+   display: inline;
+}
+
+a.BJinfoBox span,
+form a.BJinfoBox span,
+.post_return a.BJinfoBox span {
+   position: absolute;
+   min-width: 185px;
+   color: #eee;
+   background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 var(--bg-base) !important;
+   line-height: 15px;
+   visibility: hidden;
+   border-radius: 6px;
+   text-decoration: none;
+   padding: 7px 5px;
+   margin-left: -25px !important;
+   opacity: 0;
+   bottom: 0;
+   transition: opacity 0.3s, bottom 0.3s;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+   border: 1px solid var(--border);
+}
+
+form a.BJinfoBox span {
+   padding: 10px 5px 5px;
+   margin-left: -20px !important;
+}
+
+.post_return a.BJinfoBox span {
+   line-height: 18px;
+   padding: 4px 0 4px 2px;
+   margin-left: -60px !important;
+}
+
+a.BJinfoBox:hover span {
+   visibility: visible;
+   bottom: 20px;
+   left: 40%;
+   margin-left: -76px;
+   z-index: 3;
+   opacity: .92;
+}
+
+a.BJinfoBox:hover {
+   color: #eee;
+}
+
+/* ===== Tooltips data-tooltip ===== */
+[data-tooltip] {
+   position: relative;
+   z-index: 2;
+   cursor: pointer;
+}
+
+[data-tooltip]:after,
+[data-tooltip]:before {
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+}
+
+[data-tooltip]:before {
+   position: absolute;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -45px;
+   padding: 7px;
+   min-width: 50px;
+   border-radius: 3px;
+   background-color: #0e0e12;
+   color: #e8e8f0;
+   content: attr(data-tooltip);
+   text-align: center;
+   font-size: 13px;
+   line-height: 1.2;
+   font-weight: 400;
+   border: 1px solid var(--border);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+[data-tooltip]:after {
+   position: absolute;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -5px;
+   width: 0;
+   border-top: 5px solid #0e0e12;
+   border-right: 5px solid transparent;
+   border-left: 5px solid transparent;
+   content: " ";
+   font-size: 0;
+   line-height: 0;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+   visibility: visible;
+   opacity: 1;
+   transition: all 0.3s;
+}
+
+a[data-tooltip]:hover {
+   text-decoration: none;
+}
+
+/* ===== Info boxes ===== */
+.homesldframe {
+   height: 350px;
+   width: 250px;
+   left: -12px;
+   top: -4px;
+   position: relative;
+}
+
+/* ===== Slider BJQS ===== */
+ul.bjqs {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+   display: none;
+}
+
+li.bjqs-slide {
+   position: absolute;
+   display: none;
+}
+
+ul.bjqs-controls {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   z-index: 9999;
+}
+
+ul.bjqs-controls.v-centered li a {
+   position: absolute;
+   display: block;
+   padding: 10px;
+   background: #263a52;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 6px;
+   font-size: 12px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a,
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+   margin-top: 207px;
+   min-width: 83px;
+   margin-bottom: 0;
+   border: 1px solid var(--border);
+   cursor: pointer;
+   background: linear-gradient(180deg, #141416 0, #303038 1px, #242430 2px, #1c1c22);
+   vertical-align: middle;
+   text-align: center;
+   padding: 6px 8px;
+   letter-spacing: .075em;
+   color: #d8d8e4;
+   text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a {
+   right: 12px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+   left: 36px;
+}
+
+ul.bjqs-controls.v-centered li a:hover {
+   background: var(--bg-overlay);
+   text-decoration: none;
+}
+
+ol.bjqs-markers {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+}
+
+ol.bjqs-markers.h-centered {
+   text-align: center;
+}
+
+ol.bjqs-markers li {
+   display: inline;
+}
+
+ol.bjqs-markers li a {
+   display: inline-block;
+   padding: 5px 10px;
+   background: #111116;
+   color: #ccc;
+   margin: 5px;
+   text-decoration: none;
+   border-radius: 3px;
+}
+
+ol.bjqs-markers li a:hover,
+ol.bjqs-markers li.active-marker a {
+   background: var(--border);
+}
+
+p.bjqs-caption {
+   font-family: 'Varela Round', sans-serif;
+   display: block;
+   width: 190px;
+   margin: 25px;
+   padding: 2%;
+   position: absolute;
+   bottom: -10px;
+   font-size: 14px;
+   color: #e0e0e8;
+   background: rgba(14, 14, 18, 0.82);
+   border-radius: 3px;
+}
+
+#container {
+   position: relative;
+   width: 263px;
+   padding-top: 10px;
+   padding-bottom: 0;
+}
+
+#banner-fade,
+#banner-slide {
+   margin-bottom: 40px;
+   margin-top: -12px;
+}
+
+/* ===== Marcadores internos e labels de torrent ===== */
+.internalbox {
+   background: #202026 !important;
+   padding: 1px 2px !important;
+   color: var(--gold) !important;
+   border-left: 3px solid var(--gold);
+   border-right: 3px solid var(--gold);
+   border-radius: 4px;
+   transition: background 0.2s ease;
+   position: relative;
+}
+
+.internalbox:hover {
+   background: #282832 !important;
+}
+
+.internalbox::before {
+   content: "\f2f7" !important;
+   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free" !important;
+   font-size: 10px !important;
+   color: #fffbee !important;
+   margin-right: 2px !important;
+}
+
+.internalbox:hover::after {
+   content: "Este é um lançamento Internal, feito por um uploader do BJ-Share.";
+   position: absolute;
+   bottom: 130%;
+   left: 240%;
+   transform: translateX(-50%);
+   background-color: #1a1a22;
+   color: #e8e8f0;
+   padding: 6px 10px;
+   border-radius: 4px;
+   font-size: 11px !important;
+   line-height: 1.4;
+   white-space: nowrap;
+   z-index: 9999;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+   border: 1px solid var(--border);
+   font-weight: 500;
+   pointer-events: none;
+}
+
+/* ===== Labels de torrent (ícones SVG) ===== */
+.torrent_label.bjtooltip.leeching {
+   display: inline-block !important;
+   width: 15px !important;
+   height: 14px !important;
+   background: url('https://bj-share.info/static/common/Downloadv2.svg') center / contain no-repeat !important;
+   color: transparent !important;
+   font-size: 0 !important;
+   line-height: 0 !important;
+   overflow: hidden !important;
+   vertical-align: -3px !important;
+   flex-shrink: 0 !important;
+   transition: transform 0.2s ease !important;
+}
+
+.torrent_label.bjtooltip.leeching:hover {
+   transform: scale(1.15);
+}
+
+.torrent_label.bjtooltip.seeding {
+   display: inline-block !important;
+   width: 15px !important;
+   height: 13px !important;
+   background: url('https://bj-share.info/static/common/Seedv2.svg') center / contain no-repeat !important;
+   color: transparent !important;
+   font-size: 0 !important;
+   line-height: 0 !important;
+   overflow: hidden !important;
+   vertical-align: -3px !important;
+   flex-shrink: 0 !important;
+   transition: transform 0.2s ease !important;
+}
+
+.torrent_label.bjtooltip.seeding:hover {
+   transform: scale(1.15);
+}
+
+.torrent_label.bjtooltip.tl_snatched,
+.torrent_label.bjtooltip.snatched {
+   display: inline-block !important;
+   width: 15px !important;
+   height: 15px !important;
+   background: url('https://bj-share.info/static/common/check.svg') center / contain no-repeat !important;
+   color: transparent !important;
+   font-size: 0 !important;
+   line-height: 0 !important;
+   overflow: hidden !important;
+   vertical-align: -3px !important;
+   flex-shrink: 0 !important;
+   transition: transform 0.2s ease !important;
+}
+
+.torrent_label.bjtooltip.tl_snatched:hover,
+.torrent_label.bjtooltip.snatched:hover {
+   transform: scale(1.15);
+}
+
+.torrent_label.bjtooltip.repack {
+   display: inline-block !important;
+   width: 15px !important;
+   height: 14px !important;
+   background: url('https://bj-share.info/static/common/Repackv2.svg') center / contain no-repeat !important;
+   color: transparent !important;
+   font-size: 0 !important;
+   line-height: 0 !important;
+   overflow: hidden !important;
+   vertical-align: -3px !important;
+   flex-shrink: 0 !important;
+   transition: transform 0.2s ease !important;
+}
+
+.torrent_label.bjtooltip.repack:hover {
+   transform: scale(1.15);
+}
+
+/* ===== Diálogos ===== */
+dialog {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0;
+   border: 1px solid var(--border);
+   border-radius: 8px;
+   padding: 1.5rem;
+   max-width: 90vw;
+   max-height: 90vh;
+   overflow: auto;
+   background: var(--bg-raised);
+   color: var(--text-bright);
+   box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+}
+
+/* ===== Animação jelly nos botões ===== */
+@keyframes jelly-effect {
+   0%,
+   100% {
+      transform: scale(1, 1);
+   }
+   25% {
+      transform: scale(0.9, 1.1);
+   }
+   50% {
+      transform: scale(1.1, 0.9);
+   }
+   75% {
+      transform: scale(0.95, 1.05);
+   }
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+    background: var(--bg-overlay);
+    text-decoration: none;
+    animation: jelly-effect 0.5s;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    cursor: pointer;
+    outline: 0;
+    transition: background 0.15s linear, box-shadow 0.15s linear;
+    background: linear-gradient(180deg, #17171b 0, #232332 1px, #20202a 2px, #1c1c22);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    color: #d8d8e4;
+    padding: 6px 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 0.5% 0 0 0;
+    display: inline-flex;
+    /* --- ANTI-BORRÃO --- */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform;
+}
+
+button[onclick="atualizarLancamentos()"] {
+    background-color: var(--bg-raised);
+    border: 1px solid var(--border-sub);
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+    background: #1e1e24;
+    color: #555;
+    cursor: default;
+}
+
+/* ===== Botões destrutivos ===== */
+input[value="Deletar"],
+input[value="Delete"],
+input[value="Remover"] {
+   background: linear-gradient(180deg, #3a1010 0, #4a1a1a 1px, #3d1515 2px, #321010);
+   border-color: #6b2020;
+   color: #f0b0b0;
+}
+
+input[value="Deletar"]:hover,
+input[value="Delete"]:hover,
+input[value="Remover"]:hover,
+input[value="Deletar"]:focus,
+input[value="Delete"]:focus,
+input[value="Remover"]:focus {
+   background: var(--red);
+   box-shadow: 0 0 40px #da4242;
+   border: 1px solid #f57878;
+   animation: jelly-effect 0.5s;
+}
+
+/* ===== Animação de atenção (gorjeta) ===== */
+@keyframes attn-cycle {
+   0%,
+   12%,
+   100% {
+      transform: translateY(0);
+      filter: brightness(1);
+      box-shadow: 0 0 0 0 rgba(201,168,76,0);
+   }
+   5% {
+      transform: translateY(-2px);
+      filter: brightness(1.25);
+      box-shadow: 0 0 0 5px rgba(201,168,76,0.35);
+   }
+   10% {
+      transform: translateY(0);
+      filter: brightness(1);
+      box-shadow: 0 0 0 10px rgba(201,168,76,0);
+   }
+}
+
+.brackets[onclick*="gorjeta"] {
+   display: inline-block;
+   position: relative;
+   color: var(--gold);
+   cursor: pointer;
+   border-radius: 50px;
+   will-change: transform, box-shadow;
+   transform: translateZ(0);
+   transition: transform .2s, filter .2s;
+   animation: attn-cycle 5s ease-in-out infinite;
+}
+
+/* ===== Alertas e ajustes finais ===== */
+#noteAlertMsg {
+   position: absolute;
+   z-index: 6001;
+   top: 0;
+   left: 0;
+   right: 0;
+   text-align: center;
+   line-height: 2.5;
+   overflow: hidden;
+}
+
+.browse_rating {
+   background: var(--bg-raised);
+   border: 1px solid var(--border);
+   border-radius: 3px;
+}
+
+.field_div label:first-child {
+   width: max-content;
+   text-align: left;
+   margin-right: 10px;
+}

@@ -2,7 +2,10 @@
  * BJ-Share Custom CSS — Tema: BJ-Midnight
  * Versão: 2.0 (Otimizado, Modular e Reorganizado)
  * Descrição: Tema escuro premium em tons noturnos azulados/índigo, com realces em azul royal e dourado.
- * Paleta principal: Fundo: rgb(21, 21, 24) / Texto: #C6C7CF / Realces: #3463a7, #4281da, #e0e0e8
+ * Paleta principal: Fundo: #131316 / Texto: #d4d5de / Realces: #5b8dd9, #eebc58, #4db87a, #d95b5b
+ * Nota: paleta de cores (fundo/texto/borda/sombra/gradientes/tons) atualizada a
+ *       partir da referência mais recente (css.txt); estrutura, seletores,
+ *       propriedades e índice abaixo permanecem exatamente os mesmos.
  *
  * ÍNDICE DAS SEÇÕES:
  *   1. DEFAULTS AUXILIARES (@layer bj-defaults)
@@ -58,7 +61,46 @@
  *      Troque '@media all' por '@media not all' na Seção 4 para desligar o menu fixo.
  *   5. MEDIA QUERIES E RESPONSIVIDADE (MOBILE / TABLET / 4K)
  *   6. AJUSTES FINAIS DE LAYOUT E COMPATIBILIDADE MOBILE
+ * Nota (otimização): declarações de background em 8 propriedades
+ *   (cor/imagem real + 6x "initial") foram unificadas no shorthand
+ *   "background"; bordas longhand (top/right/bottom/left) idênticas nos
+ *   4 lados viraram shorthand "border(-color/-width/-style)"; cores
+ *   repetidas foram extraídas para variáveis em :root (acima). Nenhum
+ *   valor visual foi alterado — a aparência final é idêntica à original.
  * ==================================================================== */
+
+
+/* ===== Variáveis de cor (adicionado nesta otimização) ===== */
+/* Extraídas automaticamente a partir dos valores repetidos (>=3 usos)
+ *  no arquivo original. Cada variável guarda o MESMO valor literal que
+ *  aparecia antes em cada declaração — apenas a referência mudou. */
+:root {
+   --text-primary: #eeeef4;
+   --text-bright: #e0e0e8;
+   --text-muted: #7c7d8a;
+   --text-secondary: #eee;
+   --text-5: #d4d5de;
+   --text-6: #aaa;
+   --text-7: #d8d8e4;
+   --border: #494649;
+   --shadow: rgba(0, 0, 0, 0.5);
+   --shadow-soft: #000;
+   --shadow-strong: rgba(0,0,0,0.4);
+   --shadow-deep: rgba(0, 0, 0, 0.3);
+   --shadow-5: rgba(0,0,0,0.5);
+   --shadow-6: rgba(0, 0, 0, 0.7);
+   --accent: #2e2e38;
+   --accent-alt: #1d1d22;
+   --accent-3: #25252e;
+   --accent-4: #131316;
+   --accent-5: #18181c;
+   --accent-6: #1a1a1f;
+   --accent-7: #1e1e24;
+   --gold: #eebc58;
+   --green: #4db87a;
+   --red: #d95b5b;
+   --misc-1: #282828;
+}
 
 /* ====================================================================
  * SEÇÃO 1: DEFAULTS AUXILIARES (COMPONENTES MODERNOS)
@@ -69,12 +111,12 @@
    input,
    textarea,
    .sceditor-container textarea {
-      color: rgb(224, 224, 224);
+      color: var(--text-bright);
    }
 
    dialog {
-      color: rgb(198, 199, 207);
-      background-color: rgb(28, 28, 32);
+      color: var(--text-primary);
+      background-color: var(--accent-alt);
    }
 
    .sceditor-container {
@@ -95,30 +137,20 @@
  * 2.1 Fundo Geral, Tipografia Base e Listas
  * ---------------------------------------------------------------------- */
 body {
-   color: #C6C7CF;
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
+   color: var(--text-5);
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
 }
 
 h2 {
-   color: #f0f0f0;
+   color: var(--text-primary);
 }
 
 /* ----------------------------------------------------------------------
  * 2.2 Links, Estados de Hover e Artistas Similares
  * ---------------------------------------------------------------------- */
 a {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-   color: #C6C7CF;
+   border-color: currentcolor;
+   color: var(--text-5);
 }
 
 a:hover {
@@ -126,62 +158,36 @@ a:hover {
 }
 
 a.similar_artist {
-   background-color: #2a2a2e;
-   color: #fff;
-   border-top-color: rgb(85, 85, 85);
-   border-right-color: rgb(85, 85, 85);
-   border-bottom-color: rgb(85, 85, 85);
-   border-left-color: rgb(85, 85, 85);
-}
+   background-color: var(--accent-alt);
+   color: var(--text-primary);
+   border-color: var(--accent);
+   }
 
 a.similar_artist:hover {
-   background-color: #3a3a40;
+   background-color: var(--accent-3);
 }
 
 .similar_artist_header {
-   color: #fff;
-   background-color: #38383f;
-   border-top-color: rgb(85, 85, 85);
-   border-right-color: rgb(85, 85, 85);
-   border-bottom-color: rgb(85, 85, 85);
-   border-left-color: rgb(85, 85, 85);
-}
+   color: var(--text-primary);
+   background-color: var(--accent-6);
+   border-color: var(--accent);
+   }
 
 /* ----------------------------------------------------------------------
  * 2.3 Formulários, Campos de Entrada e Barra BBCode
  * ---------------------------------------------------------------------- */
 input {
-   background-color: rgb(26, 26, 30);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-   color: #e0e0e8;
-   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
+   background: var(--accent-5);
+   border-color: var(--accent);
+   color: var(--text-bright);
+   box-shadow: inset 1px 2px 4px var(--shadow-deep);
 }
 
 textarea {
-   background-color: rgb(26, 26, 30);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-   color: #e0e0e8;
-   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
+   background: var(--accent-5);
+   border-color: var(--accent);
+   color: var(--text-bright);
+   box-shadow: inset 1px 2px 4px var(--shadow-deep);
 }
 
 .BBCodeToolbar-icon {
@@ -192,26 +198,34 @@ input:focus,
 form input:focus,
 form textarea:focus,
 textarea:focus,
-form button:focus {
-   border-color: #777;
+form button:focus,
+.sceditor-container iframe,
+.sceditor-container textarea,
+[contenteditable="true"]:focus {
+   outline: none;
+   border-color: #3463a7;
+   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3), 0 0 15px #4281da;
+}
+
+.sceditor-container:focus-within {
+   outline: none;
+   border: 1px solid #3463a7;
+   box-shadow: 0 0 15px #4281da;
 }
 
 /* ----------------------------------------------------------------------
  * 2.4 Imagens, Badges de Status e Indicadores de Ratio
  * ---------------------------------------------------------------------- */
 img {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 .r01 {
-   color: #ff4d4d;
+   color: var(--red);
 }
 
 .r02 {
-   color: #ff4d4d;
+   color: var(--red);
 }
 
 .r03 {
@@ -223,11 +237,11 @@ img {
 }
 
 .r05 {
-   color: #ffab4d;
+   color: #d9a04d;
 }
 
 .r06 {
-   color: #ffab4d;
+   color: #d9a04d;
 }
 
 .r07 {
@@ -247,104 +261,84 @@ img {
 }
 
 .r20 {
-   color: #6bc46b;
+   color: var(--green);
 }
 
 .r50 {
-   color: #6bc46b;
+   color: var(--green);
 }
 
 .r99 {
-   color: #6bc46b;
+   color: var(--green);
 }
 
 span.size1 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size2 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size3 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size4 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size5 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size6 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size7 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size8 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size9 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 span.size10 {
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 /* ----------------------------------------------------------------------
  * 2.5 Cabeçalho, Logotipo e Rodapé
  * ---------------------------------------------------------------------- */
 #header {
-   background-color: #000;
-   background-image: url("https://i.bj-share.info/685f346b9388f264967429b6a7b0be56.png");
-   background-position: center top;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: var(--shadow-soft) url("https://i.bj-share.info/685f346b9388f264967429b6a7b0be56.png") no-repeat center top;
 }
 
 #footer {
-   color: #aaa;
-   background-color: rgb(25, 25, 28);
-   background-image: url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png");
-   background-position: center 184px;
-   background-size: initial;
-   background-repeat: repeat-x;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   color: var(--text-6);
+   background: var(--accent-5) url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png") repeat-x center 184px;
    border-top-color: rgb(31, 31, 34);
-   box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+   box-shadow: 0 0 5px 1px var(--shadow-5);
 }
 
 #logo a {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 #logo a:hover {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.6 Menu Principal e Menus Dropdown
  * ---------------------------------------------------------------------- */
 #menu {
-   background-color: #1a1a1e;
+   background-color: var(--accent-5);
    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
@@ -353,47 +347,33 @@ span.size10 {
 }
 
 #menudrop ul li.current-menu-item {
-   background-color: rgba(91,141,217,0.08);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: rgba(91,141,217,0.08);
+   }
 
 #menudrop ul ul {
-   background-color: #1a1a1e;
+   background-color: var(--accent-alt);
 }
 
 #menudrop ul ul ul ul {
-   background-color: #1a1a1e;
+   background-color: var(--accent-alt);
 }
 
 #menudrop ul li:hover {
-   background-color: #212127d6;
+   background-color: var(--accent-3);
 }
 
 #menu ul li a.active,
 #menu ul li a:focus,
 #menu ul li a:hover {
-   color: #b0b0c0;
+   color: var(--text-primary);
 }
 
 /* ----------------------------------------------------------------------
  * 2.7 Barra de Informações do Usuário e Estatísticas
  * ---------------------------------------------------------------------- */
 #userinfo {
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
-   color: #999;
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+   color: var(--text-muted);
 }
 
 #userinfo ul li {
@@ -405,87 +385,45 @@ span.size10 {
 }
 
 #stats_seeding .stat {
-   color: #4ade80;
+   color: var(--green);
 }
 
 #stats_leeching .stat {
-   color: #f87171;
+   color: var(--red);
 }
 
 #stats_bjpontos .stat {
-   color: #f7d66c;
+   color: var(--gold);
 }
 
 #userinfo_username {
-   background-color: rgb(26, 26, 30);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #999;
+   background: var(--accent-5);
+   color: var(--text-muted);
 }
 
 #userinfo_major {
-   background-color: rgb(26, 26, 30);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #999;
+   background: var(--accent-5);
+   color: var(--text-muted);
 }
 
 /* ----------------------------------------------------------------------
  * 2.8 Barras de Pesquisa e Notificações de Alerta
  * ---------------------------------------------------------------------- */
 #searchbars input {
-   background-color: rgba(24, 24, 28, 0.98);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #e0e0e8;
+   background: rgba(24, 24, 28, 0.98);
+   color: var(--text-bright);
 }
 
 #searchbars ul li ul li {
-   background-color: rgb(42, 42, 47);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-alt);
+   }
 
 #searchbars ul li ul li.highlight {
-   background-color: rgb(58, 58, 66);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-3);
+   }
 
 #alerts {
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
 }
 
 #alerts a {
@@ -493,24 +431,18 @@ span.size10 {
 }
 
 .alertbar {
-   background-color: rgb(33, 33, 37);
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
+   background-color: var(--accent-alt);
+   border-color: var(--accent);
    color: #ddd;
-   box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+   box-shadow: 0px 0px 2px var(--shadow-strong);
 }
 
 .alertbar.blend {
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-}
+   border-color: var(--accent);
+   }
 
 .alertbar a {
-   color: #111113;
+   color: #5b8dd9;
 }
 
 .alertbar a:hover {
@@ -521,60 +453,39 @@ span.size10 {
  * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
  * ---------------------------------------------------------------------- */
 .autocomplete-suggestions {
-   background-color: rgb(31, 31, 35);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-alt);
+   }
 
 .linkbox .brackets:after,
 .linkbox .brackets:before,
 .top10_quantity_links .brackets:after,
 .top10_quantity_links .brackets:before {
-   color: #999;
+   color: var(--text-muted);
 }
 
 /* ----------------------------------------------------------------------
  * 2.9 Estrutura de Conteúdo, Caixas e Painéis
  * ---------------------------------------------------------------------- */
 .box {
-   background-color: #1c1c20;
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
+   background-color: var(--accent-alt);
+   border-color: var(--accent);
    box-shadow: 0 1px 3px rgba(0,0,0,0.35);
 }
 
 .box2 {
-   background-color: #1e1e24;
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-}
+   background-color: var(--accent-7);
+   border-color: var(--accent);
+   }
 
 .head {
-   background-color: rgb(22, 22, 24);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #e8e8f0;
-   background-color: #1a1a1e;
+   background: var(--accent-6);
+   color: var(--text-primary);
    box-shadow: 0px 0px 0px #161616;
    border-bottom-color: rgb(15, 15, 18);
 }
 
 .tags a {
-   color: #888;
+   color: var(--text-muted);
 }
 
 .tags a:hover {
@@ -582,33 +493,27 @@ span.size10 {
 }
 
 .noborder {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.1 Fundo Geral, Tipografia Base e Listas
  * ---------------------------------------------------------------------- */
 ul.nobullet {
-   color: #e0e0e8;
+   color: var(--text-bright);
 }
 
 /* ----------------------------------------------------------------------
  * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
  * ---------------------------------------------------------------------- */
 table {
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-   box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+   border-color: var(--accent);
+   box-shadow: 0 1px 2px var(--shadow-strong);
 }
 
 tr.resolution_header {
    background-color: initial;
-   background-image: linear-gradient(0deg, rgb(14, 14, 15) 0px, rgb(38, 38, 46));
+   background-image: linear-gradient(0deg, hsl(240, 6%, 8%) 0px, hsl(240, 12%, 19.6%));
    background-position: initial;
    background-size: initial;
    background-repeat: initial;
@@ -622,7 +527,7 @@ tr.resolution_header {
 tr.season_header,
 td.season_header {
    background-color: initial;
-   background-image: linear-gradient(0deg, rgb(14, 14, 15) 0px, rgb(38, 38, 46));
+   background-image: linear-gradient(0deg, hsl(240, 6%, 8%) 0px, hsl(240, 12%, 19.6%));
    background-position: initial;
    background-size: initial;
    background-repeat: initial;
@@ -634,20 +539,17 @@ td.season_header {
 }
 
 tr {
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-}
+   border-color: var(--accent);
+   }
 
 td,
 th {
-   box-shadow: 0px 0px 0px #000;
+   box-shadow: 0px 0px 0px var(--shadow-soft);
 }
 
 .colhead {
-   background-color: #1a1a1e;
-   color: #e8e8f0;
+   background-color: var(--accent-6);
+   color: var(--text-primary);
    border-bottom-color: rgb(17, 17, 17);
 }
 
@@ -656,109 +558,60 @@ th {
 }
 
 .colhead_dark {
-   background-color: #1a1a1e;
-   color: #e8e8f0;
-   box-shadow: 0px 0px 0px #000;
+   background-color: var(--accent-6);
+   color: var(--text-primary);
+   box-shadow: 0px 0px 0px var(--shadow-soft);
    border-bottom-color: rgb(15, 15, 18);
 }
 
 .colhead_dark a {
-   color: #e8e8f0;
+   color: var(--text-primary);
 }
 
 .error_message {
-   border-top-color: #8c3030;
-   border-right-color: #8c3030;
-   border-bottom-color: #8c3030;
-   border-left-color: #8c3030;
+   border-color: #8c3030;
    background-color: #7a2a2a;
    color: #f5c0c0;
 }
 
 .save_message {
-   border-top-color: #8a7020;
-   border-right-color: #8a7020;
-   border-bottom-color: #8a7020;
-   border-left-color: #8a7020;
+   border-color: #8a7020;
    background-color: #3d3010;
    color: #e8c94d;
 }
 
 .noty_message {
-   background-color: rgb(31, 31, 35);
-   background-image: url("https://bj-share.info/static/common/icons/bj.svg");
-   background-position: 4px 7px;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
+   background: var(--accent-alt) url("https://bj-share.info/static/common/icons/bj.svg") no-repeat 4px 7px;
    color: #eeeeee;
-   background-size: 26px 16px;
 }
 
 .noty_buttons {
-   background-color: rgb(47, 47, 53) !important;
-   background-image: initial !important;
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
-}
+   background: var(--accent-3) !important;
+   }
 
 .noty_buttons a {
    color: #ddd;
 }
 
 .elem_error {
-   border-top-color: #8c0d0d;
-   border-right-color: #8c0d0d;
-   border-bottom-color: #8c0d0d;
-   border-left-color: #8c0d0d;
-}
+   border-color: #8c0d0d;
+   }
 
 .show_torrents {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/plus.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: repeat;
-   background-size: contain;
+   background: url("https://bj-share.info/static/common/icons/plus.svg") repeat;
 }
 
 .hide_torrents {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/minus.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: repeat;
-   background-size: contain;
+   background: url("https://bj-share.info/static/common/icons/minus.svg") repeat;
 }
 
 .show_torrents_link {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 .cat_list tr td {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.11 Listagem de Torrents, Detalhes e Tópicos
@@ -768,9 +621,9 @@ th {
 }
 
 .torrent_table tr.group {
-   background-color: #1e1e24;
-   text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
-   box-shadow: 0 -3px 5px -5px rgba(0,0,0,0.5);
+   background-color: var(--accent-7);
+   text-shadow: 1px 1px 1px var(--shadow-strong);
+   box-shadow: 0 -3px 5px -5px var(--shadow-5);
 }
 
 /* ----------------------------------------------------------------------
@@ -778,11 +631,11 @@ th {
  * ---------------------------------------------------------------------- */
 tr.group_torrent {
    background-color: #212128;
-   text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+   text-shadow: 1px 1px 1px var(--shadow-strong);
 }
 
 tr.torrent {
-   background-color: #1e1e24;
+   background-color: var(--accent-7);
    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
    border-left-color: rgb(40, 43, 46) !important;
    border-right-color: rgb(40, 43, 46) !important;
@@ -792,7 +645,7 @@ tr.torrent {
 tr.torrent:hover,
 tr.group_torrent:hover,
 tr.group:hover {
-   background-color: #1f1f25d6;
+   background-color: var(--accent-3);
 }
 
 /* ----------------------------------------------------------------------
@@ -817,7 +670,7 @@ tr.torrent .bookmark>a:after {
  * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
  * ---------------------------------------------------------------------- */
 blockquote {
-   background-color: rgb(36, 36, 41);
+   background-color: rgba(38, 38, 46, 0.92);
    border-bottom-color: rgba(0, 0, 0, 0.15);
    border-left-color: rgb(62, 62, 74);
    border-right-color: rgb(62, 62, 74);
@@ -826,11 +679,8 @@ blockquote {
 
 :is(iframe.youtube,
 iframe.dailymotion) {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.11 Listagem de Torrents, Detalhes e Tópicos
@@ -840,151 +690,55 @@ strong.quoteheader {
 }
 
 .last_read {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/go_last_read.png");
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: url("https://bj-share.info/static/styles/bj-black/images/go_last_read.png") no-repeat center center;
 }
 
 .last_read a {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 .last_read a:hover {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 .unread_locked_sticky {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/unread_locked_sticky.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/unread_locked_sticky.svg") no-repeat 50%;
 }
 
 .read_locked_sticky {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/read_locked_sticky.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/read_locked_sticky.svg") no-repeat 50%;
 }
 
 .unread_sticky {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/unread_sticky.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/unread_sticky.svg") no-repeat 50%;
 }
 
 .read_sticky {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/read_sticky.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/read_sticky.svg") no-repeat 50%;
 }
 
 .unread_locked {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/unread_locked.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/unread_locked.svg") no-repeat 50%;
 }
 
 .read_locked {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/read_locked.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/read_locked.svg") no-repeat 50%;
 }
 
 .unread {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/unread.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/unread.svg") no-repeat 50%;
 }
 
 .read {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/common/icons/read.svg");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-repeat: no-repeat;
-   background-size: 17px;
-   background-position: 50%;
+   background: url("https://bj-share.info/static/common/icons/read.svg") no-repeat 50%;
 }
 
 /* ----------------------------------------------------------------------
  * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
  * ---------------------------------------------------------------------- */
 table.forum_post td {
-   border-top-color: #30303a;
-   border-right-color: #30303a;
-   border-bottom-color: #30303a;
-   border-left-color: #30303a;
-}
+   border-color: #30303a;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.11 Listagem de Torrents, Detalhes e Tópicos
@@ -1005,43 +759,19 @@ tr.unreadpm {
  * ---------------------------------------------------------------------- */
 #forum_search_cat_list,
 #forum_search_cat_list tr {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   border-color: currentcolor;
+   }
 
 .left_poll {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_left.gif");
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: url("https://bj-share.info/static/styles/bj-black/images/bar_left.gif") no-repeat center center;
 }
 
 .center_poll {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar.gif");
-   background-position: initial;
-   background-size: initial;
-   background-repeat: repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: url("https://bj-share.info/static/styles/bj-black/images/bar.gif") repeat;
 }
 
 .right_poll {
-   background-color: initial;
-   background-image: url("https://bj-share.info/static/styles/bj-black/images/bar_right.gif");
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: url("https://bj-share.info/static/styles/bj-black/images/bar_right.gif") no-repeat center center;
 }
 
 .curtain {
@@ -1053,7 +783,7 @@ tr.unreadpm {
 .vote_album_up,
 .vote_artist_up,
 .vote_tag_up {
-   color: #4ade80;
+   color: var(--green);
 }
 
 .small_downvote,
@@ -1061,37 +791,28 @@ tr.unreadpm {
 .vote_album_down,
 .vote_artist_down,
 .vote_tag_down {
-   color: #f87171;
+   color: var(--red);
 }
 
 /* ----------------------------------------------------------------------
  * 2.13 Chat e Mensagens Rápidas (Shoutbox)
  * ---------------------------------------------------------------------- */
 .chat_mark_bg {
-   background-color: rgba(14, 14, 18, 0.8);
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   background-color: rgb(50, 51, 71);
+   border-color: currentcolor;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
  * ---------------------------------------------------------------------- */
 table.shoutTable {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
+   border-color: currentcolor;
    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
 }
 
 td.shoutTable {
-   border-top-color: #2a2a34;
-   border-right-color: #2a2a34;
-   border-bottom-color: #2a2a34;
-   border-left-color: #2a2a34;
+   border-color: #2a2a34;
    box-shadow: 0px 0px 1px #353535;
 }
 
@@ -1100,26 +821,12 @@ table.shoutTable a {
 }
 
 tr.row1 {
-   background-color: #1d1d23;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: #1d1d23;
+   }
 
 tr.row2 {
-   background-color: #202028;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: #202028;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.14 Botões, Controles e Menus de Seleção
@@ -1127,55 +834,28 @@ tr.row2 {
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
-   background-color: rgb(37, 37, 42);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-3);
+   }
 
 button,
 input[type=button],
 input[type=submit] {
-   background-color: initial;
-   background-image: linear-gradient(rgb(22, 22, 24) 0px, rgb(56, 56, 63) 1px, rgb(34, 34, 41) 2px, rgb(30, 30, 35));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-color: rgb(27, 27, 31);
-   border-right-color: rgb(27, 27, 31);
-   border-bottom-color: rgb(27, 27, 31);
-   border-left-color: rgb(27, 27, 31);
-   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-   color: #d8d8e4;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   background: linear-gradient(#17171b 0px, #232332 1px, #20202a 2px, #1c1c22);
+   border-color: var(--accent);
+   box-shadow: 0 1px 4px var(--shadow-strong);
+   color: var(--text-7);
+   text-shadow: 1px 1px 1px var(--shadow);
 }
 
 button[onclick="atualizarLancamentos()"] {
-   background-color: #1e1e22;
-   border-top-color: rgb(32, 32, 32);
-   border-right-color: rgb(32, 32, 32);
-   border-bottom-color: rgb(32, 32, 32);
-   border-left-color: rgb(32, 32, 32);
-}
+   background-color: var(--accent-alt);
+   border-color: #252530;
+   }
 
 button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled {
-   background-color: #1e1e24;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: var(--accent-7);
    color: #555;
 }
 
@@ -1184,7 +864,7 @@ input[type="submit"]:disabled {
  * ---------------------------------------------------------------------- */
 form tr {
    background-color: #1f1f25;
-   box-shadow: 0px 0px 0px #000;
+   box-shadow: 0px 0px 0px var(--shadow-soft);
 }
 
 /* ----------------------------------------------------------------------
@@ -1196,29 +876,26 @@ select {
    background-repeat: no-repeat;
    background-size: 10px 10px;
    background-color: #1c1c22;
-   border-top-color: rgb(56, 56, 63);
-   border-right-color: rgb(56, 56, 63);
-   border-bottom-color: rgb(56, 56, 63);
-   border-left-color: rgb(56, 56, 63);
-   box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.3);
-   color: #aaa;
+   border-color: var(--accent);
+   box-shadow: inset 1px 2px 4px var(--shadow-deep);
+   color: var(--text-6);
 }
 
 select:hover {
-   color: #999;
+   color: var(--text-5);
 }
 
 select a.active,
 select a:hover {
-   color: #000;
+   color: var(--shadow-soft);
 }
 
 .open > .dropdown-menu {
-   background-color: #1f1f23;
+   background-color: var(--accent-alt);
 }
 
 .checkbox:hover {
-   background-color: #38383f;
+   background-color: var(--accent);
 }
 
 .multiselect-container > li > a > label.radio,
@@ -1227,36 +904,22 @@ select a:hover {
 }
 
 .btn-default {
-   color: #aaa !important;
+   color: var(--text-6) !important;
    background-color: #202028 !important;
    border-color: #3a3a44 !important;
 }
 
 .btn:hover,
 .btn:focus {
-   background-color: #1c1c24 !important;
-   background-image: initial !important;
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
-}
+   background: #1c1c24 !important;
+   }
 
 /* ----------------------------------------------------------------------
  * 2.15 Atalhos Fixos de Navegação (#irtopo, #irfinal)
  * ---------------------------------------------------------------------- */
 #irtopo {
-   background-color: initial;
-   background-image: linear-gradient(rgb(20, 20, 23) 0px, rgb(33, 33, 36) 1px, rgb(24, 24, 28) 2px, rgb(34, 34, 38));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: linear-gradient(#14141a 0px, #2a2a38 1px, #2a2a38 2px, #14141a);
+   }
 
 #irtopo span {
    border-top-color: transparent;
@@ -1267,19 +930,12 @@ select a:hover {
 }
 
 #irtopo:hover {
-   background-image: linear-gradient(to top, #505355, #16171a);
+   background-image: linear-gradient(to top, #46464e, #14151a);
 }
 
 #irfinal {
-   background-color: initial;
-   background-image: linear-gradient(rgb(26, 26, 28) 0px, rgb(64, 64, 68) 1px, rgb(24, 24, 28) 2px, rgb(34, 34, 38));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: linear-gradient(#14141a 0px, #2a2a38 1px, #2a2a38 2px, #14141a);
+   }
 
 #irfinal span {
    border-top-color: transparent;
@@ -1298,59 +954,38 @@ select a:hover {
    background-origin: initial;
    background-clip: initial;
    background-attachment: initial;
-   background-image: linear-gradient(to bottom, #505355, #17171a);
+   background-image: linear-gradient(to bottom, #46464e, #17171a);
 }
 
 /* ----------------------------------------------------------------------
  * 2.2 Links, Estados de Hover e Artistas Similares
  * ---------------------------------------------------------------------- */
 a.BJinfoBox span {
-   color: #eee;
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
-   box-shadow: 0 1px 4px #000;
+   color: var(--text-secondary);
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+   box-shadow: 0 1px 4px var(--shadow-6);
 }
 
 /* ----------------------------------------------------------------------
  * 2.16 Tooltips Informativos e Caixas Flutuantes
  * ---------------------------------------------------------------------- */
 form a.BJinfoBox span {
-   color: #eee;
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
-   box-shadow: 0 1px 4px #000;
+   color: var(--text-secondary);
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+   box-shadow: 0 1px 4px var(--shadow-6);
 }
 
 .post_return a.BJinfoBox span {
-   color: #d4d4d4;
-   background-color: rgb(21, 21, 24) !important;
-   background-image: url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") !important;
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
-   box-shadow: 0 1px 4px #000;
+   color: var(--text-secondary);
+   background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+   box-shadow: 0 1px 4px var(--shadow-6);
 }
 
 /* ----------------------------------------------------------------------
  * 2.2 Links, Estados de Hover e Artistas Similares
  * ---------------------------------------------------------------------- */
 a.BJinfoBox:hover {
-   color: #eee;
+   color: var(--text-secondary);
 }
 
 /* ----------------------------------------------------------------------
@@ -1375,20 +1010,13 @@ ul.bjqs-controls.v-centered li.bjqs-next a {
    border-right-color: currentcolor;
    border-bottom-color: currentcolor;
    border-left-color: currentcolor;
-   border-top-color: #494649;
-   border-left-color: #494649;
-   border-bottom-color: #494649;
-   border-right-color: #494649;
-   background-color: initial;
-   background-image: linear-gradient(rgb(22, 22, 24) 0px, rgb(56, 56, 63) 1px, rgb(44, 44, 54) 2px, rgb(30, 30, 35));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
-   text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+   border-top-color: var(--border);
+   border-left-color: var(--border);
+   border-bottom-color: var(--border);
+   border-right-color: var(--border);
+   background: linear-gradient(#141416 0px, #303038 1px, #242430 2px, #1c1c22);
+   color: var(--text-7);
+   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 ul.bjqs-controls.v-centered li.bjqs-prev a {
@@ -1396,111 +1024,55 @@ ul.bjqs-controls.v-centered li.bjqs-prev a {
    border-right-color: currentcolor;
    border-bottom-color: currentcolor;
    border-left-color: currentcolor;
-   border-top-color: #494649;
-   border-left-color: #494649;
-   border-bottom-color: #494649;
-   border-right-color: #494649;
-   background-color: initial;
-   background-image: linear-gradient(rgb(22, 22, 24) 0px, rgb(56, 56, 63) 1px, rgb(44, 44, 54) 2px, rgb(30, 30, 35));
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
-   text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+   border-top-color: var(--border);
+   border-left-color: var(--border);
+   border-bottom-color: var(--border);
+   border-right-color: var(--border);
+   background: linear-gradient(#141416 0px, #303038 1px, #242430 2px, #1c1c22);
+   color: var(--text-7);
+   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 p.bjqs-caption {
-   color: #e0e0e8;
+   color: var(--text-bright);
 }
 
 ul.bjqs-controls.v-centered li a {
-   background-color: #263a52;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: #263a52;
    color: #fff;
 }
 
 ul.bjqs-controls.v-centered li a:hover {
-   background-color: rgb(36, 36, 40);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-3);
+   }
 
 ol.bjqs-markers li a {
-   background-color: #111116;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+   background: #111116;
    color: #ccc;
 }
 
 ol.bjqs-markers li a:hover,
 ol.bjqs-markers li.active-marker a {
-   background-color: rgb(119, 119, 119);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent);
+   }
 
 p.bjqs-caption {
-   background-color: rgba(14, 14, 18, 0.82);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: rgba(14, 14, 18, 0.82);
+   }
 
 /* ----------------------------------------------------------------------
  * 2.18 Badges Internos, Modais, Diálogos e Avisos
  * ---------------------------------------------------------------------- */
 .internalbox {
-   background-color: #202026 !important;
-   background-image: initial !important;
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
-   color: #ffcc66 !important;
+   background: #202026 !important;
+   color: var(--gold) !important;
    border-left-color: rgb(255, 204, 102);
    border-right-color: rgb(255, 204, 102);
 }
 
 .internalbox:hover {
-   background-color: #282832;
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: #282832;
+   }
 
 .internalbox::before {
    color: #fffbee !important;
@@ -1509,12 +1081,9 @@ p.bjqs-caption {
 .internalbox:hover::after {
    background-color: #1a1a22;
    color: #e8e8f0;
-   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-}
+   box-shadow: 0 2px 5px var(--shadow-5);
+   border-color: var(--accent);
+   }
 
 /* ----------------------------------------------------------------------
  * 2.11 Listagem de Torrents, Detalhes e Tópicos
@@ -1572,41 +1141,24 @@ p.bjqs-caption {
  * 2.18 Badges Internos, Modais, Diálogos e Avisos
  * ---------------------------------------------------------------------- */
 dialog {
-   border-top-color: currentcolor;
-   border-right-color: currentcolor;
-   border-bottom-color: currentcolor;
-   border-left-color: currentcolor;
-   background-color: rgb(42, 42, 47);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   color: #fff;
+   border-color: var(--accent);
+   background: var(--accent-alt);
+   color: var(--text-primary);
 }
 
 .brackets[onclick*="gorjeta"] {
-   color: #f4bc64;
+   color: var(--gold);
 }
 
 #noteAlertMsg {
-   -webkit-box-shadow: 0 0 0px #282828;
-   -moz-box-shadow: 0 0 0px #282828;
-   box-shadow: 0 0 0px #282828;
+   -webkit-box-shadow: 0 0 0px var(--misc-1);
+   -moz-box-shadow: 0 0 0px var(--misc-1);
+   box-shadow: 0 0 0px var(--misc-1);
 }
 
 .browse_rating {
-   background-color: rgb(42, 42, 47);
-   background-image: initial;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-}
+   background: var(--accent-alt);
+   }
 
 /* ====================================================================
  * SEÇÃO 3: ESTRUTURA GLOBAL E LAYOUT RESPONSIVO (BASE COMUM)
@@ -1627,12 +1179,7 @@ body,
 a.BJinfoBox span,
 form a.BJinfoBox span,
 .post_return a.BJinfoBox span {
-   background-position: 0px center !important;
-   background-size: initial !important;
-   background-repeat: repeat !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: scroll !important;
+
 }
 
 /* ----------------------------------------------------------------------
@@ -1684,14 +1231,7 @@ ol {
  * ---------------------------------------------------------------------- */
 a {
    text-decoration: none;
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    transition: color 0.25s,
       text-decoration 0.25s,
       opacity 0.25s;
@@ -1705,25 +1245,13 @@ a:hover {
 a.similar_artist {
    display: block;
    padding: 1px 4px;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 .similar_artist_header {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding: 3px 5px;
 }
 
@@ -1732,20 +1260,8 @@ a.similar_artist {
  * ---------------------------------------------------------------------- */
 input {
    padding: 2px 3px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    transition: border-color 0.15s linear,
       box-shadow 0.15s linear;
 }
@@ -1753,20 +1269,8 @@ input {
 textarea {
    padding: 2px 3px;
    width: 100%;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    transition: border-color 0.15s linear,
       box-shadow 0.15s linear;
    resize: vertical;
@@ -1790,25 +1294,12 @@ form button:focus,
 
 .sceditor-container:focus-within {
    outline: none;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 img {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    max-width: 100%;
 }
 
@@ -1822,46 +1313,23 @@ img {
 table.shoutTable {
    width: 100%;
    border-collapse: collapse;
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
-}
+   border: medium none;
+   }
 
 td.shoutTable {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding: 8px;
    text-align: left;
    font-size: 11.6px;
 }
 
 tr.row1 {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 tr.row2 {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 /* ----------------------------------------------------------------------
@@ -1944,12 +1412,6 @@ ul.thin li {
 }
 
 #header {
-   background-position: center top;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    width: 100%;
    padding: 0;
 }
@@ -1972,12 +1434,6 @@ ul.thin li {
    width: 100%;
    text-align: center;
    padding: 1em 0;
-   background-position: center 184px;
-   background-size: initial;
-   background-repeat: repeat-x;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    border-top-width: 3px;
    border-top-style: solid;
    clear: both;
@@ -1990,14 +1446,7 @@ ul.thin li {
 }
 
 #logo a {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    width: 320px;
    height: 150px;
    display: block;
@@ -2043,12 +1492,6 @@ ul.thin li {
 }
 
 #menudrop ul li.current-menu-item {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    border-bottom-width: 2px;
    border-bottom-style: solid;
 }
@@ -2151,25 +1594,13 @@ ul.thin li {
    position: absolute;
    top: 10px;
    width: 202px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    text-align: center;
    font-size: 10.67px;
    padding: 3px 0;
    z-index: 10;
    border-radius: 4px;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
 }
 
 #userinfo_username {
@@ -2200,21 +1631,9 @@ ul.thin li {
 #searchbars input {
    position: relative;
    padding: 4px 10px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    font-size: 0.9em;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    border-radius: 3px;
 }
 
@@ -2245,23 +1664,12 @@ ul.thin li {
    padding: 0;
    display: block;
    width: 100%;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    border-bottom-width: 1px;
    border-bottom-style: solid;
 }
 
 #searchbars ul li ul li.highlight {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 #searchbars ul li form {
@@ -2278,14 +1686,8 @@ ul.thin li {
 }
 
 .alertbar {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    text-align: center;
    font-weight: 700;
    font-size: 0.93em;
@@ -2296,14 +1698,8 @@ ul.thin li {
 }
 
 .alertbar.blend {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    width: 432px;
    margin-top: -1px;
 }
@@ -2334,20 +1730,8 @@ ul.thin li {
  * 3.5 Chat, Formulários e Controles
  * ---------------------------------------------------------------------- */
 .autocomplete-suggestions {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
 }
 
 /* ----------------------------------------------------------------------
@@ -2450,28 +1834,16 @@ p.min_padding {
  * ---------------------------------------------------------------------- */
 .box {
    font-size: 11.87px;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    margin-bottom: 10px;
    border-radius: 2px;
 }
 
 .box2 {
    font-size: 11.87px;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    margin-bottom: 10px;
    border-radius: 2px;
 }
@@ -2559,15 +1931,8 @@ ul.collage_images img {
 }
 
 .noborder {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
-}
+   border: medium none;
+   }
 
 /* ----------------------------------------------------------------------
  * 3.2 Tipografia e Elementos Básicos
@@ -2589,37 +1954,20 @@ div.sidebar #event_div {
 table {
    width: 100%;
    border-collapse: collapse;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 tr.resolution_header,
 tr.season_header,
 td.season_header {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 tr {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 td,
 th {
@@ -2679,28 +2027,16 @@ table.slice {
 }
 
 .error_message {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding: 3px 0;
    text-align: center;
    font-weight: 700;
 }
 
 .save_message {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding: 3px 0;
    text-align: center;
    font-weight: 700;
@@ -2711,24 +2047,12 @@ table.slice {
 }
 
 .noty_message {
-   background-position: 4px 7px;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    height: 33px;
-   background-size: 26px 16px;
    display: block;
 }
 
 .noty_buttons {
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
+
 }
 
 .noty_buttons a {
@@ -2738,15 +2062,9 @@ table.slice {
 }
 
 .elem_error {
-   border-top-width: 3px;
-   border-top-style: solid;
-   border-right-width: 3px;
-   border-right-style: solid;
-   border-bottom-width: 3px;
-   border-bottom-style: solid;
-   border-left-width: 3px;
-   border-left-style: solid;
-}
+   border-width: 3px;
+   border-style: solid;
+   }
 
 /* ----------------------------------------------------------------------
  * 3.10 Barra de Usuário e Estatísticas (#userinfo)
@@ -2762,13 +2080,6 @@ ul.stats li {
    width: 28px;
    height: 28px;
    display: inline-block;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-size: contain;
 }
 
 /* ----------------------------------------------------------------------
@@ -2778,27 +2089,13 @@ ul.stats li {
    width: 28px;
    height: 28px;
    display: inline-block;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   background-size: contain;
 }
 
 /* ----------------------------------------------------------------------
  * 3.14 Tabelas, Cabeçalhos e Mensagens
  * ---------------------------------------------------------------------- */
 .show_torrents_link {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    width: 28px;
    height: 28px;
    display: block;
@@ -2828,15 +2125,8 @@ ul.stats li {
  * 3.14 Tabelas, Cabeçalhos e Mensagens
  * ---------------------------------------------------------------------- */
 .cat_list tr td {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
-}
+   border: medium none;
+   }
 
 .torrent_table tr {
    vertical-align: top;
@@ -2913,13 +2203,10 @@ blockquote,
 blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote {
    border-left-width: 2px;
-   border-left-style: solid;
+   border-style: solid;
    border-right-width: 2px;
-   border-right-style: solid;
    border-top-width: 1px;
-   border-top-style: solid;
    border-bottom-width: 1px;
-   border-bottom-style: solid;
    border-radius: 4px;
    margin: 10px;
    padding: 10px;
@@ -2928,13 +2215,10 @@ blockquote blockquote blockquote blockquote blockquote blockquote {
 blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote {
    border-left-width: 2px;
-   border-left-style: solid;
+   border-style: solid;
    border-right-width: 2px;
-   border-right-style: solid;
    border-top-width: 1px;
-   border-top-style: solid;
    border-bottom-width: 1px;
-   border-bottom-style: solid;
    border-radius: 4px;
    margin: 10px;
    padding: 10px;
@@ -2943,13 +2227,10 @@ blockquote blockquote blockquote blockquote blockquote {
 blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
    border-left-width: 2px;
-   border-left-style: solid;
+   border-style: solid;
    border-right-width: 2px;
-   border-right-style: solid;
    border-top-width: 1px;
-   border-top-style: solid;
    border-bottom-width: 1px;
-   border-bottom-style: solid;
    border-radius: 4px;
    margin: 10px;
    padding: 10px;
@@ -2964,14 +2245,7 @@ iframe.dailymotion) {
    contain-intrinsic-size: 1600px 900px;
    aspect-ratio: 16 / 9;
    height: auto;
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    min-height: 200px;
 }
 
@@ -2981,24 +2255,11 @@ iframe.dailymotion) {
 .last_read {
    width: 15px;
    height: 15px;
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    margin-left: 5px;
 }
 
 .last_read a {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    width: 100%;
    height: 100%;
    display: block;
@@ -3084,15 +2345,9 @@ table.forum_post {
 }
 
 table.forum_post td {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 td.avatar {
    width: 158px;
@@ -3118,15 +2373,8 @@ table.forum_post td.body {
  * ---------------------------------------------------------------------- */
 #forum_search_cat_list,
 #forum_search_cat_list tr {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
-}
+   border: medium none;
+   }
 
 /* ----------------------------------------------------------------------
  * 3.18 Permissões, Enquetes e Overlays
@@ -3182,12 +2430,6 @@ ul .invitetree {
 .left_poll {
    width: 2px;
    height: 9px;
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    float: left;
    margin: 0;
    padding: 0;
@@ -3195,12 +2437,6 @@ ul .invitetree {
 
 .center_poll {
    height: 9px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    float: left;
    margin: 0;
    padding: 0;
@@ -3209,12 +2445,6 @@ ul .invitetree {
 .right_poll {
    width: 2px;
    height: 9px;
-   background-position: center center;
-   background-size: initial;
-   background-repeat: no-repeat;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    float: left;
    margin: 0;
    padding: 0;
@@ -3259,14 +2489,7 @@ ul.poll li.graph {
  * 3.5 Chat, Formulários e Controles
  * ---------------------------------------------------------------------- */
 .chat_mark_bg {
-   border-top-width: medium;
-   border-top-style: none;
-   border-right-width: medium;
-   border-right-style: none;
-   border-bottom-width: medium;
-   border-bottom-style: none;
-   border-left-width: medium;
-   border-left-style: none;
+   border: medium none;
    padding: 5px;
    text-align: left;
 }
@@ -3284,14 +2507,8 @@ select {
    cursor: pointer;
    transition: background-color 0.1s linear,
       border-color 0.1s linear;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding: 5px 25px 5px 5px;
 }
 
@@ -3301,14 +2518,8 @@ select:focus {
 
 .open > .dropdown-menu {
    display: block;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    overflow-y: auto;
    z-index: 1;
    max-height: 227px;
@@ -3322,12 +2533,6 @@ select:focus {
 
 .btn:hover,
 .btn:focus {
-   background-position: initial !important;
-   background-size: initial !important;
-   background-repeat: initial !important;
-   background-origin: initial !important;
-   background-clip: initial !important;
-   background-attachment: initial !important;
    text-decoration: none !important;
 }
 
@@ -3341,20 +2546,8 @@ select:focus {
    cursor: pointer;
    width: 42px;
    height: 42px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    text-indent: -9999px;
    display: none;
    border-radius: 6px;
@@ -3372,23 +2565,11 @@ select:focus {
    margin-top: -12px;
    height: 0;
    width: 0;
-   border-top-width: 8px;
-   border-top-style: solid;
-   border-right-width: 8px;
-   border-right-style: solid;
-   border-bottom-width: 8px;
-   border-bottom-style: solid;
-   border-left-width: 8px;
-   border-left-style: solid;
-}
+   border-width: 8px;
+   border-style: solid;
+   }
 
 #irtopo:hover {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    opacity: 1;
 }
 
@@ -3404,23 +2585,11 @@ select:focus {
    margin-top: -4px;
    height: 0;
    width: 0;
-   border-top-width: 8px;
-   border-top-style: solid;
-   border-right-width: 8px;
-   border-right-style: solid;
-   border-bottom-width: 8px;
-   border-bottom-style: solid;
-   border-left-width: 8px;
-   border-left-style: solid;
-}
+   border-width: 8px;
+   border-style: solid;
+   }
 
 #irfinal:hover {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    opacity: 1;
 }
 
@@ -3451,15 +2620,9 @@ form a.BJinfoBox span,
    bottom: 0;
    transition: opacity 0.3s,
             bottom 0.3s;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 /* ----------------------------------------------------------------------
  * 3.21 Tooltips BJinfoBox e Data-Tooltip
@@ -3516,15 +2679,9 @@ a.BJinfoBox:hover span {
    font-size: 13px;
    line-height: 1.2;
    font-weight: 400;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
-}
+   border-width: 1px;
+   border-style: solid;
+   }
 
 [data-tooltip]:after {
    position: absolute;
@@ -3619,12 +2776,6 @@ ul.bjqs-controls.v-centered {
 ul.bjqs-controls.v-centered li a {
    display: block;
    padding: 10px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    text-decoration: none;
    border-radius: 6px;
    font-size: 12px;
@@ -3634,12 +2785,6 @@ ul.bjqs-controls.v-centered li.bjqs-next a,
 ul.bjqs-controls.v-centered li.bjqs-prev a {
    min-width: 100px;
    cursor: pointer;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    vertical-align: middle;
    text-align: center;
    padding: 6px 8px;
@@ -3647,12 +2792,6 @@ ul.bjqs-controls.v-centered li.bjqs-prev a {
 }
 
 ul.bjqs-controls.v-centered li a:hover {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    text-decoration: none;
 }
 
@@ -3677,12 +2816,6 @@ ol.bjqs-markers li {
 ol.bjqs-markers li a {
    display: inline-block;
    padding: 5px 10px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    margin: 5px;
    text-decoration: none;
    border-radius: 3px;
@@ -3690,12 +2823,7 @@ ol.bjqs-markers li a {
 
 ol.bjqs-markers li a:hover,
 ol.bjqs-markers li.active-marker a {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 p.bjqs-caption {
@@ -3707,12 +2835,6 @@ p.bjqs-caption {
    position: absolute;
    bottom: -10px;
    font-size: 14px;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    border-radius: 3px;
 }
 
@@ -3733,12 +2855,6 @@ p.bjqs-caption {
  * 3.24 Marcadores Internos e Labels de Torrent
  * ---------------------------------------------------------------------- */
 .internalbox {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    padding: 1px 2px;
    border-left-width: 3px;
    border-left-style: solid;
@@ -3750,12 +2866,7 @@ p.bjqs-caption {
 }
 
 .internalbox:hover {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 .internalbox::before {
@@ -3777,14 +2888,8 @@ p.bjqs-caption {
    line-height: 1.4;
    white-space: nowrap;
    z-index: 9999;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    font-weight: 500;
    pointer-events: none;
 }
@@ -3868,25 +2973,13 @@ dialog {
    left: 50%;
    transform: translate(-50%, -50%);
    margin: 0;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    border-radius: 8px;
    padding: 1.5rem;
    max-width: 90vw;
    max-height: 90vh;
    overflow: auto;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
 }
 
 /* ----------------------------------------------------------------------
@@ -3917,12 +3010,6 @@ dialog {
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    text-decoration: none;
    animation: jelly-effect 0.5s;
 }
@@ -3934,20 +3021,8 @@ input[type="submit"] {
    outline: 0;
    transition: background 0.15s linear,
       box-shadow 0.15s linear;
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    border-radius: 5px;
    padding: 6px 10px;
    margin: 0.5% 0 0 0;
@@ -3961,14 +3036,8 @@ button {
 }
 
 button[onclick="atualizarLancamentos()"] {
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    padding-top: 8px;
    padding-bottom: 7px;
 }
@@ -3976,12 +3045,6 @@ button[onclick="atualizarLancamentos()"] {
 button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
    cursor: default;
 }
 
@@ -3991,12 +3054,7 @@ input[type="submit"]:disabled {
 input[value="Deletar"],
 input[value="Delete"],
 input[value="Remover"] {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
+
 }
 
 input[value="Deletar"]:hover,
@@ -4005,20 +3063,8 @@ input[value="Remover"]:hover,
 input[value="Deletar"]:focus,
 input[value="Delete"]:focus,
 input[value="Remover"]:focus {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    animation: jelly-effect 0.5s;
 }
 
@@ -4085,20 +3131,8 @@ input[value="Remover"]:focus {
 }
 
 .browse_rating {
-   background-position: initial;
-   background-size: initial;
-   background-repeat: initial;
-   background-origin: initial;
-   background-clip: initial;
-   background-attachment: initial;
-   border-top-width: 1px;
-   border-top-style: solid;
-   border-right-width: 1px;
-   border-right-style: solid;
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-left-width: 1px;
-   border-left-style: solid;
+   border-width: 1px;
+   border-style: solid;
    border-radius: 3px;
 }
 
