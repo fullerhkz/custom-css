@@ -2912,7 +2912,7 @@ select:focus,
 #searchbars input:focus,
 .edit_changelog textarea:focus {
     border-color: var(--theme-accent) !important;
-    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px rgba(63, 83, 110, 0.35) !important;
+    box-shadow: inset 1px 2px 4px var(--shadow-deep, rgba(0, 0, 0, 0.15)), 0 0 15px rgba(63, 83, 110, 0.35) !important;
     outline: none !important;
 }
 

@@ -737,7 +737,7 @@ select:focus,
 #searchbars input:focus,
 .edit_changelog textarea:focus {{
     border-color: var(--theme-accent) !important;
-    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px {focus_glow} !important;
+    box-shadow: inset 1px 2px 4px var(--shadow-deep, rgba(0, 0, 0, 0.15)), 0 0 15px {focus_glow} !important;
     outline: none !important;
 }}
 
@@ -1048,6 +1048,11 @@ def generate_dark_blue_base():
     color-scheme: dark;
 }"""
     base_db = re.sub(r':root\s*\{[^}]+\}', db_root, base_db, count=1)
+    # Keep DarkBlue's own banner instead of inheriting Midnight's artwork.
+    base_db = base_db.replace(
+        'https://i.bj-share.info/1fb1be13bcd490c6374d8c5027425b62.gif',
+        'https://i.bj-share.info/7941f9941d487660d53683c66ac3a1b4.gif',
+    )
     return base_db
 
 def main():

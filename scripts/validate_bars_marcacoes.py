@@ -3,6 +3,7 @@
 Comprehensive validation script for BJ-Share theme bars, markings and Section 7 implementation.
 """
 from pathlib import Path
+import re
 import tinycss2 as css
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +50,15 @@ def validate_sections_and_markings(path: Path):
         issues.append('Seleção customizada ausente')
     if ':focus-visible' not in text:
         issues.append('Foco acessível ausente')
+
+    # A missing custom property invalidates the entire computed box-shadow.
+    definitions = set(re.findall(r'(--[\w-]+)\s*:', text))
+    for match in re.finditer(r'var\((--[\w-]+)\s*\)', text):
+        if match.group(1) not in definitions:
+            issues.append(f'Variável sem definição nem fallback: {match.group(1)}')
+
+    if path.name.startswith('BJ-DarkBlue') and '7941f9941d487660d53683c66ac3a1b4.gif' not in text:
+        issues.append('Banner original do DarkBlue ausente')
         
     return issues
 
@@ -82,6 +92,11 @@ def main():
                 total_failures += 1
             else:
                 print(f"✓ {t:10} [{name:20}] — OK (Sintaxe e Marcações 100% válidas)")
+
+        if root_path.exists() and barras_path.exists() and org_path.exists():
+            if not (root_path.read_bytes() == barras_path.read_bytes() == org_path.read_bytes()):
+                print(f'❌ {t}: cópias da raiz, fonte e BJ-organized divergem')
+                total_failures += 1
                 
     print("=" * 60)
     if total_failures == 0:
