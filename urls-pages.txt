@@ -1,6 +1,7 @@
 https://theme.bj-share.org/BJ-Black.css
 https://theme.bj-share.org/BJ-Blue.css
 https://theme.bj-share.org/BJ-Clean.css
+https://theme.bj-share.org/BJ-DarkBlue.css
 https://theme.bj-share.org/BJ-Darkness.css
 https://theme.bj-share.org/BJ-Grey.css
 https://theme.bj-share.org/BJ-Midnight.css

@@ -1,9 +1,10 @@
 /* ====================================================================
- * BJ-Share Custom CSS — Tema: BJ-Black
+ * BJ-Share Custom CSS — Tema: BJ-DarkBlue
  * Versão: 2.0 (Otimizado, Modular e Reorganizado)
- * Descrição: Tema escuro clássico em tons de preto e grafite profundo, com alto contraste e elegância.
- * Paleta principal: Fundo: #303030 / Texto: #ccc / Realces: #555, #777
- *
+ * Descrição: Tema escuro clássico em tons de azul marinho profundo e ardósia,
+ *            com realces em azul elétrico e gelo.
+ * Paleta principal: Fundo: #151518 / Texto: #C6C7CF / Realces: #5897f5, #38bdf8, #80b3ff
+ * 
  * ÍNDICE DAS SEÇÕES:
  *   0. VARIÁVEIS DE COR (:root) — preâmbulo, antes da Seção 1
  *   1. DEFAULTS AUXILIARES (@layer bj-defaults)
@@ -68,26 +69,38 @@
  * Valores compartilhados pelo tema (cores, sombras, superfícies).
  * ==================================================================== */
 :root {
-    --bg-base: rgb(29, 29, 29);
-    --bg-surface: rgb(28, 28, 28);
-    --bg-raised: #222;
-    --bg-overlay: #282828;
-    --bg-header: rgb(34, 34, 34);
-    --bg-deep: #202020;
-    --text-primary: #fff;
-    --text-bright: #777;
-    --text-muted: #ccc;
-    --text-secondary: #999;
-    --text-5: #eee;
-    --border: rgb(48, 48, 48);
-    --border-sub: #555;
-    --border-strong: rgb(0, 0, 0);
-    --border-4: rgb(102, 102, 102);
-    --shadow: #000;
-    --shadow-soft: rgba(0, 0, 0, 0.4);
-    --shadow-strong: rgba(0, 0, 0, 0.5);
-    --shadow-deep: rgba(0, 0, 0, 0.3);
-    --green: #418b00;
+    /* Texto — família azul-acinzentada clássica */
+    --text-primary: #C6C7CF;
+    --text-bright: #e8ecf4;
+    --text-muted: #8b8f9e;
+    --text-secondary: #bfc4d2;
+    --text-5: #C6C7CF;
+    --text-6: #9499a8;
+    --text-7: #d2d6e4;
+
+    /* Sombras */
+    --shadow: rgba(0, 0, 0, 0.50);
+    --shadow-soft: #000;
+    --shadow-strong: rgba(0, 0, 0, 0.40);
+    --shadow-deep: rgba(0, 0, 0, 0.30);
+    --shadow-5: #5897f5;
+    --shadow-6: rgba(0, 0, 0, 0.50);
+    --shadow-7: rgba(0, 0, 0, 0.70);
+
+    /* Superfícies — escada azul-marinho ardósia */
+    --accent-4: #151518; /* body */
+    --accent-5: #181b24; /* menu / input / footer */
+    --accent-alt: #1c202d; /* boxes / painéis */
+    --accent-6: #202434; /* headers / colhead */
+    --accent-7: #252b3d; /* rows / torrents / secondary */
+    --accent-3: #2d344a; /* hover / elevated */
+    --accent: #333c54; /* bordas */
+    --accent-8: #5897f5; /* focus / active blue */
+
+    /* Realces semânticos */
+    --gold: #fcd34d;
+    --green: #4ade80;
+    --red: #f87171;
     color-scheme: dark;
 }
 
@@ -100,21 +113,21 @@
     input,
     textarea,
     .sceditor-container textarea {
-        color: rgb(221, 221, 221);
+        color: var(--text-bright);
     }
 
     dialog {
         color: var(--text-primary);
-        background-color: #323131;
+        background-color: var(--accent-alt);
     }
 
     .sceditor-container {
-        background-color: var(--bg-surface);
+        background-color: var(--accent-5);
     }
 
     .sceditor-container:focus-within {
-        border-color: var(--border-sub);
-        box-shadow: 0 0 15px var(--text-bright);
+        border-color: var(--accent-8);
+        box-shadow: 0 0 15px var(--shadow-5);
     }
 }
 
@@ -126,8 +139,8 @@
  * 2.1 Fundo Geral, Tipografia Base e Listas
  * ---------------------------------------------------------------------- */
 body {
-    color: var(--text-muted);
-    background: var(--border) url("https://i.bj-share.info/6e3137369a20ade607c443b5b93bd684.png") repeat scroll 0px center;
+    color: var(--text-5);
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
     font-size: 11px;
     min-width: 950px;
     font-family: Roboto, tahoma, helvetica, sans-serif;
@@ -140,12 +153,17 @@ h2 {
     font-size: 16px;
 }
 
+ul.nobullet {
+    color: var(--text-bright);
+    list-style-type: none;
+}
+
 /* ----------------------------------------------------------------------
  * 2.2 Links, Estados de Hover e Artistas Similares
  * ---------------------------------------------------------------------- */
 a {
     border-color: currentcolor;
-    color: var(--text-muted);
+    color: var(--text-5);
     text-decoration: none;
     border: medium none;
     transition: color 0.25s, text-decoration 0.25s, opacity 0.25s;
@@ -153,52 +171,52 @@ a {
 }
 
 a:hover {
-    color: #aaa;
+    color: #a8c1f0;
     text-decoration: underline;
 }
 
 a.similar_artist {
-    background-color: #444;
+    background-color: var(--accent-alt);
     color: var(--text-primary);
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--accent);
     display: block;
     padding: 1px 4px;
 }
 
 a.similar_artist:hover {
-    background-color: var(--border-sub);
+    background-color: var(--accent-3);
 }
 
 .similar_artist_header {
     color: var(--text-primary);
-    background-color: #666;
-    border: 1px solid rgb(255, 255, 255);
+    background-color: var(--accent-6);
+    border: 1px solid var(--accent);
     padding: 3px 5px;
 }
 
 a.BJinfoBox span {
-    color: var(--text-5);
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
-    box-shadow: 0 1px 4px var(--shadow);
+    color: var(--text-secondary);
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
+    box-shadow: 0 1px 4px var(--shadow-7);
 }
 
 /* ----------------------------------------------------------------------
  * 2.3 Formulários, Campos de Entrada e Barra BBCode
  * ---------------------------------------------------------------------- */
 input {
-    background: var(--bg-surface);
-    border: 1px solid rgba(49, 47, 47, 0.94);
-    color: #ddd;
-    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
+    background: var(--accent-5);
+    border: 1px solid var(--accent);
+    color: var(--text-bright);
+    box-shadow: inset 1px 2px 4px var(--shadow-deep);
     padding: 2px 3px;
     transition: border-color 0.15s linear, box-shadow 0.15s linear;
 }
 
 textarea {
-    background: var(--bg-surface);
-    border: 1px solid rgba(49, 47, 47, 0.94);
-    color: #ddd;
-    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.11);
+    background: var(--accent-5);
+    border: 1px solid var(--accent);
+    color: var(--text-bright);
+    box-shadow: inset 1px 2px 4px var(--shadow-deep);
     padding: 2px 3px;
     width: 100%;
     transition: border-color 0.15s linear, box-shadow 0.15s linear;
@@ -206,7 +224,7 @@ textarea {
 }
 
 .BBCodeToolbar-icon {
-    fill: var(--text-bright);
+    fill: #7a7c8a;
     height: 20px;
     width: 20px;
 }
@@ -219,14 +237,14 @@ form button:focus,
 .sceditor-container iframe,
 .sceditor-container textarea,
 [contenteditable="true"]:focus {
-    border-color: var(--border-sub);
-    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px var(--text-bright);
+    border-color: var(--accent-8);
+    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px var(--shadow-5);
     outline: none;
 }
 
 .sceditor-container:focus-within {
-    border: 1px solid var(--border-sub);
-    box-shadow: 0 0 15px var(--text-bright);
+    border: 1px solid var(--accent-8);
+    box-shadow: 0 0 15px var(--shadow-5);
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -242,43 +260,43 @@ img {
 }
 
 .r01 {
-    color: #ff1300;
+    color: var(--red);
 }
 
 .r02 {
-    color: #ff1300;
+    color: var(--red);
 }
 
 .r03 {
-    color: #ff2600;
+    color: #e07a55;
 }
 
 .r04 {
-    color: #ff4c00;
+    color: #e08a55;
 }
 
 .r05 {
-    color: #ff5e00;
+    color: #e09a55;
 }
 
 .r06 {
-    color: #ff5e00;
+    color: #e09a55;
 }
 
 .r07 {
-    color: #ff7100;
+    color: #e0b055;
 }
 
 .r08 {
-    color: #ff9700;
+    color: #e0c655;
 }
 
 .r09 {
-    color: #fa0;
+    color: #d9d95a;
 }
 
 .r10 {
-    color: #74c42e;
+    color: #8dd97a;
 }
 
 .r20 {
@@ -294,52 +312,52 @@ img {
 }
 
 span.size1 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 0.75em;
 }
 
 span.size2 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 1em;
 }
 
 span.size3 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 1.25em;
 }
 
 span.size4 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 1.5em;
 }
 
 span.size5 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 1.75em;
 }
 
 span.size6 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 2em;
 }
 
 span.size7 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 2.25em;
 }
 
 span.size8 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 2.5em;
 }
 
 span.size9 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 2.75em;
 }
 
 span.size10 {
-    text-shadow: 1px 1px 1px var(--shadow-soft);
+    text-shadow: 1px 1px 1px var(--shadow);
     font-size: 3em;
 }
 
@@ -347,25 +365,19 @@ span.size10 {
  * 2.5 Cabeçalho, Logotipo e Rodapé
  * ---------------------------------------------------------------------- */
 #header {
-    background: var(--shadow) url("https://i.bj-share.info/46043dfef92ebdf44d9243254217e39c.gif") no-repeat center top;
+    /* background: var(--shadow-soft) url("https://i.bj-share.info/685f346b9388f264967429b6a7b0be56.png") no-repeat center top; */
+    background: var(--shadow-soft) url("https://i.bj-share.info/1fb1be13bcd490c6374d8c5027425b62.gif") no-repeat center top;
+    /* background: var(--shadow-soft) url("https://i.bj-share.info/39cc9dcf61cc9adcc3f0a90d965c3f55.gif") no-repeat center top; */
+    /* background: var(--shadow-soft) url("https://i.bj-share.info/d9e208c79ce0e5dc61ace829dc6cf93a.gif") no-repeat center top; */
     width: 100%;
     padding: 0;
 }
 
-#content {
-    background: var(--border) url("https://i.bj-share.info/6e3137369a20ade607c443b5b93bd684.png") repeat scroll 0px center;
-    margin: auto;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    top: 60px;
-}
-
 #footer {
-    color: var(--text-primary);
-    background: rgb(13, 13, 13) url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png") repeat-x center 184px;
-    border-top-color: rgb(36, 36, 36);
-    box-shadow: 0 0 10px 1px var(--shadow);
+    color: var(--text-6);
+    background: var(--accent-5) url("https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png") repeat-x center 184px;
+    border-top-color: var(--accent);
+    box-shadow: 0 0 5px 1px var(--shadow-6);
     margin-top: 140px;
     width: 100%;
     text-align: center;
@@ -391,9 +403,8 @@ span.size10 {
  * 2.6 Menu Principal e Menus Dropdown
  * ---------------------------------------------------------------------- */
 #menu {
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
-    box-shadow: 0 1px 3px var(--shadow);
-    border-bottom-color: var(--border);
+    background-color: var(--accent-5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     position: absolute;
     top: 295px;
     width: 100%;
@@ -404,7 +415,7 @@ span.size10 {
 }
 
 #menudrop ul a {
-    color: var(--text-muted);
+    color: var(--text-6);
     display: block;
     text-decoration: none;
     font-weight: 700;
@@ -415,13 +426,13 @@ span.size10 {
 }
 
 #menudrop ul li.current-menu-item {
-    background: rgb(221, 221, 221);
+    background: rgba(107,158,255,0.10);
     border-bottom-width: 2px;
     border-bottom-style: solid;
 }
 
 #menudrop ul ul {
-    background: rgb(30, 30, 30) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
+    background-color: var(--accent-alt);
     display: none;
     position: absolute;
     top: 100%;
@@ -431,7 +442,7 @@ span.size10 {
 }
 
 #menudrop ul ul ul ul {
-    background: rgb(30, 30, 30) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+    background-color: var(--accent-alt);
     max-height: 300px;
     overflow-y: auto;
     position: absolute;
@@ -441,13 +452,13 @@ span.size10 {
 }
 
 #menudrop ul li:hover {
-    background: rgb(40, 40, 40);
+    background-color: var(--accent-3);
 }
 
 #menu ul li a.active,
 #menu ul li a:focus,
 #menu ul li a:hover {
-    color: #565656;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
@@ -469,8 +480,8 @@ span.size10 {
  * 2.7 Barra de Informações do Usuário e Estatísticas
  * ---------------------------------------------------------------------- */
 #userinfo {
-    background: var(--border) url("https://i.bj-share.info/6e3137369a20ade607c443b5b93bd684.png") repeat scroll 0px center;
-    color: #b5b5b5;
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
+    color: var(--text-muted);
     width: 100%;
     text-align: center;
     font-size: 10.67px;
@@ -482,7 +493,7 @@ span.size10 {
 }
 
 #userinfo ul li {
-    color: #bbb;
+    color: var(--text-secondary);
     position: relative;
     display: inline;
     margin: 0 0.1em;
@@ -492,30 +503,30 @@ span.size10 {
 }
 
 #userinfo a {
-    color: #b5b5b5;
+    color: var(--text-muted);
 }
 
 #stats_seeding .stat {
-    color: #0a0;
+    color: var(--green);
 }
 
 #stats_leeching .stat {
-    color: red;
+    color: var(--red);
 }
 
 #stats_bjpontos .stat {
-    color: #E5C599;
+    color: var(--gold);
 }
 
 #userinfo_username {
-    background: var(--bg-surface);
-    color: var(--text-bright);
+    background: var(--accent-5);
+    color: var(--text-muted);
     left: 4%;
 }
 
 #userinfo_major {
-    background: var(--bg-surface);
-    color: var(--text-bright);
+    background: var(--accent-5);
+    color: var(--text-muted);
     right: 4%;
 }
 
@@ -523,8 +534,8 @@ span.size10 {
  * 2.8 Barras de Pesquisa e Notificações de Alerta
  * ---------------------------------------------------------------------- */
 #searchbars input {
-    color: #ddd9;
-    background-color: #1e1e1ef2;
+    background: rgba(17, 18, 25, 0.98);
+    color: var(--text-bright);
     position: relative;
     padding: 4px 10px;
     font-size: 0.9em;
@@ -534,7 +545,7 @@ span.size10 {
 }
 
 #searchbars ul li ul li {
-    background: var(--border);
+    background: var(--accent-alt);
     margin: 0;
     padding: 0;
     display: block;
@@ -544,11 +555,11 @@ span.size10 {
 }
 
 #searchbars ul li ul li.highlight {
-    background: rgb(69, 69, 69);
+    background: var(--accent-3);
 }
 
 #alerts {
-    background: var(--border) url("https://i.bj-share.info/6e3137369a20ade607c443b5b93bd684.png") repeat scroll 0px center;
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
     position: relative;
     margin-top: 32px;
     margin-bottom: -60px;
@@ -558,15 +569,14 @@ span.size10 {
 }
 
 #alerts a {
-    color: var(--text-muted);
+    color: var(--text-6);
 }
 
 .alertbar {
-    background-color: var(--bg-raised);
-    color: var(--text-muted);
-    box-shadow: 0px 0px 2px var(--shadow);
-    border: 1px solid rgb(53, 51, 51);
-    border-style: solid;
+    background-color: #171820;
+    border: 1px solid var(--accent);
+    color: var(--text-5);
+    box-shadow: 0px 0px 2px var(--shadow-strong);
     text-align: center;
     font-weight: 700;
     font-size: 0.93em;
@@ -577,57 +587,64 @@ span.size10 {
 }
 
 .alertbar.blend {
-    border: 1px solid rgb(53, 51, 51);
+    border: 1px solid var(--accent);
     width: 432px;
     margin-top: -1px;
 }
 
 .alertbar a {
-    color: #19191a;
+    color: #6b9eff;
     text-decoration: underline;
 }
 
 .alertbar a:hover {
-    color: var(--text-bright);
+    color: #c0c8d8;
     text-decoration: none;
 }
 
 /* ----------------------------------------------------------------------
  * 2.9 Estrutura de Conteúdo, Caixas e Painéis
  * ---------------------------------------------------------------------- */
+/* [cascata] originalmente em 2.12 — mantida aqui para ficar antes de `.box`,
+ * `.box2` (mesma especificidade e propriedades em comum). */
+.autocomplete-suggestions {
+    background: var(--accent-alt);
+    border-width: 1px;
+    border-style: solid;
+}
+
 .box {
-    background-color: var(--bg-overlay);
-    border: 1px solid var(--border);
-    box-shadow: 0 1px 3px var(--shadow);
+    background-color: var(--accent-alt);
+    border: 1px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.35);
     font-size: 11.87px;
     margin-bottom: 10px;
     border-radius: 2px;
 }
 
 .box2 {
-    background-color: var(--bg-overlay);
-    border: 1px solid var(--border);
+    background-color: var(--accent-7);
+    border: 1px solid var(--accent);
     font-size: 11.87px;
     margin-bottom: 10px;
     border-radius: 2px;
 }
 
 .head {
-    border-bottom-color: var(--border);
+    background: var(--accent-6);
     color: var(--text-primary);
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
-    box-shadow: 0px 0px 3px var(--shadow);
+    border-bottom-color: var(--accent-5);
     padding: 4px;
     border-bottom-width: 2px;
     border-bottom-style: solid;
 }
 
 .tags a {
-    color: #7e7e7e;
+    color: var(--text-muted);
 }
 
 .tags a:hover {
-    color: #dedede;
+    color: var(--text-secondary);
     text-decoration: none;
 }
 
@@ -640,8 +657,8 @@ span.size10 {
  * 2.10 Tabelas, Cabeçalhos e Linhas Alternadas
  * ---------------------------------------------------------------------- */
 table {
-    border: 1px solid var(--border);
-    box-shadow: 0 1px 3px var(--shadow);
+    border: 1px solid var(--accent);
+    box-shadow: 0 1px 2px var(--shadow-strong);
     width: 100%;
     border-collapse: collapse;
 }
@@ -651,44 +668,39 @@ table {
 }
 
 tr.resolution_header {
-    background: linear-gradient(0deg, rgba(23, 23, 23, 0.93) 0px, rgba(68, 67, 67, 0.35));
-    text-shadow: 1px 1px 1px var(--shadow-strong);
+    background-image: linear-gradient(0deg, var(--accent-4) 0px, var(--accent-7) 100%);
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 tr.season_header,
 td.season_header {
-    background: linear-gradient(0deg, rgba(23, 23, 23, 0.93) 0px, rgba(68, 67, 67, 0.35));
-    text-shadow: 1px 1px 1px var(--shadow-strong);
+    background-image: linear-gradient(0deg, var(--accent-4) 0px, var(--accent-7) 100%);
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 tr {
-    border: 1px solid var(--border);
-    background-color: var(--bg-overlay);
-}
-
-tr.rowa {
-    background-color: var(--bg-raised);
+    border: 1px solid var(--accent);
 }
 
 td,
 th {
-    border-color: var(--border);
-    box-shadow: 0px 0px 0px var(--shadow);
     padding: 5px;
     text-align: left;
 }
 
 .colhead {
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
+    background-color: var(--accent-6);
     color: var(--text-primary);
-    border-bottom-color: var(--border-strong);
+    border-bottom-color: var(--accent-5);
     font-weight: 700;
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 
 .colhead td {
-    border-bottom-color: var(--border-strong);
+    border-bottom-color: var(--accent-5);
     padding-left: 10px;
     padding-right: 20px;
     border-bottom-width: 1px;
@@ -696,9 +708,9 @@ th {
 }
 
 .colhead_dark {
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center;
-    color: var(--text-muted);
-    box-shadow: 0px 0px 3px var(--shadow);
+    background-color: var(--accent-6);
+    color: var(--text-primary);
+    border-bottom-color: var(--accent-5);
     vertical-align: middle;
     border-bottom-width: 2px;
     border-bottom-style: solid;
@@ -709,44 +721,44 @@ th {
 }
 
 .error_message {
-    border: 1px solid var(--border-4);
-    background-color: #af2525;
-    color: var(--text-primary);
+    border: 1px solid #8c3838;
+    background-color: #6e2828;
+    color: #f0c8c8;
     padding: 3px 0;
     text-align: center;
     font-weight: 700;
 }
 
 .save_message {
-    border: 1px solid var(--border-4);
-    background-color: #f4e649;
-    color: #492802;
+    border: 1px solid #8a7528;
+    background-color: #3a3018;
+    color: #e8c86a;
     padding: 3px 0;
     text-align: center;
     font-weight: 700;
 }
 
 .noty_message {
-    background: var(--bg-header) url("https://bj-share.info/static/common/icons/bj.svg") no-repeat 4px 7px;
-    color: #dddddd;
+    background: var(--accent-alt) url("https://bj-share.info/static/common/icons/bj.svg") no-repeat 4px 7px;
+    color: var(--text-primary);
     height: 33px;
     background-size: 26px 16px;
     display: block;
 }
 
 .noty_buttons {
-    background: var(--bg-surface) !important;
+    background: var(--accent-3) !important;
 }
 
 .noty_buttons a {
-    color: #e4dcdc;
+    color: var(--text-5);
     border-radius: 3px;
     margin: 5px;
     padding: 2px 5px;
 }
 
 .elem_error {
-    border: 3px solid rgb(176, 13, 13);
+    border: 3px solid #8c2020;
 }
 
 /* ----------------------------------------------------------------------
@@ -788,15 +800,16 @@ th {
 }
 
 tr.group_torrent {
-    background-color: #212122fa;
+    background-color: var(--accent-7);
     text-shadow: 1px 1px 1px var(--shadow-strong);
 }
 
 tr.torrent {
-    background-color: var(--bg-raised);
-    text-shadow: 1px 1px 1px var(--shadow-soft);
-    border-left-color: rgb(40, 43, 46) !important;
-    border-right-color: rgb(40, 43, 46) !important;
+    background-color: var(--accent-7);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border-left-color: var(--accent) !important;
+    border-right-color: var(--accent) !important;
+    box-shadow: 0 -3px 5px -5px rgba(20, 20, 30, 0.6);
     border-left-width: 1px !important;
     border-left-style: solid !important;
     border-right-width: 1px !important;
@@ -805,41 +818,51 @@ tr.torrent {
     transition: background-color 0.2s ease;
 }
 
-tr.unreadpm {
-    background-color: #692222;
-}
-
 tr.torrent .bookmark>a:before {
-    color: var(--text-secondary);
+    color: #999;
 }
 
 tr.torrent .bookmark>a:after {
-    color: var(--text-secondary);
+    color: #999;
+}
+
+table.forum_post td {
+    border: 1px solid var(--accent);
+    background-color: var(--accent-6);
+}
+
+table.forum_post td.avatar,
+table.forum_post td.body {
+    background-color: var(--accent-7); /* fixo: área de comentário */
+}
+
+tr.unreadpm {
+    background-color: #4a2228;
 }
 
 table.shoutTable a {
-    color: #0a84af;
+    color: #6b9eff;
 }
 
 tr.row1 {
-    background-color: #2d2d2d;
+    background: var(--accent-7);
 }
 
 tr.row2 {
-    background-color: #333;
+    background: #1f202b;
 }
 
 /* ----------------------------------------------------------------------
  * 2.11 Listagem de Torrents, Detalhes e Tópicos
  * ---------------------------------------------------------------------- */
 .torrentinfo_release {
-    color: #DDC39F;
+    color: #d8bc88;
 }
 
 .torrent_table tr.group {
-    background: var(--bg-header);
-    text-shadow: 1px 1px 1px var(--shadow-soft);
-    box-shadow: 0 -6px 5px -5px var(--shadow-soft);
+    background-color: var(--accent-7);
+    text-shadow: 1px 1px 1px var(--shadow-strong);
+    box-shadow: 0 -3px 5px -5px var(--shadow-6);
 }
 
 /* [cascata] originalmente em 2.10 — mantida aqui para ficar depois de
@@ -847,7 +870,15 @@ tr.row2 {
 tr.torrent:hover,
 tr.group_torrent:hover,
 tr.group:hover {
-    background-color: var(--bg-deep);
+    background-color: var(--accent-3);
+}
+
+.torrentdetails {
+    background-color: var(--accent-6) !important;
+}
+
+strong.quoteheader {
+    color: #888;
 }
 
 .last_read {
@@ -855,14 +886,6 @@ tr.group:hover {
     width: 15px;
     height: 15px;
     margin-left: 5px;
-}
-
-.last_read a {
-    border-color: currentcolor;
-    border: medium none;
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 .last_read a:hover {
@@ -925,12 +948,11 @@ tr.group:hover {
     background-repeat: no-repeat;
 }
 
-strong.quoteheader {
-    color: var(--text-secondary);
-}
-
+/* Pode mudar esta cor livremente — os campos de comentário
+ * (table.forum_post td / td.body / td.avatar) estão fixos em var(--accent-7)
+ * e não herdam mais o fundo do tbody. */
 tbody {
-    background: rgba(31, 31, 32, 0.92);
+    background-color: var(--accent-alt);
 }
 
 .torrent_label.bjtooltip.leeching {
@@ -981,8 +1003,40 @@ tbody {
 /* ----------------------------------------------------------------------
  * 2.12 Citações (Blockquote), Mídia, Enquetes e Fórum
  * ---------------------------------------------------------------------- */
+.linkbox .brackets:after,
+.linkbox .brackets:before,
+.top10_quantity_links .brackets:after,
+.top10_quantity_links .brackets:before {
+    color: var(--text-muted);
+}
+
 blockquote {
-    border-color: var(--border-4);
+    background-color: rgba(32, 33, 45, 0.94);
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+    border-left-color: var(--accent);
+    border-right-color: var(--accent);
+    border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Níveis aninhados: mesma família índigo, luminância alternada */
+blockquote blockquote {
+    background-color: rgba(25, 26, 35, 0.94);
+}
+
+blockquote blockquote blockquote {
+    background-color: rgba(36, 37, 48, 0.94);
+}
+
+blockquote blockquote blockquote blockquote {
+    background-color: rgba(21, 22, 30, 0.94);
+}
+
+blockquote blockquote blockquote blockquote blockquote {
+    background-color: rgba(29, 30, 40, 0.94);
+}
+
+blockquote blockquote blockquote blockquote blockquote blockquote {
+    background-color: rgba(25, 26, 35, 0.94);
 }
 
 :is(iframe.youtube, iframe.dailymotion) {
@@ -996,6 +1050,23 @@ blockquote {
     height: auto;
     border: medium none;
     min-height: 200px;
+}
+
+/* [cascata] originalmente em 2.11 — mantida aqui para ficar depois de
+ * `:is(iframe.youtube, iframe.dailymotion)` (mesma especificidade e
+ * propriedades em comum). */
+.last_read a {
+    border-color: currentcolor;
+    border: medium none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#forum_search_cat_list,
+#forum_search_cat_list tr {
+    border-color: currentcolor;
+    border: medium none;
 }
 
 .left_poll {
@@ -1031,7 +1102,7 @@ blockquote {
  * modos do menu (1001 e 2000 no modo fixo), pra garantir que o modal
  * sempre fique por cima, não importa a ordem no HTML. */
 .curtain {
-    background-color: var(--shadow);
+    background-color: rgba(0,0,0,0.85);
     position: fixed;
     top: 0;
     left: 0;
@@ -1040,30 +1111,12 @@ blockquote {
     z-index: 2500;
 }
 
-form tr {
-    background-color: var(--bg-raised);
-    box-shadow: 0px 0px 0px var(--shadow);
-}
-
-.linkbox .brackets:after,
-.linkbox .brackets:before,
-.top10_quantity_links .brackets:after,
-.top10_quantity_links .brackets:before {
-    color: var(--text-secondary);
-}
-
-.autocomplete-suggestions {
-    background: var(--bg-header);
-    border-width: 1px;
-    border-style: solid;
-}
-
 .small_upvote,
 .small_upvoted,
 .vote_album_up,
 .vote_artist_up,
 .vote_tag_up {
-    color: green;
+    color: var(--green);
 }
 
 .small_downvote,
@@ -1071,20 +1124,18 @@ form tr {
 .vote_album_down,
 .vote_artist_down,
 .vote_tag_down {
-    color: red;
+    color: var(--red);
 }
 
-#forum_search_cat_list,
-#forum_search_cat_list tr {
-    border-color: currentcolor;
-    border: medium none;
+form tr {
+    background-color: var(--accent-7);
 }
 
 /* ----------------------------------------------------------------------
  * 2.13 Chat e Mensagens Rápidas (Shoutbox)
  * ---------------------------------------------------------------------- */
 .chat_mark_bg {
-    background-color: rgb(21, 21, 21);
+    background-color: var(--accent-3);
     border-color: currentcolor;
     border: medium none;
     padding: 5px;
@@ -1105,8 +1156,8 @@ table.shoutTable {
  * `:is(iframe.youtube, iframe.dailymotion)` (mesma especificidade e
  * propriedades em comum). */
 td.shoutTable {
-    border: 1px solid rgb(51, 51, 51);
-    box-shadow: 0px 0px 1px #353535;
+    border: 1px solid var(--accent);
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
     padding: 8px;
     text-align: left;
     font-size: 11.6px;
@@ -1118,33 +1169,40 @@ td.shoutTable {
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
-    background: rgb(56, 56, 56);
+    background: var(--accent-3);
 }
 
 button,
 input[type=button],
 input[type=submit] {
-    background: linear-gradient(rgb(26, 26, 27) 0px, rgb(64, 64, 68) 1px, rgb(46, 46, 48) 2px, rgb(34, 34, 37));
-    border-color: rgb(27, 27, 27);
-    box-shadow: 0 1px 4px var(--shadow-deep);
-    color: var(--text-secondary);
-    text-shadow: 1px 1px 1px var(--shadow-strong);
+    background: linear-gradient(var(--accent-5) 0px, var(--accent-7) 1px, var(--accent-7) 2px, var(--accent-alt));
+    border-color: var(--accent);
+    box-shadow: 0 1px 4px var(--shadow-strong);
+    color: var(--text-7);
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+button[onclick="atualizarLancamentos()"] {
+    background-color: var(--accent-alt);
+    border: 1px solid var(--accent);
+    padding-top: 8px;
+    padding-bottom: 7px;
 }
 
 button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled {
-    background: var(--border);
-    color: #686868;
+    background: var(--accent-7);
+    color: #555;
     cursor: default;
 }
 
 select {
     background-image: url("https://bj-share.info/static/common/icons/svg-viewer.svg");
-    background-color: #1c1c1c;
-    border: 1px solid rgba(45, 43, 43, 0.86);
+    background-color: var(--accent-5);
+    border: 1px solid var(--accent);
     box-shadow: inset 1px 2px 4px var(--shadow-deep);
-    color: #888;
+    color: var(--text-6);
     -webkit-appearance: none;
     appearance: none;
     background-position: right 8px center;
@@ -1157,16 +1215,16 @@ select {
 }
 
 select:hover {
-    background-color: var(--bg-deep);
+    color: var(--text-5);
 }
 
 select a.active,
 select a:hover {
-    color: var(--shadow);
+    color: var(--shadow-soft);
 }
 
 .open > .dropdown-menu {
-    background-color: var(--bg-deep);
+    background-color: var(--accent-alt);
     display: block;
     border-width: 1px;
     border-style: solid;
@@ -1177,24 +1235,24 @@ select a:hover {
 }
 
 .checkbox:hover {
-    background-color: #313131;
+    background-color: var(--accent);
 }
 
 .multiselect-container > li > a > label.radio,
 .multiselect-container > li > a > label.checkbox {
-    color: var(--text-primary);
+    color: #fff;
     margin: 0;
 }
 
 .btn-default {
-    color: #bbb !important;
-    background-color: #2b2b2d !important;
-    border-color: #444 !important;
+    color: var(--text-6) !important;
+    background-color: var(--accent-7) !important;
+    border-color: var(--accent) !important;
 }
 
 .btn:hover,
 .btn:focus {
-    background: rgb(51, 51, 51) !important;
+    background: var(--accent-7) !important;
     text-decoration: none !important;
 }
 
@@ -1202,7 +1260,7 @@ select a:hover {
  * 2.15 Atalhos Fixos de Navegação (#irtopo, #irfinal)
  * ---------------------------------------------------------------------- */
 #irtopo {
-    background-image: linear-gradient(to top, #313133, #171616);
+    background: linear-gradient(var(--accent-5) 0px, var(--accent-3) 1px, var(--accent-3) 2px, var(--accent-5));
     bottom: 60px;
 }
 
@@ -1210,7 +1268,7 @@ select a:hover {
     border-top-color: transparent;
     border-right-color: transparent;
     border-left-color: transparent;
-    border-bottom-color: var(--text-primary);
+    border-bottom-color: #c8c9d8;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1223,16 +1281,12 @@ select a:hover {
 }
 
 #irtopo:hover {
-    background-image: linear-gradient(to top, #505355, #161718);
+    background-image: linear-gradient(to top, var(--accent), var(--accent-5));
     opacity: 1;
 }
 
 #irfinal {
-    background-color: rgb(52, 152, 219);
-    background-position: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-image: linear-gradient(to bottom, #313437, #111);
+    background: linear-gradient(var(--accent-5) 0px, var(--accent-3) 1px, var(--accent-3) 2px, var(--accent-5));
     bottom: 10px;
 }
 
@@ -1240,7 +1294,7 @@ select a:hover {
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
-    border-top-color: var(--text-primary);
+    border-top-color: #c8c9d8;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1253,11 +1307,8 @@ select a:hover {
 }
 
 #irfinal:hover {
-    background-color: rgb(80, 83, 85);
-    background-position: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-image: linear-gradient(to bottom, #505355, #171616);
+    background-color: var(--accent);
+    background-image: linear-gradient(to bottom, var(--accent), var(--accent-5));
     opacity: 1;
 }
 
@@ -1265,31 +1316,30 @@ select a:hover {
  * 2.16 Tooltips Informativos e Caixas Flutuantes
  * ---------------------------------------------------------------------- */
 form a.BJinfoBox span {
-    color: var(--text-5);
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
-    box-shadow: 0 1px 4px var(--shadow);
+    color: var(--text-secondary);
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+    box-shadow: 0 1px 4px var(--shadow-7);
     padding: 10px 5px 5px;
     margin-left: -20px;
 }
 
 .post_return a.BJinfoBox span {
-    color: #D4D4D4;
-    background: var(--bg-base) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
-    box-shadow: 0 1px 4px var(--shadow);
+    color: var(--text-secondary);
+    background: var(--accent-4) url("https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png") repeat scroll 0px center !important;
+    box-shadow: 0 1px 4px var(--shadow-7);
     line-height: 18px;
     padding: 4px 0 4px 2px;
     margin-left: -60px;
 }
 
 /* [cascata] originalmente em 2.2 — mantida aqui para ficar depois de
- * `.alertbar a:hover`, `.tags a:hover` (mesma especificidade e propriedades
- * em comum). */
+ * `.alertbar a:hover` (mesma especificidade e propriedades em comum). */
 a.BJinfoBox:hover {
-    color: var(--text-5);
+    color: var(--text-secondary);
 }
 
 [data-tooltip]:before {
-    background-color: var(--shadow);
+    background-color: var(--accent-4);
     color: var(--text-primary);
     position: absolute;
     bottom: 150%;
@@ -1308,7 +1358,7 @@ a.BJinfoBox:hover {
 }
 
 [data-tooltip]:after {
-    border-top-color: var(--border-strong);
+    border-top-color: rgb(0, 0, 0);
     border-right-color: transparent;
     border-left-color: transparent;
     position: absolute;
@@ -1331,24 +1381,22 @@ a.BJinfoBox:hover {
  * 2.17 Sliders e Carrossel de Destaques (BJQS)
  * ---------------------------------------------------------------------- */
 ul.bjqs-controls.v-centered li.bjqs-next a {
-    border-color: #494649;
-    background-color: rgba(0, 0, 0, .2);
-    background-repeat: no-repeat;
-    color: var(--text-primary);
-    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    border-color: var(--accent);
+    background: linear-gradient(var(--accent-5) 0px, var(--accent) 1px, var(--accent-7) 2px, var(--accent-alt));
+    color: var(--text-7);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 ul.bjqs-controls.v-centered li.bjqs-prev a {
-    border-color: #494649;
-    background-color: rgba(0, 0, 0, .2);
-    background-repeat: no-repeat;
-    color: var(--text-primary);
-    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    border-color: var(--accent);
+    background: linear-gradient(var(--accent-5) 0px, var(--accent) 1px, var(--accent-7) 2px, var(--accent-alt));
+    color: var(--text-7);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 p.bjqs-caption {
-    color: var(--shadow);
-    background: rgba(254, 254, 254, 0.74);
+    color: var(--text-bright);
+    background: rgba(12, 13, 18, 0.88);
     font-family: "Varela Round", sans-serif;
     display: block;
     width: 190px;
@@ -1361,8 +1409,8 @@ p.bjqs-caption {
 }
 
 ul.bjqs-controls.v-centered li a {
-    background: rgb(54, 90, 114);
-    color: var(--text-primary);
+    background: #2a3c5c;
+    color: #fff;
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -1371,13 +1419,13 @@ ul.bjqs-controls.v-centered li a {
 }
 
 ul.bjqs-controls.v-centered li a:hover {
-    background: rgb(56, 56, 56);
+    background: var(--accent-3);
     text-decoration: none;
 }
 
 ol.bjqs-markers li a {
-    background: var(--border-strong);
-    color: var(--text-primary);
+    background: var(--accent-5);
+    color: var(--text-secondary);
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
@@ -1387,17 +1435,17 @@ ol.bjqs-markers li a {
 
 ol.bjqs-markers li a:hover,
 ol.bjqs-markers li.active-marker a {
-    background: rgb(153, 153, 153);
+    background: var(--accent);
 }
 
 /* ----------------------------------------------------------------------
  * 2.18 Badges Internos, Modais, Diálogos e Avisos
  * ---------------------------------------------------------------------- */
 .internalbox {
-    background: rgb(29, 33, 36) !important;
-    color: #ffb300 !important;
-    border-left-color: rgb(255, 179, 0);
-    border-right-color: rgb(255, 179, 0);
+    background: var(--accent-7) !important;
+    color: var(--gold) !important;
+    border-left-color: var(--gold);
+    border-right-color: var(--gold);
     padding: 1px 2px;
     border-left-width: 3px;
     border-left-style: solid;
@@ -1409,11 +1457,11 @@ ol.bjqs-markers li.active-marker a {
 }
 
 .internalbox:hover {
-    background: rgb(53, 53, 55);
+    background: var(--accent-3);
 }
 
 .internalbox::before {
-    color: #fffbee !important;
+    color: #fff8e8 !important;
     content: "" !important;
     font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free" !important;
     font-size: 10px !important;
@@ -1421,10 +1469,10 @@ ol.bjqs-markers li.active-marker a {
 }
 
 .internalbox:hover::after {
-    background-color: #333;
+    background-color: var(--accent-alt);
     color: var(--text-primary);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    border: 1px solid currentcolor;
+    box-shadow: 0 2px 5px var(--shadow-6);
+    border: 1px solid var(--accent);
     content: "Este é um lançamento Internal, feito por um uploader do BJ-Share.";
     position: absolute;
     bottom: 130%;
@@ -1441,8 +1489,8 @@ ol.bjqs-markers li.active-marker a {
 }
 
 dialog {
-    border: 1px solid currentcolor;
-    background: rgb(50, 49, 49);
+    border: 1px solid var(--accent);
+    background: var(--accent-alt);
     color: var(--text-primary);
     position: fixed;
     top: 50%;
@@ -1457,7 +1505,7 @@ dialog {
 }
 
 .brackets[onclick*="gorjeta"] {
-    color: #f4bc64;
+    color: var(--gold);
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -1469,7 +1517,7 @@ dialog {
 }
 
 #noteAlertMsg {
-    box-shadow: 0 0 0px var(--bg-overlay);
+    box-shadow: 0 0 0px #282828;
     position: absolute;
     z-index: 6001;
     top: 0;
@@ -1481,7 +1529,7 @@ dialog {
 }
 
 .browse_rating {
-    background: black;
+    background: var(--accent-alt);
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
@@ -1498,14 +1546,6 @@ dialog {
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-body,
-#userinfo,
-#alerts,
-a.BJinfoBox span,
-form a.BJinfoBox span,
-.post_return a.BJinfoBox span {
 }
 
 /* ----------------------------------------------------------------------
@@ -1542,10 +1582,6 @@ ol {
 
 p.min_padding {
     margin: 2px 0;
-}
-
-ul.nobullet {
-    list-style-type: none;
 }
 
 /* ----------------------------------------------------------------------
@@ -1630,6 +1666,14 @@ ul.thin {
 ul.thin li {
     margin: 0;
     padding: 0;
+}
+
+#content {
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 60px;
 }
 
 #wrapper {
@@ -1913,16 +1957,12 @@ div.sidebar #event_div {
 
 table.forum_post td.body {
     max-width: 675px;
+    background-color: var(--accent-7);
 }
 
 /* ----------------------------------------------------------------------
  * 3.14 Tabelas, Cabeçalhos e Mensagens
  * ---------------------------------------------------------------------- */
-tr.resolution_header,
-tr.season_header,
-td.season_header {
-}
-
 .width5 {
     width: 3%;
 }
@@ -1976,14 +2016,10 @@ table.forum_post {
     margin: 10px 0;
 }
 
-table.forum_post td {
-    border-width: 1px;
-    border-style: solid;
-}
-
 td.avatar {
     width: 158px;
     padding: 4px;
+    background-color: var(--accent-7);
 }
 
 /* [cascata] originalmente em 3.18 — mantida aqui para ficar antes de `ul
@@ -2232,7 +2268,6 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
     text-decoration: none;
-    transform: translateY(-1px);
 }
 
 button,
@@ -2253,19 +2288,6 @@ input[type="submit"] {
 
 button {
     display: inline-flex;
-}
-
-button:active,
-input[type="button"]:active,
-input[type="submit"]:active {
-    transform: translateY(1px);
-}
-
-button[onclick="atualizarLancamentos()"] {
-    border-width: 1px;
-    border-style: solid;
-    padding-top: 8px;
-    padding-bottom: 7px;
 }
 
 /* ----------------------------------------------------------------------
@@ -2397,10 +2419,7 @@ ol.bjqs-markers li {
 /* ----------------------------------------------------------------------
  * 3.26 Animações nos Botões (Lift + Press e Botões Destrutivos)
  * ---------------------------------------------------------------------- */
-input[value="Deletar"],
-input[value="Delete"],
-input[value="Remover"] {
-}
+/* Lift/press usa transition + transform (sem keyframes de jelly). */
 
 input[value="Deletar"]:hover,
 input[value="Delete"]:hover,
@@ -2418,19 +2437,19 @@ input[value="Remover"]:focus {
     100% {
         transform: translateY(0);
         filter: brightness(1);
-        box-shadow: 0 0 0 0 rgba(244,188,100,0);
+        box-shadow: 0 0 0 0 rgba(201,168,76,0);
     }
 
     5% {
         transform: translateY(-2px);
         filter: brightness(1.25);
-        box-shadow: 0 0 0 5px rgba(244,188,100,0.4);
+        box-shadow: 0 0 0 5px rgba(201,168,76,0.35);
     }
 
     10% {
         transform: translateY(0);
         filter: brightness(1);
-        box-shadow: 0 0 0 10px rgba(244,188,100,0);
+        box-shadow: 0 0 0 10px rgba(201,168,76,0);
     }
 }
 
@@ -2792,7 +2811,7 @@ body.bj-sticky-menu #searchbars * {
 
 /* ====================================================================
  * SEÇÃO 7: PERSONALIZAÇÕES E OVERRIDES DO TEMA (APLICADOS POR ÚLTIMO)
- * BJ-Black — Pacote de melhorias (v2.1). Estas regras sobrescrevem as
+ * BJ-DarkBlue — Pacote de melhorias (v2.1). Estas regras sobrescrevem as
  * seções 2–6 (mesma especificidade + vir depois = vence), por isso ficam
  * juntas no final; cada bloco pode ser removido isoladamente.
  *   7.1 Tokens e Variáveis Adicionais
@@ -2808,29 +2827,29 @@ body.bj-sticky-menu #searchbars * {
  * ---------------------------------------------------------------------- */
 :root {
     /* Realce primário do tema */
-    --theme-accent: #d4d4d8;
-    --theme-hover: #ffffff;
-    --theme-soft: rgba(255, 255, 255, 0.10);
-    --theme-ring: rgba(255, 255, 255, 0.28);
+    --theme-accent: #5897f5;
+    --theme-hover: #80b3ff;
+    --theme-soft: rgba(88, 151, 245, 0.14);
+    --theme-ring: rgba(88, 151, 245, 0.35);
 
     /* Realce secundário */
-    --theme-secondary: #71717a;
-    --theme-secondary-soft: rgba(113, 113, 122, 0.15);
+    --theme-secondary: #38bdf8;
+    --theme-secondary-soft: rgba(56, 189, 248, 0.14);
 
     /* Versões "tinta" das cores semânticas (fundos de aviso combinam com o tema) */
-    --gold-soft: rgba(245, 186, 73, 0.14);
-    --green-soft: rgba(74, 187, 98, 0.14);
-    --red-soft: rgba(235, 87, 87, 0.14);
+    --gold-soft: rgba(240, 192, 90, 0.13);
+    --green-soft: rgba(74, 206, 132, 0.13);
+    --red-soft: rgba(235, 95, 95, 0.13);
 
     /* Bordas e contraste */
-    --accent: #3f3f46;
-    --text-muted: #a1a1aa;
+    --accent: #2b3040;
+    --text-muted: #9497a7;
 
     /* Novos auxiliares */
-    --edge: rgba(255, 255, 255, 0.07); /* brilho de 1px no topo */
+    --edge: rgba(255, 255, 255, 0.06); /* brilho de 1px no topo */
     --radius: 8px;
     --radius-sm: 6px;
-    --lift: 0 6px 20px rgba(0, 0, 0, 0.50);
+    --lift: 0 6px 20px rgba(0, 0, 0, 0.40);
 }
 
 /* ----------------------------------------------------------------------
@@ -2859,17 +2878,17 @@ blockquote a:hover,
 
 /* Ícones e contraste */
 .BBCodeToolbar-icon {
-    fill: #a1a1aa;
+    fill: #8b8f9e;
 }
 
 strong.quoteheader {
-    color: #a1a1aa;
+    color: #9499a8;
 }
 
 button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled {
-    color: #71717a;
+    color: #696c78;
 }
 
 .multiselect-container > li > a > label.radio,
@@ -2888,7 +2907,7 @@ input[type="submit"]:disabled {
 
 /* Cabeçalho de caixa: leve degradê + barra colorida lateral como "assinatura" */
 .head {
-    background: linear-gradient(180deg, #2c2c2e, #202022);
+    background: linear-gradient(180deg, #1c202d, #151824);
     box-shadow: inset 3px 0 0 var(--theme-accent), inset 0 1px 0 var(--edge);
     padding: 4px 8px;
 }
@@ -2899,7 +2918,7 @@ input[type="submit"]:disabled {
 }
 
 table {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.40);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 /* Sem sombra de texto em fundos onde borra a leitura */
@@ -2945,7 +2964,7 @@ textarea {
 input:not([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"], [type="image"], [type="file"]):hover:not(:focus),
 textarea:hover:not(:focus),
 select:hover:not(:focus) {
-    border-color: #52525b;
+    border-color: #3d4760;
 }
 
 /* Glow de 15px — TODOS os campos de escrita, sem exceção */
@@ -2964,13 +2983,13 @@ select:focus,
 #searchbars input:focus,
 .edit_changelog textarea:focus {
     border-color: var(--theme-accent) !important;
-    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px rgba(255, 255, 255, 0.35) !important;
+    box-shadow: inset 1px 2px 4px var(--shadow-deep), 0 0 15px rgba(88, 151, 245, 0.40) !important;
     outline: none !important;
 }
 
 .sceditor-container:focus-within {
     border: 1px solid var(--theme-accent) !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 0 15px rgba(88, 151, 245, 0.40) !important;
     outline: none !important;
     border-width: 1px !important;
     border-style: solid !important;
@@ -2983,8 +3002,8 @@ select:focus,
 button,
 input[type="button"],
 input[type="submit"] {
-    background: linear-gradient(180deg, #2d2d30, #222224);
-    border: 1px solid var(--accent);
+    background: linear-gradient(180deg, #222736, #191c28);
+    border: 1px solid #2f364a;
     border-radius: var(--radius-sm);
     box-shadow: inset 0 1px 0 var(--edge), 0 1px 3px rgba(0, 0, 0, 0.4);
     transition: background 0.18s, border-color 0.18s, transform 0.12s ease, box-shadow 0.18s, color 0.18s;
@@ -2998,8 +3017,8 @@ input[type="submit"]:hover,
 .btn:focus,
 .btn-default:hover,
 button[onclick="atualizarLancamentos()"]:hover {
-    background: linear-gradient(180deg, #38383c, #2a2a2e) !important;
-    border-color: rgba(255, 255, 255, 0.65) !important;
+    background: linear-gradient(180deg, #27344e, #1c263c) !important;
+    border-color: rgba(88, 151, 245, 0.70) !important;
     color: #ffffff !important;
     transform: translateY(-1px);
     box-shadow: inset 0 1px 0 var(--edge), 0 4px 12px rgba(0, 0, 0, 0.45) !important;
@@ -3009,18 +3028,18 @@ button[onclick="atualizarLancamentos()"]:hover {
 button:active,
 input[type="button"]:active,
 input[type="submit"]:active {
-    background: linear-gradient(180deg, #1c1c1e, #262628);
+    background: linear-gradient(180deg, #151c2a, #202b40);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
     transform: translateY(1px);
 }
 
 /* Submit normal */
 input[type="submit"] {
-    color: #ffffff;
+    color: #d6e4ff;
 }
 
 input[type="submit"]:active {
-    background: linear-gradient(180deg, #1c1c1e, #262628);
+    background: linear-gradient(180deg, #151c2a, #202b40);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -3034,7 +3053,7 @@ tr.group_torrent:hover > td:first-child {
 /* Mensagens: tinta translúcida em vez de blocos saturados */
 .error_message {
     background: var(--red-soft);
-    border: 1px solid rgba(235, 87, 87, 0.45);
+    border: 1px solid rgba(235, 95, 95, 0.45);
     color: #fca5a5;
     border-radius: var(--radius-sm);
     padding: 4px 10px;
@@ -3042,7 +3061,7 @@ tr.group_torrent:hover > td:first-child {
 
 .save_message {
     background: var(--gold-soft);
-    border: 1px solid rgba(245, 186, 73, 0.45);
+    border: 1px solid rgba(240, 192, 90, 0.45);
     color: #fcd34d;
     border-radius: var(--radius-sm);
     padding: 4px 10px;
@@ -3062,8 +3081,8 @@ tr.unreadpm {
  * 7.6 Menu, Alertas, Citações, Modais e Carrossel
  * ---------------------------------------------------------------------- */
 #menu {
-    background-image: linear-gradient(180deg, #262628, #1c1c1e);
-    border-bottom: 1px solid #3f3f46;
+    background-image: linear-gradient(180deg, #171b26, #10131d);
+    border-bottom: 1px solid #2b3040;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -3073,11 +3092,11 @@ tr.unreadpm {
 }
 
 #menudrop ul li.current-menu-item > a {
-    color: var(--text-primary);
+    color: var(--text-bright);
 }
 
 #menudrop ul ul {
-    border: 1px solid #3f3f46;
+    border: 1px solid #2b3040;
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
 }
@@ -3098,16 +3117,16 @@ table.shoutTable a {
 
 /* Citações: barra colorida; níveis aninhados alternam acento primário/secundário */
 blockquote {
-    border-left: 3px solid rgba(212, 212, 216, 0.65);
+    border-left: 3px solid rgba(88, 151, 245, 0.55);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
 blockquote blockquote {
-    border-left-color: rgba(113, 113, 122, 0.65);
+    border-left-color: rgba(56, 189, 248, 0.55);
 }
 
 blockquote blockquote blockquote {
-    border-left-color: rgba(212, 212, 216, 0.65);
+    border-left-color: rgba(88, 151, 245, 0.55);
 }
 
 dialog {
@@ -3126,7 +3145,7 @@ dialog::backdrop {
 
 /* Botões do carrossel */
 ul.bjqs-controls.v-centered li a {
-    background: #333333;
+    background: #1e2638;
 }
 
 ul.bjqs-controls.v-centered li a:hover {
@@ -3136,7 +3155,7 @@ ul.bjqs-controls.v-centered li a:hover {
 ol.bjqs-markers li.active-marker a,
 ol.bjqs-markers li a:hover {
     background: var(--theme-accent);
-    color: #111111;
+    color: #0d1017;
 }
 
 /* ----------------------------------------------------------------------
@@ -3182,7 +3201,7 @@ button:active .far {
 html {
     accent-color: var(--theme-accent); /* checkbox/radio/range */
     scrollbar-width: thin;
-    scrollbar-color: #4a4a50 #1a1a1c;
+    scrollbar-color: #353d52 #0f1218;
 }
 
 ::-webkit-scrollbar {
@@ -3191,17 +3210,17 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a1a1c;
+    background: #0f1218;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4a4a50;
+    background: #353d52;
     border-radius: 6px;
-    border: 2px solid #1a1a1c;
+    border: 2px solid #0f1218;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #606068;
+    background: #495470;
 }
 
 ::selection {

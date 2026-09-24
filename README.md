@@ -4,28 +4,28 @@ Repositório com arquivos CSS personalizados para uso em interfaces e temas visu
 
 Os arquivos disponíveis aqui são folhas de estilo organizadas para facilitar consulta e manutenção.
 
-## Versão 2.1 (17/09/2026) — Suporte a Glow nos Formulários e Otimização de Backgrounds
+## Versão 2.2 (24/09/2026) — Barras de Realce Temáticas, Marcações e Profundidade Visual
 
-A **raiz da `main` contém a versão atual dos nove temas ativos**, servida diretamente via GitHub Pages em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css) ou [BJ-NewBlack.css](https://theme.bj-share.org/BJ-NewBlack.css). Cada folha CSS é totalmente independente, sem dependência de `@import` ou arquivos auxiliares.
+A **raiz da `main` contém a versão atual dos dez temas ativos**, servida diretamente via GitHub Pages em `https://theme.bj-share.org/<arquivo.css>`. Por exemplo: [BJ-Midnight.css](https://theme.bj-share.org/BJ-Midnight.css) ou [BJ-NewBlack.css](https://theme.bj-share.org/BJ-NewBlack.css). Cada folha CSS é totalmente independente, sem dependência de `@import` ou arquivos auxiliares.
 
-Nesta versão 2.1:
-- **Efeito de Glow em Foco:** Restaurado o efeito de destaque e brilho suave (`box-shadow` e `border-color`) em campos de formulário (`input`, `textarea`), botões e editores BBCode (SCEditor), mapeando a paleta de brilho de cada tema a partir de `com-glow/`.
-- **Otimização de Backgrounds:** Unificadas as propriedades longhand de `background` em declarações shorthand limpas e seguras, reduzindo o peso médio dos arquivos em ~28% sem alterar o comportamento visual ou repetição de texturas.
-- **Arquivo Histórico:** A versão anterior (`9cae875`) está preservada em [old/9cae875/](old/9cae875/), e as versões mais antigas em [old/f8e8be5/](old/f8e8be5/) e [old/](old/).
+Nesta versão:
+- **Barras e Marcações Assinatura:** Adicionadas barras verticais de destaque (`box-shadow: inset 3px 0 0 ...`) em cabeçalhos de caixas (`.head`), alertas (`.alertbar`), citações (`blockquote`) e no hover de torrents (`tr.torrent:hover > td:first-child`), personalizadas para a paleta e estilo de cada tema.
+- **Botões e Profundidade:** Efeitos modernos de lift e press com degradê e bordas temáticas em botões e controles.
+- **Restauração do DarkBlue:** Tema `BJ-DarkBlue.css` reimplementado e ativo na raiz com suporte completo a Pages.
+- **Estatísticas e Conforto:** Scrollbars temáticas customizadas, cores de seleção personalizadas e foco de acessibilidade (`:focus-visible`).
 
 | Tema | Arquivo na Raiz (`main`) | URL GitHub Pages |
 | --- | --- | --- |
 | Black | [BJ-Black.css](BJ-Black.css) | `https://theme.bj-share.org/BJ-Black.css` |
 | Blue | [BJ-Blue.css](BJ-Blue.css) | `https://theme.bj-share.org/BJ-Blue.css` |
 | Clean | [BJ-Clean.css](BJ-Clean.css) | `https://theme.bj-share.org/BJ-Clean.css` |
+| DarkBlue | [BJ-DarkBlue.css](BJ-DarkBlue.css) | `https://theme.bj-share.org/BJ-DarkBlue.css` |
 | Darkness | [BJ-Darkness.css](BJ-Darkness.css) | `https://theme.bj-share.org/BJ-Darkness.css` |
 | Grey | [BJ-Grey.css](BJ-Grey.css) | `https://theme.bj-share.org/BJ-Grey.css` |
 | Midnight | [BJ-Midnight.css](BJ-Midnight.css) | `https://theme.bj-share.org/BJ-Midnight.css` |
 | NewBlack | [BJ-NewBlack.css](BJ-NewBlack.css) | `https://theme.bj-share.org/BJ-NewBlack.css` |
 | Pink | [BJ-Pink.css](BJ-Pink.css) | `https://theme.bj-share.org/BJ-Pink.css` |
 | Red | [BJ-Red.css](BJ-Red.css) | `https://theme.bj-share.org/BJ-Red.css` |
-
-> **Nota:** O tema `BJ-DarkBlue` foi descontinuado e removido dos temas ativos. Sua versão anterior permanece arquivada em [old/f8e8be5/BJ-DarkBlue.css](old/f8e8be5/BJ-DarkBlue.css).
 
 
 A estrutura vem de [examples/CSS new.css](examples/CSS%20new.css), cópia do exemplo recebido com extensão `.cts`. As cores, imagens, gradientes e sombras vêm de **[old/](old/)**, recuperado do commit [`ba4e315`](https://github.com/fullerhkz/custom-css/commit/ba4e31540ff0843df7c2a8e4b3f6fbc07cc894c4), anterior à reformulação responsiva. A aparência é transferida por seletor e declaração, preservando a ordem e `!important`, inclusive as diferenças entre temas claros e escuros. Não há substituição aproximada de paleta.
